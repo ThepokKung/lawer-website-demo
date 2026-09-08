@@ -5,15 +5,6 @@
 @tailwind utilities;
 
 @layer base {
-  :root {
-    --color-bg-base: #F8FAFC;
-    --color-surface: #FFFFFF;
-    --color-navy: #0B1B3D;
-    --color-gold: #B38E46;
-    --color-gold-hover: #9A7432;
-    --color-border: #E2E8F0;
-  }
-
   html {
     scroll-behavior: smooth;
     background-color: #F8FAFC;
@@ -29,12 +20,7 @@
     line-height: 1.65;
   }
 
-  html[lang="th"] h1,
-  html[lang="th"] h2,
-  html[lang="th"] h3,
-  html[lang="zh"] h1,
-  html[lang="zh"] h2,
-  html[lang="zh"] h3 {
+  html:is([lang="th"], [lang="zh"]) :is(h1, h2, h3) {
     line-height: 1.35;
     padding-top: 0.1em;
     padding-bottom: 0.08em;
@@ -90,17 +76,6 @@
     transform: translateY(-3px);
   }
 
-  .gold-gradient-text {
-    background: linear-gradient(135deg, #0B1B3D 0%, #173974 40%, #B38E46 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-  }
-
-  .gold-gradient-text-light {
-    background: linear-gradient(135deg, #FFFFFF 0%, #F3E8CE 50%, #D5B76C 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-  }
 }
 
 /* ==========================================================
@@ -112,10 +87,6 @@
   transform: translateY(24px);
   transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
   will-change: opacity, transform;
-}
-
-.reveal-init.reveal-scale {
-  transform: translateY(20px) scale(0.98);
 }
 
 .revealed {

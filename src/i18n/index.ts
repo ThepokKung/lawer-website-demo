@@ -42,13 +42,6 @@ export function useTranslations(lang: SupportedLang = 'th') {
   };
 }
 
-export function getLangFromUrl(url: URL): SupportedLang {
-  const [, lang] = url.pathname.split('/');
-  if (lang in languages) return lang as SupportedLang;
-  return defaultLang;
-}
-
 export function getCleanPathWithoutLang(pathname: string): string {
-  const clean = pathname.replace(/^\/(th|en|zh)/, '');
-  return clean === '' ? '/' : clean;
+  return pathname.replace(/^\/(th|en|zh)/, '') || '/';
 }

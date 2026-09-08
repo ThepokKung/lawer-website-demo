@@ -1,6 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 export default {
-  content: ['./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}'],
+  content: ['./src/**/*.{astro,ts}'],
   theme: {
     extend: {
       colors: {
@@ -24,23 +24,11 @@ export default {
         }
       },
       borderRadius: {
-        none: '0px',
-        xs: '1px',
-        sm: '2px',
-        DEFAULT: '2px',
-        md: '4px',
-        lg: '6px',
-        xl: '8px',
-        '2xl': '10px',
-        '3xl': '12px'
+        xs: '1px'
       },
       fontFamily: {
         sans: ['Sarabun', 'Inter', 'system-ui', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Noto Sans SC', 'sans-serif'],
-        serif: ['"Cormorant Garamond"', 'Georgia', 'Cambria', 'serif'],
-        heading: ['"Cormorant Garamond"', 'Sarabun', 'sans-serif']
-      },
-      transitionTimingFunction: {
-        'apple-ease': 'cubic-bezier(0.16, 1, 0.3, 1)'
+        serif: ['"Cormorant Garamond"', 'Georgia', 'Cambria', 'serif']
       }
     }
   },
