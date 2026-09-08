@@ -1,5 +1,5 @@
 ---
-import { ViewTransitions } from 'astro:transitions';
+import { ClientRouter } from 'astro:transitions';
 import CookieBanner from '@/components/common/CookieBanner.astro';
 import '@/styles/global.css';
 
@@ -145,9 +145,9 @@ const schemaData = {
     )}
 
     <!-- Schema.org Structured Data -->
-    <script type="application/ld+json" set:html={JSON.stringify(schemaData)} />
+    <script is:inline type="application/ld+json" set:html={JSON.stringify(schemaData)} />
 
-    <ViewTransitions />
+    <ClientRouter />
   </head>
   <body class="min-h-screen text-slate-100 flex flex-col selection:bg-gold-500/30 selection:text-gold-300">
     <!-- Google Tag Manager (noscript) -->
