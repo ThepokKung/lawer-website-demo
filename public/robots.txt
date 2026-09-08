@@ -1,4 +1,17 @@
 User-agent: *
 Allow: /
+Disallow: /api/
 
-Sitemap: https://ms-legal.example.com/sitemap-index.xml
+# Explicit search crawler directives
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Baiduspider
+Allow: /
+
+# Canonical Sitemap Index
+Sitemap: https://law.thepokkung.space/sitemap-index.xml
+

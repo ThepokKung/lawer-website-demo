@@ -98,18 +98,15 @@ const schemaData = {
     <!-- Priority Hints & Asset Preloading -->
     <link rel="preload" href="/images/logo.svg" as="image" type="image/svg+xml" fetchpriority="high" />
 
-    <!-- Google Fonts: Sarabun (Official Thai Legal Standard) & Cormorant Garamond (Prestige Legal Serif) -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600;1,700&family=Sarabun:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,600&display=swap"
-      fetchpriority="high"
-    />
+    <!-- Self-Hosted Webfonts Preload (Zero External Network Overhead) -->
+    <link rel="preload" href="/fonts/sarabun-thai-400.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="/fonts/sarabun-latin-400.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="/fonts/sarabun-thai-700.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="/fonts/cormorant-garamond-latin-600.woff2" as="font" type="font/woff2" crossorigin />
 
     <!-- Cloudflare Turnstile API (Loaded when Turnstile key is configured) -->
     {SITE_CONFIG.turnstileSiteKey && (
-      <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
+      <script is:inline src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
     )}
 
     <!-- Google Consent Mode v2 Default Setup (Must execute before GTM) -->
