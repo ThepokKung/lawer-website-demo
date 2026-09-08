@@ -9,30 +9,30 @@ const { lang } = Astro.props;
 const t = useTranslations(lang);
 ---
 
-<section class="py-20 lg:py-28 relative bg-navy-950/70 border-t border-gold-500/15">
+<section class="py-20 lg:py-28 relative bg-white border-y border-slate-200">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     
     <div class="text-center max-w-3xl mx-auto mb-16">
-      <div class="reveal-init inline-block px-3 py-1 rounded-full bg-navy-900 border border-gold-500/30 text-gold-300 text-xs font-semibold uppercase tracking-wider mb-3">
+      <div class="reveal-init inline-block px-3 py-1 rounded-[2px] bg-gold-100 border border-gold-300 text-gold-800 text-xs font-bold uppercase tracking-wider mb-3">
         {t.whyUs.sectionBadge}
       </div>
-      <h2 class="reveal-init stagger-1 text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-white mb-4">
+      <h2 class="reveal-init stagger-1 text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-navy-950 mb-4">
         {t.whyUs.title}
       </h2>
-      <p class="reveal-init stagger-2 text-base sm:text-lg text-slate-400">
+      <p class="reveal-init stagger-2 text-base sm:text-lg text-slate-600">
         {t.whyUs.subtitle}
       </p>
     </div>
 
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
       {t.whyUs.pillars.map((pillar, index) => (
         <div
           class:list={[
-            "reveal-init glass-card rounded-2xl p-8 flex items-start gap-5",
+            "reveal-init rounded-[2px] p-8 flex items-start gap-5 bg-slate-50 border border-slate-200 hover:border-gold-500 transition-colors duration-300 shadow-xs",
             `stagger-${index + 1}`
           ]}
         >
-          <div class="w-12 h-12 rounded-xl bg-gold-500/10 border border-gold-500/30 flex items-center justify-center text-gold-400 shrink-0 mt-1">
+          <div class="w-12 h-12 rounded-[2px] bg-navy-900 border border-navy-800 flex items-center justify-center text-gold-400 shrink-0 mt-1">
             <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
               <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10" />
               <path d="m9 12 2 2 4-4" />
@@ -40,10 +40,10 @@ const t = useTranslations(lang);
           </div>
 
           <div>
-            <h3 class="text-xl font-bold text-slate-100 mb-2">
+            <h3 class="text-xl font-bold text-navy-950 mb-2">
               {pillar.title}
             </h3>
-            <p class="text-sm sm:text-base text-slate-400 leading-relaxed">
+            <p class="text-sm sm:text-base text-slate-600 leading-relaxed">
               {pillar.desc}
             </p>
           </div>

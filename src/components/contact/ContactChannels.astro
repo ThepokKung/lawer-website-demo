@@ -11,15 +11,15 @@ const t = useTranslations(lang);
 
 <div class="space-y-6">
   <!-- Address Card -->
-  <div class="reveal-init glass-card rounded-2xl p-6 border border-gold-500/20">
+  <div class="reveal-init rounded-[2px] p-6 bg-white border border-slate-200 shadow-sm">
     <div class="flex items-start gap-4">
-      <div class="w-10 h-10 rounded-xl bg-gold-500/10 border border-gold-500/30 flex items-center justify-center text-gold-400 shrink-0">
+      <div class="w-10 h-10 rounded-[2px] bg-navy-900 border border-navy-800 flex items-center justify-center text-gold-400 shrink-0">
         📍
       </div>
       <div>
-        <h3 class="text-base font-bold text-white mb-1">{t.contact.addressLabel}</h3>
-        <p class="text-sm text-slate-300 leading-relaxed">{t.contact.addressValue}</p>
-        <p class="text-xs text-gold-400 mt-2">BTS ช่องนนทรี (Chong Nonsi) ทางออก 1 / ติดเชื่อมต่ออาคารสาทรสแควร์</p>
+        <h3 class="text-base font-bold text-navy-950 mb-1">{t.contact.addressLabel}</h3>
+        <p class="text-sm text-slate-600 leading-relaxed">{t.contact.addressValue}</p>
+        <p class="text-xs text-gold-700 font-semibold mt-2">BTS ช่องนนทรี (Chong Nonsi) ทางออก 1 / ทางเชื่อมตรงสู่อาคารสาทรสแควร์</p>
       </div>
     </div>
   </div>
@@ -29,33 +29,33 @@ const t = useTranslations(lang);
     <!-- Phone Call -->
     <a
       href={`tel:${t.contact.phoneValue.replace(/\s+/g, '')}`}
-      class="track-call reveal-init stagger-1 glass-card glass-card-hover rounded-2xl p-5 border border-gold-500/20 block group"
+      class="track-call reveal-init stagger-1 rounded-[2px] p-5 bg-white border border-slate-200 hover:border-gold-600 transition-all block group shadow-xs hover:shadow-sm"
       data-phone={t.contact.phoneValue}
     >
       <div class="flex items-center gap-3 mb-2">
-        <span class="w-9 h-9 rounded-lg bg-navy-900 border border-gold-500/30 flex items-center justify-center text-gold-400 text-lg">📞</span>
+        <span class="w-9 h-9 rounded-[2px] bg-navy-900 border border-navy-800 flex items-center justify-center text-gold-400 text-lg">📞</span>
         <div>
-          <span class="block text-xs text-slate-400 uppercase font-semibold">{t.contact.phoneLabel}</span>
-          <span class="text-sm font-bold text-slate-100 group-hover:text-gold-300 transition-colors">{t.contact.phoneValue}</span>
+          <span class="block text-xs text-slate-500 uppercase font-bold">{t.contact.phoneLabel}</span>
+          <span class="text-sm font-bold text-navy-950 group-hover:text-gold-700 transition-colors">{t.contact.phoneValue}</span>
         </div>
       </div>
-      <span class="text-xs text-slate-400 block">{t.contact.phoneMobile}</span>
+      <span class="text-xs text-slate-500 block">{t.contact.phoneMobile}</span>
     </a>
 
     <!-- Email Inquiries -->
     <a
       href={`mailto:${t.contact.emailValue}`}
-      class="track-email reveal-init stagger-2 glass-card glass-card-hover rounded-2xl p-5 border border-gold-500/20 block group"
+      class="track-email reveal-init stagger-2 rounded-[2px] p-5 bg-white border border-slate-200 hover:border-gold-600 transition-all block group shadow-xs hover:shadow-sm"
       data-email={t.contact.emailValue}
     >
       <div class="flex items-center gap-3 mb-2">
-        <span class="w-9 h-9 rounded-lg bg-navy-900 border border-gold-500/30 flex items-center justify-center text-gold-400 text-lg">✉️</span>
+        <span class="w-9 h-9 rounded-[2px] bg-navy-900 border border-navy-800 flex items-center justify-center text-gold-400 text-lg">✉️</span>
         <div class="min-w-0">
-          <span class="block text-xs text-slate-400 uppercase font-semibold">{t.contact.emailLabel}</span>
-          <span class="text-sm font-bold text-slate-100 group-hover:text-gold-300 transition-colors truncate block">{t.contact.emailValue}</span>
+          <span class="block text-xs text-slate-500 uppercase font-bold">{t.contact.emailLabel}</span>
+          <span class="text-sm font-bold text-navy-950 group-hover:text-gold-700 transition-colors truncate block">{t.contact.emailValue}</span>
         </div>
       </div>
-      <span class="text-xs text-slate-400 block">ตอบกลับภายใน 24 ชม.</span>
+      <span class="text-xs text-slate-500 block">ตอบกลับภายใน 24 ชม.</span>
     </a>
 
     <!-- LINE Official -->
@@ -63,12 +63,12 @@ const t = useTranslations(lang);
       href="https://line.me/R/ti/p/@vanguardlaw"
       target="_blank"
       rel="noopener noreferrer"
-      class="track-line reveal-init stagger-3 glass-card glass-card-hover rounded-2xl p-5 border border-[#06C755]/30 bg-[#06C755]/5 block group"
+      class="track-line reveal-init stagger-3 rounded-[2px] p-5 bg-white border border-[#06C755]/30 hover:border-[#06C755] transition-all block group shadow-xs"
     >
       <div class="flex items-center gap-3">
-        <span class="w-9 h-9 rounded-lg bg-[#06C755]/20 border border-[#06C755]/40 flex items-center justify-center text-[#06C755] font-bold text-base">L</span>
+        <span class="w-9 h-9 rounded-[2px] bg-[#06C755]/15 border border-[#06C755]/40 flex items-center justify-center text-[#06C755] font-black text-base">L</span>
         <div>
-          <span class="block text-xs text-slate-400 uppercase font-semibold">{t.contact.lineLabel}</span>
+          <span class="block text-xs text-slate-500 uppercase font-bold">{t.contact.lineLabel}</span>
           <span class="text-sm font-bold text-[#06C755]">{t.contact.lineValue}</span>
         </div>
       </div>
@@ -77,12 +77,12 @@ const t = useTranslations(lang);
     <!-- WeChat -->
     <div
       id="wechat"
-      class="reveal-init stagger-4 glass-card rounded-2xl p-5 border border-[#07C160]/30 bg-[#07C160]/5"
+      class="reveal-init stagger-4 rounded-[2px] p-5 bg-white border border-[#07C160]/30 shadow-xs"
     >
       <div class="flex items-center gap-3">
-        <span class="w-9 h-9 rounded-lg bg-[#07C160]/20 border border-[#07C160]/40 flex items-center justify-center text-[#07C160] font-bold text-base">微</span>
+        <span class="w-9 h-9 rounded-[2px] bg-[#07C160]/15 border border-[#07C160]/40 flex items-center justify-center text-[#07C160] font-black text-base">微</span>
         <div>
-          <span class="block text-xs text-slate-400 uppercase font-semibold">{t.contact.wechatLabel}</span>
+          <span class="block text-xs text-slate-500 uppercase font-bold">{t.contact.wechatLabel}</span>
           <span class="text-sm font-bold text-[#07C160]">{t.contact.wechatValue}</span>
         </div>
       </div>
@@ -90,12 +90,12 @@ const t = useTranslations(lang);
   </div>
 
   <!-- Business Hours -->
-  <div class="reveal-init glass-card rounded-2xl p-6 border border-slate-800">
+  <div class="reveal-init rounded-[2px] p-6 bg-white border border-slate-200 shadow-xs">
     <div class="flex items-center gap-3">
       <span class="text-xl">🕒</span>
       <div>
-        <h4 class="text-sm font-bold text-white mb-1">{t.contact.hoursLabel}</h4>
-        <p class="text-xs sm:text-sm text-slate-300">{t.contact.hoursValue}</p>
+        <h4 class="text-sm font-bold text-navy-950 mb-1">{t.contact.hoursLabel}</h4>
+        <p class="text-xs sm:text-sm text-slate-600">{t.contact.hoursValue}</p>
       </div>
     </div>
   </div>

@@ -27,58 +27,58 @@ const t = useTranslations(lang);
   <main class="pt-12 pb-24">
     <!-- Header Section -->
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center mb-16">
-      <div class="reveal-init inline-block px-3 py-1 rounded-full bg-navy-900 border border-gold-500/30 text-gold-300 text-xs font-semibold uppercase tracking-wider mb-4">
+      <div class="reveal-init inline-block px-3 py-1 rounded-[2px] bg-gold-100 border border-gold-300 text-gold-800 text-xs font-bold uppercase tracking-wider mb-4">
         {t.servicesSection.sectionBadge}
       </div>
-      <h1 class="reveal-init stagger-1 text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white tracking-tight mb-6">
+      <h1 class="reveal-init stagger-1 text-4xl sm:text-5xl lg:text-6xl font-extrabold text-navy-950 tracking-tight mb-6">
         {t.servicesSection.title}
       </h1>
-      <p class="reveal-init stagger-2 max-w-3xl mx-auto text-base sm:text-lg text-slate-300 leading-relaxed">
+      <p class="reveal-init stagger-2 max-w-3xl mx-auto text-base sm:text-lg text-slate-600 leading-relaxed">
         {t.servicesSection.subtitle}
       </p>
     </div>
 
     <!-- Practice Areas Grid -->
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
         {t.services.map((service, index) => (
           <article
             class:list={[
-              "reveal-init glass-card glass-card-hover rounded-2xl p-8 flex flex-col justify-between group",
+              "reveal-init rounded-[2px] p-8 flex flex-col justify-between group bg-white border border-slate-200/90 shadow-sm glass-card-hover",
               `stagger-${(index % 3) + 1}`
             ]}
           >
             <div>
-              <div class="w-14 h-14 rounded-xl bg-navy-900 border border-gold-500/30 flex items-center justify-center text-gold-400 mb-6 group-hover:bg-gold-500 group-hover:text-navy-950 group-hover:border-gold-400 transition-all duration-300">
-                <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <div class="w-12 h-12 rounded-[2px] bg-navy-900 border border-navy-800 flex items-center justify-center text-gold-400 mb-6 group-hover:bg-gold-600 group-hover:text-white transition-all duration-300">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                   <path d="M12 2v20" />
                   <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" />
                 </svg>
               </div>
 
-              <h2 class="text-2xl font-bold text-slate-100 group-hover:text-gold-300 transition-colors mb-3">
+              <h2 class="text-xl font-bold text-navy-950 group-hover:text-gold-700 transition-colors mb-3 min-h-[56px] flex items-start">
                 {service.title}
               </h2>
 
-              <p class="text-sm text-slate-300 leading-relaxed mb-6">
+              <p class="text-sm text-slate-600 leading-relaxed mb-6 min-h-[68px]">
                 {service.shortDesc}
               </p>
 
               <!-- Preview Bullet Points -->
-              <ul class="space-y-2 mb-8 text-xs text-slate-400">
+              <ul class="space-y-2 mb-8 text-xs text-slate-600 min-h-[72px]">
                 {service.keyPoints.slice(0, 3).map((point) => (
                   <li class="flex items-start gap-2">
-                    <span class="text-gold-400 mt-0.5">•</span>
+                    <span class="text-gold-600 font-bold mt-0.5">•</span>
                     <span class="line-clamp-2">{point}</span>
                   </li>
                 ))}
               </ul>
             </div>
 
-            <div class="pt-5 border-t border-slate-800/80">
+            <div class="pt-5 border-t border-slate-100">
               <a
                 href={`/${lang}/services/${service.slug}/`}
-                class="inline-flex items-center text-sm font-semibold text-gold-400 group-hover:text-gold-300 transition-colors"
+                class="inline-flex items-center text-xs font-bold uppercase tracking-wider text-navy-900 group-hover:text-gold-700 transition-colors"
               >
                 <span>{t.servicesSection.learnMore}</span>
                 <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 ml-1.5 transform group-hover:translate-x-1.5 transition-transform" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">

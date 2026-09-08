@@ -9,18 +9,18 @@ const { lang } = Astro.props;
 const t = useTranslations(lang);
 ---
 
-<section id="services" class="py-20 lg:py-28 relative">
+<section id="services" class="py-20 lg:py-28 relative bg-slate-50/60">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     
     <!-- Section Header -->
     <div class="text-center max-w-3xl mx-auto mb-16">
-      <div class="reveal-init inline-block px-3 py-1 rounded-full bg-navy-900 border border-gold-500/30 text-gold-300 text-xs font-semibold uppercase tracking-wider mb-3">
+      <div class="reveal-init inline-block px-3 py-1 rounded-[2px] bg-gold-100 border border-gold-300 text-gold-800 text-xs font-bold uppercase tracking-wider mb-3">
         {t.servicesSection.sectionBadge}
       </div>
-      <h2 class="reveal-init stagger-1 text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-white mb-4">
+      <h2 class="reveal-init stagger-1 text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-navy-950 mb-4">
         {t.servicesSection.title}
       </h2>
-      <p class="reveal-init stagger-2 text-base sm:text-lg text-slate-400">
+      <p class="reveal-init stagger-2 text-base sm:text-lg text-slate-600 leading-relaxed">
         {t.servicesSection.subtitle}
       </p>
     </div>
@@ -30,13 +30,13 @@ const t = useTranslations(lang);
       {t.services.map((service, index) => (
         <article
           class:list={[
-            "reveal-init glass-card glass-card-hover rounded-2xl p-7 flex flex-col justify-between group",
+            "reveal-init glass-card glass-card-hover rounded-[2px] p-8 flex flex-col justify-between group bg-white border border-slate-200/90 shadow-sm",
             `stagger-${(index % 3) + 1}`
           ]}
         >
           <div>
-            <!-- Icon Frame -->
-            <div class="w-12 h-12 rounded-xl bg-navy-900 border border-gold-500/30 flex items-center justify-center text-gold-400 mb-6 group-hover:bg-gold-500 group-hover:text-navy-950 group-hover:border-gold-400 transition-all duration-300">
+            <!-- Sharp Icon Frame -->
+            <div class="w-12 h-12 rounded-[2px] bg-navy-900 border border-navy-800 flex items-center justify-center text-gold-400 mb-6 group-hover:bg-gold-600 group-hover:text-white transition-all duration-300">
               <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                 <path d="M12 2v20" />
                 <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" />
@@ -44,24 +44,24 @@ const t = useTranslations(lang);
             </div>
 
             <!-- Title -->
-            <h3 class="text-xl font-bold text-slate-100 group-hover:text-gold-300 transition-colors mb-3 min-h-[56px] flex items-start">
+            <h3 class="text-xl font-bold text-navy-950 group-hover:text-gold-700 transition-colors mb-3 min-h-[56px] flex items-start">
               {service.title}
             </h3>
 
             <!-- Description -->
-            <p class="text-sm text-slate-400 leading-relaxed mb-6 min-h-[68px]">
+            <p class="text-sm text-slate-600 leading-relaxed mb-6 min-h-[68px]">
               {service.shortDesc}
             </p>
           </div>
 
           <!-- Bottom Action Link -->
-          <div class="pt-4 border-t border-slate-800/80">
+          <div class="pt-4 border-t border-slate-100">
             <a
               href={`/${lang}/services/${service.slug}/`}
-              class="inline-flex items-center text-sm font-semibold text-gold-400 group-hover:text-gold-300 transition-colors"
+              class="inline-flex items-center text-xs font-bold uppercase tracking-wider text-navy-900 group-hover:text-gold-700 transition-colors"
             >
               <span>{t.servicesSection.learnMore}</span>
-              <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 ml-1.5 transform group-hover:translate-x-1 transition-transform" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 ml-1.5 transform group-hover:translate-x-1.5 transition-transform" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                 <path d="M5 12h14" />
                 <path d="m12 5 7 7-7 7" />
               </svg>
@@ -75,7 +75,7 @@ const t = useTranslations(lang);
     <div class="reveal-init text-center mt-12">
       <a
         href={`/${lang}/services/`}
-        class="inline-flex items-center justify-center px-6 py-3 text-sm font-semibold text-slate-200 hover:text-white rounded-xl bg-navy-900 border border-slate-700 hover:border-gold-500/40 transition-all hover:scale-105"
+        class="inline-flex items-center justify-center px-7 py-3.5 text-xs font-bold uppercase tracking-wider text-navy-950 hover:text-white rounded-[2px] bg-white hover:bg-navy-900 border border-slate-300 hover:border-navy-900 transition-all duration-200 shadow-xs"
       >
         {t.servicesSection.viewAll}
       </a>

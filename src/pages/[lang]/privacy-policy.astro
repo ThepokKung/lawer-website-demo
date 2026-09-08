@@ -108,24 +108,24 @@ const privacy = {
     <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
       
       <div class="mb-12 text-center">
-        <div class="reveal-init inline-block px-3 py-1 rounded-full bg-navy-900 border border-gold-500/30 text-gold-300 text-xs font-semibold uppercase tracking-wider mb-4">
+        <div class="reveal-init inline-block px-3 py-1 rounded-[2px] bg-gold-100 border border-gold-300 text-gold-800 text-xs font-bold uppercase tracking-wider mb-4">
           Legal Disclosures
         </div>
-        <h1 class="reveal-init stagger-1 text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white tracking-tight mb-4">
+        <h1 class="reveal-init stagger-1 text-3xl sm:text-4xl lg:text-5xl font-extrabold text-navy-950 tracking-tight mb-4">
           {privacy.title}
         </h1>
-        <p class="reveal-init stagger-2 text-xs sm:text-sm text-gold-400 font-medium">
+        <p class="reveal-init stagger-2 text-xs sm:text-sm text-gold-700 font-semibold">
           {privacy.updated}
         </p>
       </div>
 
-      <div class="reveal-init glass-card rounded-3xl p-8 sm:p-12 border border-gold-500/20 space-y-8 text-slate-300 text-sm sm:text-base leading-relaxed">
+      <div class="reveal-init rounded-[2px] p-8 sm:p-12 border border-slate-200 bg-white shadow-sm space-y-8 text-slate-700 text-sm sm:text-base leading-relaxed">
         {privacy.sections.map((section) => (
           <div>
-            <h2 class="text-xl font-bold text-white mb-3">
+            <h2 class="text-xl font-bold text-navy-950 mb-3">
               {section.heading}
             </h2>
-            <p class="text-slate-300 leading-relaxed">
+            <p class="text-slate-600 leading-relaxed">
               {section.body}
             </p>
           </div>

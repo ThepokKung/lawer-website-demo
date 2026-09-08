@@ -5,20 +5,34 @@ export default {
     extend: {
       colors: {
         navy: {
-          950: '#040814',
-          900: '#060D1E',
-          850: '#0A142F',
-          800: '#0E1D43',
-          700: '#15295C',
-          600: '#1F3B82'
+          950: '#060F1E',
+          900: '#0B1B3D',
+          850: '#102A56',
+          800: '#173974',
+          700: '#1E4A94',
+          600: '#255DB7'
         },
         gold: {
-          300: '#F5E2B3',
-          400: '#DFBA73',
-          500: '#C5A059',
-          600: '#A4823E',
-          700: '#7F6229'
+          100: '#F9F5EC',
+          200: '#F2E7CB',
+          300: '#E5D19E',
+          400: '#D5B76C',
+          500: '#B38E46',
+          600: '#9A7432',
+          700: '#7C5B23',
+          800: '#5F4418'
         }
+      },
+      borderRadius: {
+        none: '0px',
+        xs: '1px',
+        sm: '2px',
+        DEFAULT: '2px',
+        md: '4px',
+        lg: '6px',
+        xl: '8px',
+        '2xl': '10px',
+        '3xl': '12px'
       },
       fontFamily: {
         sans: ['Inter', 'system-ui', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'sans-serif']

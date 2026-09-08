@@ -4,87 +4,78 @@
 
 @layer base {
   :root {
-    --color-bg-deep: #060D1E;
-    --color-bg-navy: #0A142F;
-    --color-gold: #C5A059;
-    --color-gold-light: #DFBA73;
+    --color-bg-base: #F8FAFC;
+    --color-surface: #FFFFFF;
+    --color-navy: #0B1B3D;
+    --color-gold: #B38E46;
+    --color-gold-hover: #9A7432;
+    --color-border: #E2E8F0;
   }
 
   html {
     scroll-behavior: smooth;
-    background-color: #060D1E;
-    color: #F8FAFC;
+    background-color: #F8FAFC;
+    color: #0F172A;
     font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   }
 
   body {
     min-height: 100vh;
     overflow-x: hidden;
-    background: radial-gradient(circle at 50% 0%, #0D1C44 0%, #060D1E 70%);
+    background-color: #F8FAFC;
+    color: #1E293B;
   }
 
-  /* Custom luxury scrollbar */
+  /* Clean executive scrollbar */
   ::-webkit-scrollbar {
-    width: 8px;
+    width: 7px;
   }
   ::-webkit-scrollbar-track {
-    background: #060D1E;
+    background: #F1F5F9;
   }
   ::-webkit-scrollbar-thumb {
-    background: #1E293B;
-    border-radius: 4px;
-    border: 1px solid rgba(197, 160, 89, 0.2);
+    background: #CBD5E1;
+    border-radius: 2px;
   }
   ::-webkit-scrollbar-thumb:hover {
-    background: #C5A059;
+    background: #B38E46;
   }
 }
 
 @layer utilities {
   .glass-nav {
-    background: rgba(6, 13, 30, 0.8);
-    backdrop-filter: blur(20px);
-    -webkit-backdrop-filter: blur(20px);
-    border-bottom: 1px solid rgba(197, 160, 89, 0.15);
+    background: rgba(255, 255, 255, 0.94);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border-bottom: 1px solid #E2E8F0;
   }
 
   .glass-card {
-    background: rgba(10, 20, 47, 0.65);
-    backdrop-filter: blur(16px);
-    -webkit-backdrop-filter: blur(16px);
-    border: 1px solid rgba(197, 160, 89, 0.15);
+    background: #FFFFFF;
+    border: 1px solid #E2E8F0;
+    box-shadow: 0 1px 3px 0 rgba(15, 23, 42, 0.04);
   }
 
   .glass-card-hover {
-    transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+    transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
   }
 
   .glass-card-hover:hover {
-    transform: translateY(-4px);
-    border-color: rgba(197, 160, 89, 0.45);
-    box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.7), 0 0 25px -5px rgba(197, 160, 89, 0.25);
+    border-color: #B38E46;
+    box-shadow: 0 12px 24px -6px rgba(15, 23, 42, 0.08), 0 0 0 1px #B38E46;
+    transform: translateY(-3px);
   }
 
   .gold-gradient-text {
-    background: linear-gradient(135deg, #FFF0D4 0%, #DFBA73 40%, #C5A059 70%, #A4823E 100%);
+    background: linear-gradient(135deg, #0B1B3D 0%, #173974 40%, #B38E46 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }
 
-  .gold-border-glow {
-    position: relative;
-  }
-  .gold-border-glow::after {
-    content: '';
-    position: absolute;
-    inset: -1px;
-    border-radius: inherit;
-    padding: 1px;
-    background: linear-gradient(135deg, rgba(223, 186, 115, 0.5), transparent 60%);
-    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-    -webkit-mask-composite: xor;
-    mask-composite: exclude;
-    pointer-events: none;
+  .gold-gradient-text-light {
+    background: linear-gradient(135deg, #FFFFFF 0%, #F3E8CE 50%, #D5B76C 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
   }
 }
 
@@ -94,13 +85,13 @@
    ========================================================== */
 .reveal-init {
   opacity: 0;
-  transform: translateY(32px);
-  transition: opacity 0.85s cubic-bezier(0.16, 1, 0.3, 1), transform 0.85s cubic-bezier(0.16, 1, 0.3, 1);
+  transform: translateY(24px);
+  transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
   will-change: opacity, transform;
 }
 
 .reveal-init.reveal-scale {
-  transform: translateY(24px) scale(0.96);
+  transform: translateY(20px) scale(0.98);
 }
 
 .revealed {
@@ -109,12 +100,12 @@
 }
 
 /* Stagger Delays for child elements */
-.stagger-1 { transition-delay: 80ms; }
-.stagger-2 { transition-delay: 160ms; }
-.stagger-3 { transition-delay: 240ms; }
-.stagger-4 { transition-delay: 320ms; }
-.stagger-5 { transition-delay: 400ms; }
-.stagger-6 { transition-delay: 480ms; }
+.stagger-1 { transition-delay: 60ms; }
+.stagger-2 { transition-delay: 120ms; }
+.stagger-3 { transition-delay: 180ms; }
+.stagger-4 { transition-delay: 240ms; }
+.stagger-5 { transition-delay: 300ms; }
+.stagger-6 { transition-delay: 360ms; }
 
 @media (prefers-reduced-motion: reduce) {
   .reveal-init {
