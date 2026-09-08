@@ -7,8 +7,8 @@ export const zh = {
     consultationBtn: "预约法律咨询"
   },
   brand: {
-    name: "先锋国际律师事务所",
-    legalName: "先锋国际法律顾问有限责任公司 (Vanguard & Partners)",
+    name: "蒙克莱尔·斯特林国际律师事务所",
+    legalName: "蒙克莱尔·斯特林法律顾问有限责任公司 (Montclaire & Sterling)",
     tagline: "明法笃行，鼎立相助，护航商业成功",
     description: "泰国领先的涉外综合性商业律师事务所，精于外商直接投资、企业合规、大型诉讼仲裁、房地产及私人财富管理，秉承专业严谨与最高职业操守。"
   },
@@ -22,13 +22,13 @@ export const zh = {
     badge: "泰国顶尖涉外法律顾问团队",
     title1: "精准法理剖析",
     title2: "护航出海企业稳健长远",
-    lead: "先锋国际律所（Vanguard & Partners）融合对泰国本土成文法与判例的深刻洞察与国际顶尖商事思维，以中英泰三语为跨国企业及投资者铸就坚不可摧的法律屏障。",
+    lead: "蒙克莱尔·斯特林律所（Montclaire & Sterling）融合对泰国本土成文法与判例的深刻洞察与国际顶尖商事思维，以中英泰三语为跨国企业及投资者铸就坚不可摧的法律屏障。",
     ctaConsultation: "预约专属保密咨询",
     ctaServices: "浏览全部业务领域",
     trustNote: "严格恪守律师职业保密特权 • 中文、英文、泰文无障碍全方位服务"
   },
   whyUs: {
-    sectionBadge: "选择先锋",
+    sectionBadge: "选择蒙克莱尔·斯特林",
     title: "铸就卓越信誉的核心优势",
     subtitle: "我们不仅是您的法律代理人，更是深谙商业逻辑、助您预判风险并确立市场竞争优势的战略伙伴。",
     pillars: [
@@ -162,19 +162,22 @@ export const zh = {
         name: "帕塔拉朋·西提德 (Pattarapon Sitthidet)",
         role: "管理合伙人 / 诉讼与争议解决部主任",
         credentials: "泰国最高法院出庭大律师 (Barrister) • 朱拉隆功大学法学硕士 (LL.M.) • 泰国律师公会常务会员",
-        experience: "执业逾 22 年，专攻重大商事合同纠纷、外资重大维权、跨国职务侵占辩护及国际商事仲裁，具备卓越法庭影响力。"
+        experience: "执业逾 22 年，专攻重大商事合同纠纷、外资重大维权、跨国职务侵占辩护及国际商事仲裁，具备卓越法庭影响力。",
+        image: "/images/partner-chaiwat.jpg"
       },
       {
         name: "安查莉·拉塔纳乔特 (Anchalee Rattanachot)",
         role: "高级合伙人 / 公司法与外商投资部主任",
         credentials: "法政大学法学学士 • 伦敦大学国际商法硕士 • 泰国公证人律师认证资格",
-        experience: "擅长搭建外资合规控股架构、申请泰国 BOI 最高免税优惠及主导数十亿泰铢规模的跨国企业收购与兼并项目。"
+        experience: "擅长搭建外资合规控股架构、申请泰国 BOI 最高免税优惠及主导数十亿泰铢规模的跨国企业收购与兼并项目。",
+        image: "/images/partner-kanya.jpg"
       },
       {
         name: "威斯鲁·猜普里查 (Wisrut Chaipreecha)",
         role: "合伙人 / 泰中法律事务部主任 (China Desk)",
         credentials: "泰国名校法学荣誉学士 • 北京大学法学院研究生 (LL.M.) • 中文母语级流利",
-        experience: "中国出海企业常年首席泰方法律顾问，深谙两国商业文化与政策差异，长期为数百家中国制造业巨头及高科技企业赴泰投资护航。"
+        experience: "中国出海企业常年首席泰方法律顾问，深谙两国商业文化与政策差异，长期为数百家中国制造业巨头及高科技企业赴泰投资护航。",
+        image: "/images/partner-michael.jpg"
       }
     ]
   },
@@ -189,13 +192,13 @@ export const zh = {
     phoneValue: "+66 2 123 4567",
     phoneMobile: "+66 81 999 8888 (中文专线)",
     emailLabel: "官方问询邮箱",
-    emailValue: "contact@vanguard-legal.example.com",
+    emailValue: "contact@ms-legal.example.com",
     hoursLabel: "对外接待时间",
     hoursValue: "周一至周五: 08:30 – 18:00 (周末仅接受提前预约)",
     lineLabel: "LINE 官方账号",
-    lineValue: "@vanguardlaw",
+    lineValue: "@mslegal",
     wechatLabel: "微信客服号 (WeChat)",
-    wechatValue: "VanguardLawBKK",
+    wechatValue: "MSLegalBKK",
     whatsappLabel: "WhatsApp 专线",
     whatsappValue: "+66 81 999 8888",
     formTitle: "在线预约法律评估",

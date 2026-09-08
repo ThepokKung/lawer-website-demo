@@ -3,7 +3,7 @@ import tailwind from '@astrojs/tailwind';
 import sitemap from '@astrojs/sitemap';
 
 export default defineConfig({
-  site: 'https://vanguard-legal.example.com',
+  site: 'https://ms-legal.example.com',
   output: 'static',
   i18n: {
     defaultLocale: 'th',

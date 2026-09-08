@@ -7,8 +7,8 @@ export const en = {
     consultationBtn: "Book Consultation"
   },
   brand: {
-    name: "Vanguard & Partners",
-    legalName: "Vanguard & Partners Legal Counsel Co., Ltd.",
+    name: "Montclaire & Sterling",
+    legalName: "Montclaire & Sterling Legal Counsel Co., Ltd.",
     tagline: "Precision in Law. Excellence in Counsel.",
     description: "A premier international law firm in Bangkok providing comprehensive corporate counsel, foreign direct investment structuring, dispute resolution, and private wealth management with unyielding integrity."
   },
@@ -22,13 +22,13 @@ export const en = {
     badge: "Executive Legal Counsel & Advocacy",
     title1: "Strategic Legal Precision",
     title2: "Safeguarding Your Enterprise",
-    lead: "Vanguard & Partners blends deep mastery of Thai jurisprudence with sophisticated international commercial insight to vigorously protect your enterprise and wealth.",
+    lead: "Montclaire & Sterling blends deep mastery of Thai jurisprudence with sophisticated international commercial insight to vigorously protect your enterprise and wealth.",
     ctaConsultation: "Schedule a Consultation",
     ctaServices: "Explore Practice Areas",
     trustNote: "Strict Professional Privilege Guaranteed • Fluent in Thai, English, and Chinese"
   },
   whyUs: {
-    sectionBadge: "Why Vanguard",
+    sectionBadge: "Why Montclaire & Sterling",
     title: "The Pillars of Our Distinction",
     subtitle: "More than just legal representatives, we serve as strategic partners mitigating existential risks and forging decisive commercial advantages.",
     pillars: [
@@ -82,7 +82,7 @@ export const en = {
       title: "Litigation & Commercial Dispute Resolution",
       shortDesc: "Aggressive courtroom trial advocacy, civil and criminal defense, commercial disputes, and domestic/international arbitration (THAC, SIAC).",
       icon: "gavel",
-      overview: "When commercial disputes escalate, Vanguard's courtroom trial attorneys stand resolute. We bring formidable oral advocacy, rigorous cross-examination, and calculated negotiation strategies.",
+      overview: "When commercial disputes escalate, Montclaire & Sterling's courtroom trial attorneys stand resolute. We bring formidable oral advocacy, rigorous cross-examination, and calculated negotiation strategies.",
       keyPoints: [
         "Complex commercial litigation, breach of contract, and damages recovery",
         "White-collar criminal defense, fraud, embezzlement, and director liability",
@@ -162,19 +162,22 @@ export const en = {
         name: "Pattarapon Sitthidet",
         role: "Managing Partner & Head of Dispute Resolution",
         credentials: "Barrister-at-Law (Thai Bar) • LL.M. Chulalongkorn University • Member of the Lawyers Council of Thailand",
-        experience: "Over 22 years representing Fortune 500 conglomerates in complex commercial litigation, economic white-collar defense, and international arbitrations."
+        experience: "Over 22 years representing Fortune 500 conglomerates in complex commercial litigation, economic white-collar defense, and international arbitrations.",
+        image: "/images/partner-chaiwat.jpg"
       },
       {
         name: "Anchalee Rattanachot",
         role: "Senior Partner — Corporate & Foreign Direct Investment",
         credentials: "LL.B. (Thammasat) • LL.M. International Commercial Law (London) • Certified Notarial Services Attorney",
-        experience: "Specialist in structuring foreign corporate investments, multimillion-dollar M&A transactions, and regulatory BOI incentivization."
+        experience: "Specialist in structuring foreign corporate investments, multimillion-dollar M&A transactions, and regulatory BOI incentivization.",
+        image: "/images/partner-kanya.jpg"
       },
       {
         name: "Wisrut Chaipreecha",
         role: "Partner & Head of China-Thailand Desk",
         credentials: "LL.B. (Honors) • LL.M. Peking University (北京大学) • Fluent Native-Level Mandarin",
-        experience: "Lead counsel to major state-owned and private Chinese enterprises, tech firms, and high-net-worth investors establishing regional headquarters in Thailand."
+        experience: "Lead counsel to major state-owned and private Chinese enterprises, tech firms, and high-net-worth investors establishing regional headquarters in Thailand.",
+        image: "/images/partner-michael.jpg"
       }
     ]
   },
@@ -189,13 +192,13 @@ export const en = {
     phoneValue: "+66 2 123 4567",
     phoneMobile: "+66 81 999 8888",
     emailLabel: "Official Email",
-    emailValue: "contact@vanguard-legal.example.com",
+    emailValue: "contact@ms-legal.example.com",
     hoursLabel: "Office Hours",
     hoursValue: "Monday – Friday: 08:30 – 18:00 (Weekends by prior appointment)",
     lineLabel: "LINE Official ID",
-    lineValue: "@vanguardlaw",
+    lineValue: "@mslegal",
     wechatLabel: "WeChat Official ID",
-    wechatValue: "VanguardLawBKK",
+    wechatValue: "MSLegalBKK",
     whatsappLabel: "WhatsApp Direct",
     whatsappValue: "+66 81 999 8888",
     formTitle: "Consultation Request Form",

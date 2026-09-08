@@ -66,11 +66,26 @@ const ethics = {
             </h2>
             <p class="text-sm sm:text-base text-slate-600 leading-relaxed">
               {lang === 'th'
-                ? 'สำนักงานกฎหมาย แวนการ์ด แอนด์ พาร์ทเนอร์ส ก่อตั้งขึ้นด้วยวิสัยทัศน์ที่ต้องการยกระดับมาตรฐานการให้บริการทางกฎหมายในประเทศไทยให้ทัดเทียมสากล เราให้บริการทั้งแก่องค์กรธุรกิจชั้นนำ บริษัทข้ามชาติ และบุคคลทั่วไป ด้วยความเชี่ยวชาญเฉพาะทางในแต่ละสาขากฎหมาย'
+                ? 'สำนักงานกฎหมาย มงต์แคลร์ แอนด์ สเตอร์ลิง ก่อตั้งขึ้นด้วยวิสัยทัศน์ที่ต้องการยกระดับมาตรฐานการให้บริการทางกฎหมายในประเทศไทยให้ทัดเทียมสากล เราให้บริการทั้งแก่องค์กรธุรกิจชั้นนำ บริษัทข้ามชาติ และบุคคลทั่วไป ด้วยความเชี่ยวชาญเฉพาะทางในแต่ละสาขากฎหมาย'
                 : lang === 'zh'
-                ? '先锋国际律所（Vanguard & Partners）自创立以来，始终立足曼谷商业核心，致力于消除外资企业与本地法律制度之间的沟通鸿沟与风控盲区。我们以极高的职业胜诉率和商业信誉，成为众多跨国集团进军泰国的首选法务军师。'
-                : 'Founded in 2004, Vanguard & Partners was forged with a singular mission: to deliver international-tier legal precision within Thailand’s evolving statutory environment. We have represented Fortune 500 multinationals, innovative private enterprises, and prominent families across critical junctures.'}
+                ? '蒙克莱尔·斯特林律所（Montclaire & Sterling）自创立以来，始终立足曼谷商业核心，致力于消除外资企业与本地法律制度之间的沟通鸿沟与风控盲区。我们以极高的职业胜诉率和商业信誉，成为众多跨国集团进军泰国的首选法务军师。'
+                : 'Founded in 2004, Montclaire & Sterling was forged with a singular mission: to deliver international-tier legal precision within Thailand’s evolving statutory environment. We have represented Fortune 500 multinationals, innovative private enterprises, and prominent families across critical junctures.'}
             </p>
+
+            <!-- Boardroom Photo -->
+            <div class="rounded-[2px] overflow-hidden border border-slate-200 shadow-sm relative group">
+              <img
+                src="/images/office-boardroom.jpg"
+                alt="Montclaire & Sterling Sathorn Headquarters Boardroom"
+                class="w-full h-56 object-cover filter brightness-[1.02] contrast-[1.02] group-hover:scale-105 transition-transform duration-500"
+                loading="lazy"
+                width="600"
+                height="300"
+              />
+              <div class="absolute bottom-2 left-2 px-2.5 py-1 rounded-[2px] bg-navy-950/80 backdrop-blur-md text-[11px] text-white font-medium border border-white/10">
+                📍 Sathorn Square Tower 28th Fl. Executive Suite
+              </div>
+            </div>
           </div>
 
           <!-- Ethics Box -->
@@ -104,11 +119,17 @@ const ethics = {
         {t.teamSection.members.map((member, idx) => (
           <div class:list={["reveal-init rounded-[2px] p-8 flex flex-col justify-between bg-white border border-slate-200/90 shadow-sm glass-card-hover", `stagger-${idx + 1}`]}>
             <div>
-              <div class="w-20 h-20 rounded-[2px] bg-navy-900 border border-navy-800 flex items-center justify-center text-gold-400 mb-6 shadow-sm">
-                <svg xmlns="http://www.w3.org/2000/svg" class="w-10 h-10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2" />
-                  <circle cx="12" cy="7" r="4" />
-                </svg>
+              <!-- Sharp Real Attorney Photo -->
+              <div class="relative w-full aspect-[4/3] rounded-[2px] overflow-hidden border border-slate-200 mb-6 shadow-xs group/photo bg-slate-100">
+                <img
+                  src={member.image}
+                  alt={member.name}
+                  class="w-full h-full object-cover object-top filter brightness-[1.02] contrast-[1.02] group-hover/photo:scale-105 transition-transform duration-500"
+                  loading="lazy"
+                  width="400"
+                  height="300"
+                />
+                <div class="absolute inset-0 bg-gradient-to-t from-navy-950/20 via-transparent to-transparent pointer-events-none"></div>
               </div>
 
               <h3 class="text-xl font-bold text-navy-950 mb-1">{member.name}</h3>

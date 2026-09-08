@@ -1,8 +1,8 @@
 # AGENT.md - Project Context & AI Agent Guidelines
 
-**Project:** Vanguard & Partners Legal Counsel (สำนักงานกฎหมาย แวนการ์ด แอนด์ พาร์ทเนอร์ส / 先锋国际律师事务所)  
+**Project:** Montclaire & Sterling Legal Counsel (สำนักงานกฎหมาย มงต์แคลร์ แอนด์ สเตอร์ลิง / 蒙克莱尔·斯特林国际律师事务所)  
 **Framework:** Astro 5 (Static Site Generation)  
-**Design Paradigm:** Prestige Executive (Midnight Navy `#060D1E`, Champagne Gold `#C5A059`) with Apple-grade smooth micro-interactions.
+**Design Paradigm:** Architectural Sharp & High-Contrast Light Corporate Theme (Off-White `#F8FAFC`, Royal Navy `#0B1B3D`, Brushed Gold `#B38E46`, `rounded-[2px]`) with Apple-grade smooth micro-interactions.
 
 ---
 

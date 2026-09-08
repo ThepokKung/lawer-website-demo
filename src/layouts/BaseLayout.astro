@@ -17,7 +17,7 @@ const {
   canonical
 } = Astro.props;
 
-const siteUrl = import.meta.env.PUBLIC_SITE_URL || 'https://vanguard-legal.example.com';
+const siteUrl = import.meta.env.PUBLIC_SITE_URL || 'https://ms-legal.example.com';
 const gtmId = import.meta.env.PUBLIC_GTM_ID || 'GTM-XXXXXXX';
 const clarityId = import.meta.env.PUBLIC_CLARITY_ID || '';
 
@@ -33,15 +33,15 @@ const zhUrl = new URL(`/zh${pathWithoutLang === '/' ? '' : pathWithoutLang}`, si
 const schemaData = {
   "@context": "https://schema.org",
   "@type": "LegalService",
-  "name": "Vanguard & Partners Legal Counsel",
+  "name": "Montclaire & Sterling Legal Counsel",
   "alternateName": [
-    "สำนักงานกฎหมาย แวนการ์ด แอนด์ พาร์ทเนอร์ส",
-    "先锋国际律师事务所"
+    "สำนักงานกฎหมาย มงต์แคลร์ แอนด์ สเตอร์ลิง",
+    "蒙克莱尔·斯特林国际律师事务所"
   ],
-  "image": `${siteUrl}/favicon.svg`,
+  "image": `${siteUrl}/images/logo-crest.jpg`,
   "url": siteUrl,
   "telephone": "+66-2-123-4567",
-  "email": "contact@vanguard-legal.example.com",
+  "email": "contact@ms-legal.example.com",
   "address": {
     "@type": "PostalAddress",
     "streetAddress": "88/1 Sathorn Square Tower, 28th Floor, North Sathorn Rd, Silom, Bang Rak",
@@ -102,7 +102,7 @@ const schemaData = {
         window.dataLayer.push(arguments);
       }
       try {
-        var saved = localStorage.getItem('vanguard_legal_cookie_consent');
+        var saved = localStorage.getItem('ms_legal_cookie_consent');
         var parsed = saved ? JSON.parse(saved) : null;
         gtag('consent', 'default', {
           ad_storage: parsed && parsed.marketing ? 'granted' : 'denied',
