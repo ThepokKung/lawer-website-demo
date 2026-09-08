@@ -6,7 +6,7 @@
 
 export const SITE_CONFIG = {
   // Public Site URL
-  url: (import.meta.env.PUBLIC_SITE_URL || 'https://ms-legal.example.com').replace(/\/+$/, ''),
+  url: (import.meta.env.PUBLIC_SITE_URL || 'https://law.thepokkung.space').replace(/\/+$/, ''),
 
   // Firm Information
   firmName: import.meta.env.PUBLIC_FIRM_NAME || 'Montclaire & Sterling Legal Counsel',

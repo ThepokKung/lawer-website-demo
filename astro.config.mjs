@@ -4,7 +4,7 @@ import sitemap from '@astrojs/sitemap';
 import { loadEnv } from 'vite';
 
 const env = loadEnv(process.env.NODE_ENV || 'production', process.cwd(), '');
-const siteUrl = env.PUBLIC_SITE_URL || 'https://ms-legal.example.com';
+const siteUrl = env.PUBLIC_SITE_URL || 'https://law.thepokkung.space';
 
 export default defineConfig({
   site: siteUrl,
