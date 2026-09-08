@@ -1,0 +1,139 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import Navbar from '@/components/common/Navbar.astro';
+import Footer from '@/components/common/Footer.astro';
+import { useTranslations, type SupportedLang } from '@/i18n';
+
+export function getStaticPaths() {
+  return [
+    { params: { lang: 'th' } },
+    { params: { lang: 'en' } },
+    { params: { lang: 'zh' } }
+  ];
+}
+
+const { lang } = Astro.params as { lang: SupportedLang };
+const t = useTranslations(lang);
+
+const privacy = {
+  th: {
+    title: "นโยบายความเป็นส่วนตัว (Privacy Policy)",
+    updated: "ปรับปรุงล่าสุด: กันยายน 2026",
+    sections: [
+      {
+        heading: "1. บทนำและผู้ควบคุมข้อมูลส่วนบุคคล",
+        body: "สำนักงานกฎหมาย แวนการ์ด แอนด์ พาร์ทเนอร์ส ('สำนักงาน') เคารพสิทธิความเป็นส่วนตัวของท่าน และปฏิบัติตามพระราชบัญญัติคุ้มครองข้อมูลส่วนบุคคล พ.ศ. 2562 ('PDPA') อย่างเคร่งครัด เอกสารนี้อธิบายถึงวิธีการที่สำนักงานเก็บรวบรวม ใช้ และเปิดเผยข้อมูลส่วนบุคคลของท่านเมื่อท่านเข้าชมเว็บไซต์หรือติดต่อขอรับคำปรึกษาทางกฎหมาย"
+      },
+      {
+        heading: "2. ข้อมูลส่วนบุคคลที่เราเก็บรวบรวม",
+        body: "สำนักงานอาจเก็บรวบรวมข้อมูลส่วนบุคคลที่ท่านให้ไว้โดยตรงผ่านแบบฟอร์มบนเว็บไซต์ อีเมล หรือโทรศัพท์ ได้แก่: ชื่อ-นามสกุล, ที่อยู่อีเมล, หมายเลขโทรศัพท์, สังกัดองค์กร, และข้อมูลข้อเท็จจริงเบื้องต้นเกี่ยวกับเรื่องที่ท่านต้องการปรึกษาทางกฎหมาย ตลอดจนข้อมูลทางเทคนิค เช่น IP Address และคุกกี้ที่ท่านให้ความยินยอม"
+      },
+      {
+        heading: "3. วัตถุประสงค์และฐานทางกฎหมายในการประมวลผลข้อมูล",
+        body: "เราประมวลผลข้อมูลของท่านเพื่อ: (1) ดำเนินการตามคำขอรับคำปรึกษาทางกฎหมายและการจัดเตรียมสัญญาว่าจ้าง (2) การสื่อสารและแจ้งสถานะความคืบหน้า (3) การปฏิบัติตามหน้าที่ตามกฎหมายวิชาชีพทนายความ และ (4) การรักษาความปลอดภัยของระบบและการป้องกันการกระทำผิดกฎหมาย"
+      },
+      {
+        heading: "4. การรักษาความลับและเอกสิทธิ์ของทนายความ (Attorney-Client Privilege)",
+        body: "ข้อมูลและข้อเท็จจริงทั้งหมดที่ท่านเปิดเผยต่อสำนักงานเพื่อการขอรับคำปรึกษาจะได้รับการปกป้องด้วยเอกสิทธิ์ความลับระหว่างทนายความกับลูกความ สำนักงานจะไม่เปิดเผยข้อมูลดังกล่าวต่อบุคคลภายนอก เว้นแต่จะได้รับความยินยอมเป็นลายลักษณ์อักษรจากท่าน หรือมีคำสั่งศาลตามกฎหมาย"
+      },
+      {
+        heading: "5. สิทธิของเจ้าของข้อมูลส่วนบุคคลตามกฎหมาย PDPA",
+        body: "ท่านมีสิทธิในการ: ขอเข้าถึงและขอรับสำเนาข้อมูลส่วนบุคคล, ขอแก้ไขข้อมูลให้ถูกต้องเป็นปัจจุบัน, ขอลบหรือทำลายข้อมูล, ขอระงับการใช้ข้อมูล, คัดค้านการประมวลผลข้อมูล, และถอนความยินยอมได้ตลอดเวลา โดยสามารถติดต่อเจ้าหน้าที่คุ้มครองข้อมูล (DPO) ของเราได้ที่ contact@vanguard-legal.example.com"
+      }
+    ]
+  },
+  en: {
+    title: "Privacy Policy (PDPA)",
+    updated: "Last Updated: September 2026",
+    sections: [
+      {
+        heading: "1. Data Controller Identification",
+        body: "Vanguard & Partners Legal Counsel Co., Ltd. ('we', 'us', or 'the Firm') adheres strictly to the Thailand Personal Data Protection Act B.E. 2562 ('PDPA') and international privacy frameworks. This document describes how personal data is collected, processed, and safeguarded when using our platform."
+      },
+      {
+        heading: "2. Categories of Personal Data Collected",
+        body: "We collect information provided directly via inquiry forms, emails, or phone: full name, corporate title, email address, phone number, and factual summaries of legal inquiries, alongside technical telemetry (IP address, anonymized analytics cookies)."
+      },
+      {
+        heading: "3. Purposes and Legal Grounds of Processing",
+        body: "Your data is processed under contractual necessity, statutory obligations under the Lawyers Act, and legitimate interests to evaluate conflict of interests, deliver legal advice, formulate retainer engagements, and defend legal claims."
+      },
+      {
+        heading: "4. Attorney-Client Privilege & Strict Confidentiality",
+        body: "All communications transmitted for legal consultation purposes are protected under legal professional privilege. We enforce enterprise-tier encryption and never disclose client communications to third parties absent explicit consent or mandatory judicial subpoena."
+      },
+      {
+        heading: "5. Your Rights Under the PDPA",
+        body: "You retain the right to request access, rectification, erasure, processing restriction, data portability, or consent withdrawal. Direct all inquiries to our designated Data Protection Officer at contact@vanguard-legal.example.com."
+      }
+    ]
+  },
+  zh: {
+    title: "个人数据隐私保护政策 (PDPA)",
+    updated: "最近更新日期：2026年9月",
+    sections: [
+      {
+        heading: "1. 数据控制主体与合规承诺",
+        body: "先锋国际律师事务所（Vanguard & Partners Legal Counsel，以下简称'本律所'）严格遵循泰国《个人数据保护法》(PDPA B.E. 2562) 及国际通用数据安全准则。本政策旨在说明在您访问本网站或与我们建立法律咨询联系时，我们如何合法收集、处理和保护您的个人数据。"
+      },
+      {
+        heading: "2. 个人信息收集范围",
+        body: "我们仅收集您在预约咨询表单、电邮或电话中主动提供的必要信息：包括姓名、电子邮箱、联络电话、所属企业机构及咨询事由简要案情，以及基于您授权同意的匿名化设备访问信息（如 IP 及分析 Cookie）。"
+      },
+      {
+        heading: "3. 数据处理目的与合法性依据",
+        body: "我们基于利益冲突审查、评估法律案情、起草委托代理协议及履行法定律师职业操守之必要性，在合法限度内使用相关信息，绝不作任何超出法律委托目的之商业利用。"
+      },
+      {
+        heading: "4. 律师职业保密特权 (Attorney-Client Privilege)",
+        body: "您向本律所陈述的全部咨询内容与证据线索，均处于律师保密特权的最高保护之下。非经委托人书面明示授权或泰国法院生效令状，本律所严禁向任何第三方披露您的涉案隐私。"
+      },
+      {
+        heading: "5. 依据 PDPA 您所享有的法定权利",
+        body: "根据泰国法律，您依法享有对个人数据的知情权、查阅复制权、更正权、删除权、限制处理权及随时撤回同意之权利。如有行权需求，请发送公函至合规邮箱：contact@vanguard-legal.example.com。"
+      }
+    ]
+  }
+}[lang];
+---
+
+<BaseLayout
+  title={`${privacy.title} | ${t.brand.name}`}
+  description={`${privacy.title} - ${t.brand.legalName}`}
+  lang={lang}
+>
+  <Navbar lang={lang} />
+
+  <main class="pt-12 pb-24">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="mb-12 text-center">
+        <div class="reveal-init inline-block px-3 py-1 rounded-full bg-navy-900 border border-gold-500/30 text-gold-300 text-xs font-semibold uppercase tracking-wider mb-4">
+          Legal Disclosures
+        </div>
+        <h1 class="reveal-init stagger-1 text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white tracking-tight mb-4">
+          {privacy.title}
+        </h1>
+        <p class="reveal-init stagger-2 text-xs sm:text-sm text-gold-400 font-medium">
+          {privacy.updated}
+        </p>
+      </div>
+
+      <div class="reveal-init glass-card rounded-3xl p-8 sm:p-12 border border-gold-500/20 space-y-8 text-slate-300 text-sm sm:text-base leading-relaxed">
+        {privacy.sections.map((section) => (
+          <div>
+            <h2 class="text-xl font-bold text-white mb-3">
+              {section.heading}
+            </h2>
+            <p class="text-slate-300 leading-relaxed">
+              {section.body}
+            </p>
+          </div>
+        ))}
+      </div>
+
+    </div>
+  </main>
+
+  <Footer lang={lang} />
+</BaseLayout>

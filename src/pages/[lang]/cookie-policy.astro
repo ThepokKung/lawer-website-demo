@@ -1,0 +1,229 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import Navbar from '@/components/common/Navbar.astro';
+import Footer from '@/components/common/Footer.astro';
+import { useTranslations, type SupportedLang } from '@/i18n';
+
+export function getStaticPaths() {
+  return [
+    { params: { lang: 'th' } },
+    { params: { lang: 'en' } },
+    { params: { lang: 'zh' } }
+  ];
+}
+
+const { lang } = Astro.params as { lang: SupportedLang };
+const t = useTranslations(lang);
+
+const policyContent = {
+  th: {
+    title: "นโยบายการใช้คุกกี้ (Cookie Policy)",
+    updated: "ปรับปรุงล่าสุด: กันยายน 2026",
+    intro: "สำนักงานกฎหมาย แวนการ์ด แอนด์ พาร์ทเนอร์ส ('สำนักงาน') ให้ความสำคัญกับความเป็นส่วนตัวของท่าน นโยบายนี้อธิบายถึงประเภทของคุกกี้และเทคโนโลยีการติดตามที่เราใช้บนเว็บไซต์นี้ ตลอดจนวิธีการที่ท่านสามารถจัดการการตั้งค่าคุกกี้ของท่านได้ตาม พ.ร.บ. คุ้มครองข้อมูลส่วนบุคคล พ.ศ. 2562 (PDPA)",
+    whatIsCookie: "คุกกี้คืออะไร?",
+    whatIsCookieDesc: "คุกกี้คือไฟล์ข้อความขนาดเล็กที่จัดเก็บไว้ในคอมพิวเตอร์หรืออุปกรณ์พกพาของท่านเมื่อเข้าชมเว็บไซต์ ช่วยให้เว็บไซต์จดจำการตั้งค่า (เช่น ภาษา) และช่วยให้เราเข้าใจการใช้งานเว็บไซต์เพื่อปรับปรุงการบริการ",
+    categoriesTitle: "ประเภทของคุกกี้ที่เราใช้",
+    preferencesTitle: "ศูนย์จัดการการยินยอมคุกกี้ (Cookie Consent Manager)",
+    saveBtn: "บันทึกการตั้งค่า",
+    savedMsg: "บันทึกการตั้งค่าคุกกี้ของท่านเรียบร้อยแล้ว",
+    necessaryTitle: "1. คุกกี้ที่มีความจำเป็นอย่างยิ่ง (Strictly Necessary Cookies)",
+    necessaryDesc: "คุกกี้เหล่านี้จำเป็นต่อการทำงานพื้นฐานของเว็บไซต์ เช่น การนำทางหน้าเว็บ การแสดงผลภาษา และการรักษาความปลอดภัยของระบบ เว็บไซต์ไม่สามารถทำงานได้อย่างถูกต้องหากไม่มีคุกกี้นี้ (เปิดใช้งานตลอดเวลา)",
+    analyticsTitle: "2. คุกกี้เพื่อการวิเคราะห์และวัดผล (Analytics & Performance Cookies)",
+    analyticsDesc: "ช่วยให้เรานับจำนวนผู้เข้าชม ทราบแหล่งที่มาของการเข้าชม และเข้าใจพฤติกรรมการใช้งานหน้าเว็บ (ผ่าน Google Tag Manager, Google Analytics 4, Microsoft Clarity) เพื่อพัฒนาการออกแบบและเนื้อหาของสำนักงาน ข้อมูลทั้งหมดเป็นแบบนิรนาม (Anonymized)",
+    marketingTitle: "3. คุกกี้เพื่อการตลาดและการกำหนดเป้าหมาย (Marketing Cookies)",
+    marketingDesc: "ใช้เพื่อวัดประสิทธิผลของแคมเปญโฆษณาและการประชาสัมพันธ์ทางกฎหมาย (เช่น Google Ads) เพื่อให้ท่านได้รับข้อมูลข่าวสารทางกฎหมายที่ตรงกับความสนใจ"
+  },
+  en: {
+    title: "Cookie Policy",
+    updated: "Last Updated: September 2026",
+    intro: "Vanguard & Partners Legal Counsel ('we', 'us', or 'the Firm') is committed to safeguarding your privacy. This policy elucidates our utilization of cookies and tracking technologies in strict accordance with the Thailand Personal Data Protection Act B.E. 2562 (PDPA) and international standards.",
+    whatIsCookie: "What are Cookies?",
+    whatIsCookieDesc: "Cookies are small text files placed on your browser or device when you navigate a website. They allow the platform to remember your preferences (such as selected language) and assist us in evaluating user engagement to enhance our digital legal services.",
+    categoriesTitle: "Categories of Cookies We Deploy",
+    preferencesTitle: "Cookie Consent & Preferences Manager",
+    saveBtn: "Save Preferences",
+    savedMsg: "Your cookie preferences have been successfully updated.",
+    necessaryTitle: "1. Strictly Necessary Cookies",
+    necessaryDesc: "Indispensable for core site functionality, including security protocols, network management, and accessibility. These cannot be switched off in our systems.",
+    analyticsTitle: "2. Analytics & Performance Cookies",
+    analyticsDesc: "Enable us to aggregate visitor metrics, traffic pathways, and user interaction data (via Google Tag Manager, GA4, and Microsoft Clarity) to optimize site responsiveness and user journey. All collected data is strictly anonymized.",
+    marketingTitle: "3. Marketing & Remarketing Cookies",
+    marketingDesc: "Deployed to gauge the effectiveness of legal advisory awareness campaigns (such as Google Ads) and present relevant legal updates aligned with your corporate requirements."
+  },
+  zh: {
+    title: "Cookie 政策说明 (Cookie Policy)",
+    updated: "最近更新日期：2026年9月",
+    intro: "先锋国际律师事务所（以下简称'本律所'）高度重视您的隐私权利。本政策依据泰国《个人数据保护法》(PDPA B.E. 2562) 及国际通用数据合规准则，详细说明本网站所采用之 Cookie 及追踪技术的具体类型、用途及管理方式。",
+    whatIsCookie: "什么是 Cookie？",
+    whatIsCookieDesc: "Cookie 是在您访问网站时存储于您的计算机或移动设备中的微型文本文件。其主要功能在于记忆您的浏览偏好（如语言选择），并协助我们统计分析网站互动指标，从而持续提升法律咨询服务品质。",
+    categoriesTitle: "我们所使用的 Cookie 分类",
+    preferencesTitle: "Cookie 隐私偏好自主管理中心",
+    saveBtn: "保存偏好设置",
+    savedMsg: "您的 Cookie 偏好设置已成功保存并立即生效。",
+    necessaryTitle: "1. 必要性技术 Cookie (Strictly Necessary Cookies)",
+    necessaryDesc: "此类 Cookie 为保障网站基本安全及核心功能运行所必需（如路由跳转、界面渲染、安全验证），无法在系统设置中单独关闭（始终处于启用状态）。",
+    analyticsTitle: "2. 分析与性能统计 Cookie (Analytics & Performance)",
+    analyticsDesc: "帮助律所统计访问流量、访客来源及页面停留路径（通过 Google Tag Manager、GA4 及 Microsoft Clarity），以便优化网站架构及专业内容呈现。所有数据均采用匿名化脱敏处理。",
+    marketingTitle: "3. 营销与推广优化 Cookie (Marketing Cookies)",
+    marketingDesc: "用于评估涉外法律普及推广活动（如 Google Ads）的实际转化成效，以便向您提供更具针对性的法律合规资讯。"
+  }
+}[lang];
+---
+
+<BaseLayout
+  title={`${policyContent.title} | ${t.brand.name}`}
+  description={policyContent.intro.slice(0, 150)}
+  lang={lang}
+>
+  <Navbar lang={lang} />
+
+  <main class="pt-12 pb-24">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Policy Header -->
+      <div class="mb-12 text-center">
+        <div class="reveal-init inline-block px-3 py-1 rounded-full bg-navy-900 border border-gold-500/30 text-gold-300 text-xs font-semibold uppercase tracking-wider mb-4">
+          PDPA Compliance
+        </div>
+        <h1 class="reveal-init stagger-1 text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white tracking-tight mb-4">
+          {policyContent.title}
+        </h1>
+        <p class="reveal-init stagger-2 text-xs sm:text-sm text-gold-400 font-medium">
+          {policyContent.updated}
+        </p>
+      </div>
+
+      <!-- Introduction Card -->
+      <div class="reveal-init glass-card rounded-3xl p-8 sm:p-10 border border-gold-500/20 mb-10 space-y-6 text-slate-300 text-sm sm:text-base leading-relaxed">
+        <p>{policyContent.intro}</p>
+        
+        <div>
+          <h2 class="text-xl font-bold text-white mb-2">{policyContent.whatIsCookie}</h2>
+          <p>{policyContent.whatIsCookieDesc}</p>
+        </div>
+      </div>
+
+      <!-- Interactive Cookie Consent Preference Box -->
+      <div class="reveal-init glass-card rounded-3xl p-8 sm:p-10 border border-gold-500/30 bg-navy-900/90 shadow-2xl mb-12">
+        <div class="flex items-center gap-3 mb-6">
+          <span class="text-2xl">⚙️</span>
+          <h2 class="text-xl sm:text-2xl font-bold text-white">
+            {policyContent.preferencesTitle}
+          </h2>
+        </div>
+
+        <div id="consent-saved-alert" class="hidden mb-6 p-4 rounded-xl bg-emerald-950/80 border border-emerald-500/40 text-emerald-200 text-sm">
+          ✓ {policyContent.savedMsg}
+        </div>
+
+        <div class="space-y-6">
+          <!-- Necessary (Disabled / Always Active) -->
+          <div class="p-5 rounded-2xl bg-navy-950/80 border border-slate-800 flex items-start justify-between gap-4">
+            <div>
+              <div class="flex items-center gap-2 mb-1">
+                <h3 class="text-base font-bold text-white">{policyContent.necessaryTitle}</h3>
+                <span class="px-2 py-0.5 rounded text-[10px] font-bold bg-gold-500/20 text-gold-300 border border-gold-500/30 uppercase">
+                  {lang === 'th' ? 'จำเป็น' : lang === 'zh' ? '必需' : 'Required'}
+                </span>
+              </div>
+              <p class="text-xs sm:text-sm text-slate-400 leading-relaxed">
+                {policyContent.necessaryDesc}
+              </p>
+            </div>
+            <div class="pt-1 shrink-0">
+              <input type="checkbox" checked disabled class="w-5 h-5 accent-gold-500 cursor-not-allowed opacity-80" />
+            </div>
+          </div>
+
+          <!-- Analytics (GA4, GTM, Clarity) -->
+          <div class="p-5 rounded-2xl bg-navy-950/80 border border-slate-800 flex items-start justify-between gap-4">
+            <div>
+              <h3 class="text-base font-bold text-white mb-1">{policyContent.analyticsTitle}</h3>
+              <p class="text-xs sm:text-sm text-slate-400 leading-relaxed">
+                {policyContent.analyticsDesc}
+              </p>
+              <div class="mt-2 text-[11px] text-slate-500">
+                Google Analytics 4 • Google Tag Manager • Microsoft Clarity
+              </div>
+            </div>
+            <div class="pt-1 shrink-0">
+              <input
+                type="checkbox"
+                id="toggle-analytics"
+                class="w-5 h-5 accent-gold-500 cursor-pointer rounded"
+              />
+            </div>
+          </div>
+
+          <!-- Marketing & Remarketing -->
+          <div class="p-5 rounded-2xl bg-navy-950/80 border border-slate-800 flex items-start justify-between gap-4">
+            <div>
+              <h3 class="text-base font-bold text-white mb-1">{policyContent.marketingTitle}</h3>
+              <p class="text-xs sm:text-sm text-slate-400 leading-relaxed">
+                {policyContent.marketingDesc}
+              </p>
+              <div class="mt-2 text-[11px] text-slate-500">
+                Google Ads Conversion Tracking & Remarketing
+              </div>
+            </div>
+            <div class="pt-1 shrink-0">
+              <input
+                type="checkbox"
+                id="toggle-marketing"
+                class="w-5 h-5 accent-gold-500 cursor-pointer rounded"
+              />
+            </div>
+          </div>
+        </div>
+
+        <!-- Action Save -->
+        <div class="mt-8 pt-6 border-t border-slate-800 flex justify-end">
+          <button
+            type="button"
+            id="btn-save-preferences"
+            class="px-8 py-3 rounded-xl text-sm font-bold uppercase tracking-wider text-navy-950 bg-gradient-to-r from-gold-400 to-gold-500 hover:from-gold-300 hover:to-gold-400 shadow-lg shadow-gold-500/20 transition-all hover:scale-[1.02] active:scale-[0.98]"
+          >
+            {policyContent.saveBtn}
+          </button>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <Footer lang={lang} />
+</BaseLayout>
+
+<script>
+  import { getStoredConsent, saveConsent } from '@/utils/consent';
+
+  function initCookieSettings() {
+    const toggleAnalytics = document.getElementById('toggle-analytics') as HTMLInputElement | null;
+    const toggleMarketing = document.getElementById('toggle-marketing') as HTMLInputElement | null;
+    const btnSave = document.getElementById('btn-save-preferences');
+    const alertBox = document.getElementById('consent-saved-alert');
+
+    if (!toggleAnalytics || !toggleMarketing || !btnSave) return;
+
+    // Load current values
+    const current = getStoredConsent();
+    if (current) {
+      toggleAnalytics.checked = !!current.analytics;
+      toggleMarketing.checked = !!current.marketing;
+    } else {
+      toggleAnalytics.checked = false;
+      toggleMarketing.checked = false;
+    }
+
+    btnSave.addEventListener('click', () => {
+      saveConsent(toggleAnalytics.checked, toggleMarketing.checked);
+      alertBox?.classList.remove('hidden');
+      setTimeout(() => {
+        alertBox?.classList.add('hidden');
+      }, 4000);
+    });
+  }
+
+  document.addEventListener('DOMContentLoaded', initCookieSettings);
+  document.addEventListener('astro:page-load', initCookieSettings);
+</script>
