@@ -2,7 +2,8 @@
 
 **Project:** Montclaire & Sterling Legal Counsel (สำนักงานกฎหมาย มงต์แคลร์ แอนด์ สเตอร์ลิง / 蒙克莱尔·斯特林国际律师事务所)  
 **Framework:** Astro 5 (Static Site Generation)  
-**Design Paradigm:** Architectural Sharp & High-Contrast Light Corporate Theme (Off-White `#F8FAFC`, Royal Navy `#0B1B3D`, Brushed Gold `#B38E46`, `rounded-[2px]`) with Apple-grade smooth micro-interactions.
+**Design Paradigm:** Architectural Sharp & High-Contrast Light Corporate Theme (Off-White `#F8FAFC`, Royal Navy `#0B1B3D`, Brushed Gold `#B38E46`, `rounded-[2px]`) with Apple-grade smooth micro-interactions.  
+**ACTIVE WORKING BRANCH:** `dev` (Strict Rule: All edits, code modifications, and new features must be done in `dev`. Never commit directly to `main`).
 
 ---
 
@@ -145,3 +146,9 @@ d:\Work_Dir\Law\
    * Apply `fetchpriority="high"` and `loading="eager"` to top-of-page LCP visual elements (Hero emblem).
    * All below-the-fold images (`Footer`, `TeamPreview`, `about.astro`) must strictly use `loading="lazy"` and `decoding="async"` to prevent bandwidth contention and avoid Dev Toolbar audit warnings.
    * Connect fonts via `<link rel="preconnect">` and load stylesheets with `fetchpriority="high"`.
+
+11. **Strict Git Branch Policy (dev vs main):**
+   * ALL future edits, bugfixes, refactoring, and feature requests MUST be developed on the `dev` branch.
+   * NEVER commit or push directly to `main` without explicit user instruction.
+   * `main` is strictly reserved for Cloudflare auto-deployment upon stable production releases.
+   * GTM configurations must be maintained in `config/gtm/gtm-container-export.json` for reproducible container imports.

@@ -13,10 +13,10 @@ const t = useTranslations(lang);
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     
     <div class="text-center max-w-3xl mx-auto mb-16">
-      <div class="reveal-init inline-block px-3 py-1 rounded-[2px] bg-gold-100 border border-gold-300 text-gold-800 text-xs font-bold uppercase tracking-wider mb-3">
+      <div class="reveal-init inline-block px-3.5 py-1.5 rounded-[2px] bg-gold-100 border border-gold-300 text-gold-800 text-xs font-bold uppercase tracking-wider mb-5 sm:mb-6">
         {t.teamSection.sectionBadge}
       </div>
-      <h2 class="reveal-init stagger-1 text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-navy-950 mb-4">
+      <h2 class="reveal-init stagger-1 text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-navy-950 leading-[1.3] sm:leading-[1.25] mb-4 sm:mb-5">
         {t.teamSection.title}
       </h2>
       <p class="reveal-init stagger-2 text-base sm:text-lg text-slate-600">
@@ -24,11 +24,11 @@ const t = useTranslations(lang);
       </p>
     </div>
 
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
       {t.teamSection.members.map((member, index) => (
         <div
           class:list={[
-            "reveal-init glass-card glass-card-hover rounded-[2px] p-8 flex flex-col justify-between bg-white border border-slate-200/90 shadow-sm",
+            "reveal-init glass-card glass-card-hover rounded-[2px] p-6 sm:p-8 flex flex-col justify-between bg-white border border-slate-200/90 shadow-sm",
             `stagger-${index + 1}`
           ]}
         >
