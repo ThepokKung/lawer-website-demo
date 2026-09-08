@@ -48,7 +48,7 @@ const ethics = {
       <div class="reveal-init inline-block px-3.5 py-1.5 rounded-[2px] bg-gold-100 border border-gold-300 text-gold-800 text-xs font-bold uppercase tracking-wider mb-5 sm:mb-6">
         {t.teamSection.sectionBadge}
       </div>
-      <h1 class="reveal-init stagger-1 text-4xl sm:text-5xl lg:text-6xl font-extrabold text-navy-950 tracking-tight leading-[1.3] sm:leading-[1.25] mb-6">
+      <h1 class="reveal-init stagger-1 text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold text-navy-950 tracking-tight leading-[1.3] sm:leading-[1.25] mb-6 break-words">
         {t.brand.name}
       </h1>
       <p class="reveal-init stagger-2 max-w-3xl mx-auto text-base sm:text-lg text-slate-600 leading-relaxed">
@@ -117,9 +117,9 @@ const ethics = {
         </p>
       </div>
 
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
         {t.teamSection.members.map((member, idx) => (
-          <div class:list={["reveal-init rounded-[2px] p-8 flex flex-col justify-between bg-white border border-slate-200/90 shadow-sm glass-card-hover", `stagger-${idx + 1}`]}>
+          <div class:list={["reveal-init rounded-[2px] p-6 sm:p-8 flex flex-col justify-between bg-white border border-slate-200/90 shadow-sm glass-card-hover", `stagger-${idx + 1}`]}>
             <div>
               <!-- Sharp Real Attorney Photo -->
               <div class="relative w-full aspect-[4/3] rounded-[2px] overflow-hidden border border-slate-200 mb-6 shadow-xs group/photo bg-slate-100">
