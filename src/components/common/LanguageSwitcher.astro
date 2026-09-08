@@ -28,7 +28,7 @@ const localesList: Array<{ code: SupportedLang; label: string; href: string }> =
 ];
 ---
 
-<div class="inline-flex items-center p-0.5 rounded-[2px] bg-slate-100 border border-slate-300/80 h-9 shrink-0">
+<div class="inline-flex items-center justify-center p-0.5 rounded-[2px] bg-slate-100 border border-slate-300/80 h-9 w-[114px] shrink-0 select-none">
   {localesList.map((locale) => {
     const isActive = locale.code === currentLang;
     return (

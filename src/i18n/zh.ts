@@ -3,7 +3,7 @@ export const zh = {
     home: "首页",
     services: "业务领域",
     about: "关于律所",
-    contact: "联系与预约",
+    contact: "联系我们",
     consultationBtn: "预约法律咨询"
   },
   brand: {
