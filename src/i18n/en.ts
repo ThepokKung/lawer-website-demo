@@ -34,23 +34,19 @@ export const en = {
     pillars: [
       {
         title: "Trilingual Legal Specialists",
-        desc: "Seamless, nuance-aware advocacy in Thai, English, and Mandarin, bridging complex local statutory frameworks with global corporate expectations.",
-        icon: "globe"
+        desc: "Seamless, nuance-aware advocacy in Thai, English, and Mandarin, bridging complex local statutory frameworks with global corporate expectations."
       },
       {
         title: "Strict Professional Privilege",
-        desc: "Uncompromising adherence to attorney-client privilege, cutting-edge data protection protocols, and full compliance with Thailand's PDPA.",
-        icon: "shield"
+        desc: "Uncompromising adherence to attorney-client privilege, cutting-edge data protection protocols, and full compliance with Thailand's PDPA."
       },
       {
         title: "Proactive, Result-Driven Strategy",
-        desc: "We anticipate legal vulnerabilities before they materialize, architecting aggressive negotiation postures and tactical litigation strategies.",
-        icon: "scale"
+        desc: "We anticipate legal vulnerabilities before they materialize, architecting aggressive negotiation postures and tactical litigation strategies."
       },
       {
         title: "Transparent & Accountable Billing",
-        desc: "Candid case evaluations with transparent fee schedules and milestone-based retainers. Zero hidden disbursements or surprise invoices.",
-        icon: "check"
+        desc: "Candid case evaluations with transparent fee schedules and milestone-based retainers. Zero hidden disbursements or surprise invoices."
       }
     ]
   },
@@ -66,7 +62,6 @@ export const en = {
       slug: "foreign-investment-boi",
       title: "Foreign Investment & BOI Privileges",
       shortDesc: "Company incorporation, Board of Investment (BOI) incentives, Foreign Business Licenses (FBL), and LTR / Work Permit processing.",
-      icon: "building",
       overview: "As Southeast Asia's premier logistics and manufacturing hub, Thailand presents lucrative commercial opportunities. Our corporate attorneys steer multinational enterprises safely through complex regulatory landscapes.",
       keyPoints: [
         "Incorporation of limited companies, branch offices, and regional headquarters",
@@ -81,7 +76,6 @@ export const en = {
       slug: "litigation-dispute-resolution",
       title: "Litigation & Commercial Dispute Resolution",
       shortDesc: "Aggressive courtroom trial advocacy, civil and criminal defense, commercial disputes, and domestic/international arbitration (THAC, SIAC).",
-      icon: "gavel",
       overview: "When commercial disputes escalate, Montclaire & Sterling's courtroom trial attorneys stand resolute. We bring formidable oral advocacy, rigorous cross-examination, and calculated negotiation strategies.",
       keyPoints: [
         "Complex commercial litigation, breach of contract, and damages recovery",
@@ -96,7 +90,6 @@ export const en = {
       slug: "real-estate-property",
       title: "Real Estate & Title Due Diligence",
       shortDesc: "In-depth land title investigations, condominium acquisitions, long-term 30-year leases, usufructs, and developer contracts.",
-      icon: "home",
       overview: "Real estate transactions in Thailand demand meticulous scrutiny. We conduct multi-tiered title searches and draft ironclad purchase contracts to insulate buyers from structural and ownership risks.",
       keyPoints: [
         "Exhaustive Land Department title deed verification and historical search",
@@ -111,7 +104,6 @@ export const en = {
       slug: "corporate-commercial-contracts",
       title: "Corporate Law & Mergers and Acquisitions (M&A)",
       shortDesc: "General counsel retainers, comprehensive legal due diligence, cross-border M&A transactions, and shareholder agreements.",
-      icon: "briefcase",
       overview: "Sustainable enterprise growth requires robust corporate governance and foresight. We serve as external general counsel, proactively shielding companies from legal exposure across operational lifecycles.",
       keyPoints: [
         "Monthly corporate legal retainer and advisory services",
@@ -126,7 +118,6 @@ export const en = {
       slug: "family-wealth-inheritance",
       title: "Private Wealth, Wills & Inheritance",
       shortDesc: "Family business succession planning, bilingual testament drafting, probate court proceedings, and cross-border estate administration.",
-      icon: "users",
       overview: "Preserve and transition multi-generational wealth seamlessly. We structure tax-efficient family asset holdings and draft clear, unchallengeable wills under Thai and international law.",
       keyPoints: [
         "Bilingual wills and testament preparation compliant with Thai statutory standards",
@@ -141,7 +132,6 @@ export const en = {
       slug: "notarial-legal-translation",
       title: "Notarial Services & Certified Legal Translation",
       shortDesc: "Licensed Notarial Services Attorneys, document authentication, apostille assistance, and court-certified trilingual translations.",
-      icon: "file-check",
       overview: "Documents destined for overseas jurisdictions, embassies, or judicial bodies require accredited verification. Our certified notarial attorneys provide fast, infallible authentication services.",
       keyPoints: [
         "Verification of signatures and official corporate execution on international deeds",
@@ -209,7 +199,6 @@ export const en = {
     fieldService: "Practice Area of Interest *",
     fieldMessage: "Brief Summary of Your Legal Inquiry *",
     fieldSubmit: "Request Consultation",
-    submitting: "Submitting...",
     successMsg: "Thank you for reaching out. Your confidential inquiry has been logged, and our senior counsel will contact you shortly.",
     errorMsg: "An error occurred while transmitting your request. Please try again or contact our emergency telephone line directly.",
     selectServiceDefault: "-- Please select a practice area --"

@@ -166,7 +166,7 @@ const turnstileSiteKey = SITE_CONFIG.turnstileSiteKey;
 </div>
 
 <script>
-  import { trackFormLead } from '@/utils/tracking';
+  import { trackEvent } from '@/utils/tracking';
 
   function setupConsultationForm() {
     const form = document.getElementById('consultation-form') as HTMLFormElement | null;
@@ -185,12 +185,7 @@ const turnstileSiteKey = SITE_CONFIG.turnstileSiteKey;
     const urlParams = new URLSearchParams(window.location.search);
     const preselectedService = urlParams.get('service');
     if (preselectedService && serviceSelect) {
-      for (let i = 0; i < serviceSelect.options.length; i++) {
-        if (serviceSelect.options[i].value === preselectedService) {
-          serviceSelect.selectedIndex = i;
-          break;
-        }
-      }
+      serviceSelect.value = preselectedService;
     }
 
     form.addEventListener('submit', async (e) => {
@@ -207,11 +202,6 @@ const turnstileSiteKey = SITE_CONFIG.turnstileSiteKey;
 
       const formData = new FormData(form);
 
-      // Anti-Spam Detection: Honeypot & Time-based Trap
-      const honeypotVal = (formData.get('company_url_hp') || '').toString().trim();
-      const timeElapsedMs = Date.now() - formMountedAt;
-      const isAutomatedBot = honeypotVal.length > 0 || timeElapsedMs < 2000;
-
       // Cloudflare Turnstile token (if present)
       const turnstileToken = (formData.get('cf-turnstile-response') || '').toString();
 
@@ -220,30 +210,9 @@ const turnstileSiteKey = SITE_CONFIG.turnstileSiteKey;
         submitText.textContent = lang === 'th' ? 'กำลังส่งข้อมูล...' : lang === 'zh' ? '正在提交...' : 'Submitting...';
       }
 
-      // Neutralize bot submissions silently
-      if (isAutomatedBot) {
-        console.warn('[Anti-Spam Shield]: Automated bot submission neutralized silently.');
-        await new Promise((resolve) => setTimeout(resolve, 700));
-        successBox?.classList.remove('hidden');
-        errorBox?.classList.add('hidden');
-        form.reset();
-
-        if (submitBtn && submitText) {
-          submitBtn.disabled = false;
-          submitText.textContent = lang === 'th' ? 'ส่งคำขอนัดปรึกษาเรียบร้อย' : lang === 'zh' ? '已成功发送' : 'Submitted Successfully';
-        }
-        return;
-      }
-
-      const payload: Record<string, any> = {
-        name: (formData.get('name') || '').toString().trim(),
-        email: (formData.get('email') || '').toString().trim(),
-        phone: (formData.get('phone') || '').toString().trim(),
-        service: serviceVal,
-        message: (formData.get('message') || '').toString().trim(),
-        lang: lang,
-        timestamp: new Date().toISOString()
-      };
+      const payload: Record<string, any> = Object.fromEntries(formData);
+      payload.lang = lang;
+      payload.timestamp = new Date().toISOString();
 
       if (turnstileToken) {
         payload.turnstileToken = turnstileToken;
@@ -263,18 +232,16 @@ const turnstileSiteKey = SITE_CONFIG.turnstileSiteKey;
         } else {
           // Local/development preview mode
           console.info('[M&S Legal Lead Preview]: Form payload ready for Google & Email dispatch:', payload);
-          await new Promise((resolve) => setTimeout(resolve, 600));
         }
 
         // Trigger Google Tag Manager / GA4 conversion event
-        trackFormLead(serviceVal, lang);
+        trackEvent('form_submit_lead', { service_interest: serviceVal, preferred_lang: lang });
 
         successBox?.classList.remove('hidden');
         errorBox?.classList.add('hidden');
         form.reset();
 
-        if (submitBtn && submitText) {
-          submitBtn.disabled = false;
+        if (submitText) {
           submitText.textContent = lang === 'th' ? 'ส่งคำขอนัดปรึกษาเรียบร้อย' : lang === 'zh' ? '已成功发送' : 'Submitted Successfully';
         }
       } catch (err) {
@@ -282,14 +249,16 @@ const turnstileSiteKey = SITE_CONFIG.turnstileSiteKey;
         errorBox?.classList.remove('hidden');
         successBox?.classList.add('hidden');
 
-        if (submitBtn && submitText) {
-          submitBtn.disabled = false;
+        if (submitText) {
           submitText.textContent = lang === 'th' ? 'เกิดข้อผิดพลาด ลองใหม่อีกครั้ง' : lang === 'zh' ? '提交失败，请重试' : 'Error, please retry';
+        }
+      } finally {
+        if (submitBtn) {
+          submitBtn.disabled = false;
         }
       }
     });
   }
 
-  document.addEventListener('DOMContentLoaded', setupConsultationForm);
   document.addEventListener('astro:page-load', setupConsultationForm);
 </script>
