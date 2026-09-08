@@ -28,7 +28,7 @@ const localesList: Array<{ code: SupportedLang; label: string; href: string }> =
 ];
 ---
 
-<div class="inline-flex items-center p-1 rounded-full bg-navy-950/80 border border-gold-500/20 shadow-inner">
+<div class="inline-flex items-center p-1 rounded-full bg-navy-950/80 border border-gold-500/20 shadow-inner h-9 shrink-0">
   {localesList.map((locale) => {
     const isActive = locale.code === currentLang;
     return (
@@ -37,7 +37,7 @@ const localesList: Array<{ code: SupportedLang; label: string; href: string }> =
         data-from-lang={currentLang}
         data-to-lang={locale.code}
         class:list={[
-          "lang-switch-btn px-2.5 py-1 text-xs font-medium rounded-full transition-all duration-300",
+          "lang-switch-btn w-9 h-7 inline-flex items-center justify-center text-xs font-semibold rounded-full transition-all duration-300 text-center select-none",
           isActive
             ? "bg-gradient-to-r from-gold-500 to-gold-400 text-navy-950 font-bold shadow-sm"
             : "text-slate-400 hover:text-slate-200 hover:bg-slate-800/40"
