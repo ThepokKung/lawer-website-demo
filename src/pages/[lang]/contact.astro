@@ -1,0 +1,84 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import Navbar from '@/components/common/Navbar.astro';
+import Footer from '@/components/common/Footer.astro';
+import ContactChannels from '@/components/contact/ContactChannels.astro';
+import ConsultationForm from '@/components/contact/ConsultationForm.astro';
+import { useTranslations, type SupportedLang } from '@/i18n';
+
+export function getStaticPaths() {
+  return [
+    { params: { lang: 'th' } },
+    { params: { lang: 'en' } },
+    { params: { lang: 'zh' } }
+  ];
+}
+
+const { lang } = Astro.params as { lang: SupportedLang };
+const t = useTranslations(lang);
+---
+
+<BaseLayout
+  title={`${t.contact.title} | ${t.brand.name}`}
+  description={`${t.contact.subtitle} - ${t.brand.legalName}`}
+  lang={lang}
+>
+  <Navbar lang={lang} />
+
+  <main class="pt-12 pb-24">
+    <!-- Header Section -->
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center mb-16">
+      <div class="reveal-init inline-block px-3 py-1 rounded-full bg-navy-900 border border-gold-500/30 text-gold-300 text-xs font-semibold uppercase tracking-wider mb-4">
+        {t.contact.sectionBadge}
+      </div>
+      <h1 class="reveal-init stagger-1 text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white tracking-tight mb-6">
+        {t.contact.title}
+      </h1>
+      <p class="reveal-init stagger-2 max-w-2xl mx-auto text-base sm:text-lg text-slate-300 leading-relaxed">
+        {t.contact.subtitle}
+      </p>
+    </div>
+
+    <!-- Contact Content Layout -->
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
+        
+        <!-- Channels & Location (5 cols) -->
+        <div class="lg:col-span-5 space-y-8">
+          <ContactChannels lang={lang} />
+
+          <!-- Location Map Placeholder Card -->
+          <div class="reveal-init glass-card rounded-2xl p-6 border border-slate-800">
+            <h4 class="text-sm font-bold text-white mb-3 flex items-center gap-2">
+              <span>🗺️</span>
+              <span>{lang === 'th' ? 'แผนที่และการเดินทาง' : lang === 'zh' ? '交通路线与地理位置' : 'Location & Directions'}</span>
+            </h4>
+            <div class="aspect-video w-full rounded-xl bg-navy-950 border border-gold-500/20 flex flex-col items-center justify-center p-6 text-center">
+              <div class="w-12 h-12 rounded-full bg-gold-500/10 border border-gold-500/30 flex items-center justify-center text-gold-400 mb-3 text-xl">
+                📍
+              </div>
+              <p class="text-sm font-semibold text-slate-200">Sathorn Square Tower, 28th Floor</p>
+              <p class="text-xs text-slate-400 mt-1">Direct Skywalk from BTS Chong Nonsi Exit 1</p>
+              <a
+                href="https://maps.google.com/?q=Sathorn+Square+Tower+Bangkok"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="mt-4 px-4 py-2 rounded-lg text-xs font-semibold text-gold-400 hover:text-gold-300 border border-gold-500/30 hover:bg-gold-500/10 transition-all"
+              >
+                {lang === 'th' ? 'เปิดใน Google Maps' : lang === 'zh' ? '在谷歌地图中打开' : 'Open in Google Maps'} →
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Consultation Form (7 cols) -->
+        <div class="lg:col-span-7">
+          <ConsultationForm lang={lang} />
+        </div>
+
+      </div>
+    </div>
+  </main>
+
+  <Footer lang={lang} />
+</BaseLayout>

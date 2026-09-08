@@ -1,0 +1,156 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import Navbar from '@/components/common/Navbar.astro';
+import Footer from '@/components/common/Footer.astro';
+import HomeCta from '@/components/home/HomeCta.astro';
+import { useTranslations, type SupportedLang } from '@/i18n';
+
+export function getStaticPaths() {
+  return [
+    { params: { lang: 'th' } },
+    { params: { lang: 'en' } },
+    { params: { lang: 'zh' } }
+  ];
+}
+
+const { lang } = Astro.params as { lang: SupportedLang };
+const t = useTranslations(lang);
+
+const ethics = {
+  th: [
+    { title: "ซื่อสัตย์สุจริตและโปร่งใส", desc: "ยึดมั่นในความจริง ชี้แจงข้อดีข้อเสียของคดีอย่างตรงไปตรงมา ไม่ให้ความหวังที่เกินจริงแก่ลูกความ" },
+    { title: "รักษาความลับตามมรรยาทวิชาชีพ", desc: "ข้อมูลลูกความทุกชิ้นได้รับการจัดเก็บด้วยระบบความปลอดภัยระดับสถาบันการเงิน และได้รับการคุ้มครองสิทธิการไม่เปิดเผยความลับของทนายความ" },
+    { title: "ความมุ่งมั่นเพื่อผลสัมฤทธิ์สูงสุด", desc: "ทุ่มเทค้นคว้าแนวคำพิพากษาฎีกา ประมวลกฎหมาย และกลยุทธ์การว่าความในทุกมิติเพื่อปกป้องสิทธิประโยชน์ของท่าน" }
+  ],
+  en: [
+    { title: "Unyielding Integrity & Candor", desc: "We provide honest, unvarnished legal risk appraisals without false assurances or inflated promises." },
+    { title: "Sacrosanct Professional Privilege", desc: "Client data is safeguarded with institutional-grade encryption protocols and backed by strict statutory privilege." },
+    { title: "Relentless Commitment to Excellence", desc: "We exhaustively research legal precedents and design trial strategy to deliver definitive commercial victories." }
+  ],
+  zh: [
+    { title: "恪守诚信与客观研判", desc: "如实陈述案件事实与法律依据，客观剖析胜诉面与潜在风险，绝不对委托人作出虚假承诺。" },
+    { title: "顶级保密机制与特权保护", desc: "全案档案与通讯均纳入律师法定保密特权范围，采用银行级严密数字加密与物理隔离存储。" },
+    { title: "精益求精的制胜追求", desc: "深度穷尽判例检索与成文法法理，全方位推演攻防棋局，力求为委托人赢得最佳商业结果。" }
+  ]
+}[lang];
+---
+
+<BaseLayout
+  title={`${t.nav.about} | ${t.brand.name}`}
+  description={`${t.brand.description}`}
+  lang={lang}
+>
+  <Navbar lang={lang} />
+
+  <main class="pt-12 pb-24">
+    <!-- Header -->
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center mb-16">
+      <div class="reveal-init inline-block px-3 py-1 rounded-full bg-navy-900 border border-gold-500/30 text-gold-300 text-xs font-semibold uppercase tracking-wider mb-4">
+        {t.teamSection.sectionBadge}
+      </div>
+      <h1 class="reveal-init stagger-1 text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white tracking-tight mb-6">
+        {t.brand.name}
+      </h1>
+      <p class="reveal-init stagger-2 max-w-3xl mx-auto text-base sm:text-lg text-slate-300 leading-relaxed">
+        {t.brand.description}
+      </p>
+    </div>
+
+    <!-- Firm Pedigree Section -->
+    <section class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 mb-20">
+      <div class="glass-card rounded-3xl p-8 sm:p-12 lg:p-16 border border-gold-500/20 bg-gradient-to-b from-navy-850 to-navy-950">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
+          <div class="space-y-6">
+            <h2 class="text-2xl sm:text-3xl font-bold text-white leading-tight">
+              {lang === 'th' ? 'กว่าสองทศวรรษแห่งการเป็นเกราะป้องกันทางกฎหมาย' : lang === 'zh' ? '逾二十载矢志不渝的泰方法律护航壁垒' : 'Over Two Decades of Uncompromising Legal Advocacy'}
+            </h2>
+            <p class="text-sm sm:text-base text-slate-300 leading-relaxed">
+              {lang === 'th'
+                ? 'สำนักงานกฎหมาย แวนการ์ด แอนด์ พาร์ทเนอร์ส ก่อตั้งขึ้นด้วยวิสัยทัศน์ที่ต้องการยกระดับมาตรฐานการให้บริการทางกฎหมายในประเทศไทยให้ทัดเทียมสากล เราให้บริการทั้งแก่องค์กรธุรกิจชั้นนำ บริษัทข้ามชาติ และบุคคลทั่วไป ด้วยความเชี่ยวชาญเฉพาะทางในแต่ละสาขากฎหมาย'
+                : lang === 'zh'
+                ? '先锋国际律所（Vanguard & Partners）自创立以来，始终立足曼谷商业核心，致力于消除外资企业与本地法律制度之间的沟通鸿沟与风控盲区。我们以极高的职业胜诉率和商业信誉，成为众多跨国集团进军泰国的首选法务军师。'
+                : 'Founded in 2004, Vanguard & Partners was forged with a singular mission: to deliver international-tier legal precision within Thailand’s evolving statutory environment. We have represented Fortune 500 multinationals, innovative private enterprises, and prominent families across critical junctures.'}
+            </p>
+          </div>
+
+          <!-- Ethics Box -->
+          <div class="space-y-4">
+            {ethics.map((item, i) => (
+              <div class="p-5 rounded-2xl bg-navy-900/90 border border-gold-500/20">
+                <h3 class="text-base font-bold text-gold-300 mb-1">0{i + 1}. {item.title}</h3>
+                <p class="text-xs sm:text-sm text-slate-300 leading-relaxed">{item.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Detailed Partner Roster -->
+    <section class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 mb-20">
+      <div class="text-center max-w-2xl mx-auto mb-14">
+        <h2 class="reveal-init text-3xl sm:text-4xl font-bold text-white mb-3">
+          {t.teamSection.title}
+        </h2>
+        <p class="reveal-init stagger-1 text-sm sm:text-base text-slate-400">
+          {t.teamSection.subtitle}
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        {t.teamSection.members.map((member, idx) => (
+          <div class:list={["reveal-init glass-card glass-card-hover rounded-2xl p-8 flex flex-col justify-between", `stagger-${idx + 1}`]}>
+            <div>
+              <div class="w-20 h-20 rounded-2xl bg-gradient-to-br from-navy-800 to-navy-950 border border-gold-500/30 flex items-center justify-center text-gold-400 mb-6 shadow-md">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-10 h-10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2" />
+                  <circle cx="12" cy="7" r="4" />
+                </svg>
+              </div>
+
+              <h3 class="text-xl font-bold text-white mb-1">{member.name}</h3>
+              <p class="text-xs font-semibold uppercase tracking-wider text-gold-400 mb-4">{member.role}</p>
+
+              <div class="p-3.5 rounded-xl bg-navy-950/80 border border-slate-800 text-xs text-slate-300 mb-4 leading-relaxed">
+                {member.credentials}
+              </div>
+
+              <p class="text-sm text-slate-300 leading-relaxed">
+                {member.experience}
+              </p>
+            </div>
+
+            <div class="mt-8 pt-4 border-t border-slate-800">
+              <a
+                href={`/${lang}/contact/?attorney=${encodeURIComponent(member.name)}`}
+                class="inline-flex items-center text-xs font-semibold uppercase tracking-wider text-gold-400 hover:text-gold-300"
+              >
+                <span>{t.contact.formTitle}</span>
+                <span class="ml-1">→</span>
+              </a>
+            </div>
+          </div>
+        ))}
+      </div>
+    </section>
+
+    <!-- Accreditations & Memberships -->
+    <section class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 mb-20">
+      <div class="reveal-init glass-card rounded-2xl p-8 border border-slate-800 text-center">
+        <h3 class="text-sm font-semibold uppercase tracking-wider text-gold-400 mb-6">
+          {lang === 'th' ? 'การรับรองและสมาชิกภาพองค์กรวิชาชีพกฎหมาย' : lang === 'zh' ? '官方律师执业认证与国际仲裁公会资质' : 'Professional Accreditations & Bar Affiliations'}
+        </h3>
+        <div class="flex flex-wrap items-center justify-center gap-6 sm:gap-10 text-xs sm:text-sm text-slate-300 font-medium">
+          <span class="px-4 py-2 rounded-lg bg-navy-900 border border-slate-800">🏛️ สภาทนายความแห่งประเทศไทย (Lawyers Council)</span>
+          <span class="px-4 py-2 rounded-lg bg-navy-900 border border-slate-800">⚖️ สำนักอบรมศึกษากฎหมายแห่งเนติบัณฑิตยสภา (Thai Bar)</span>
+          <span class="px-4 py-2 rounded-lg bg-navy-900 border border-slate-800">📜 ทนายความผู้ทำคำรับรองลายมือชื่อ (Notarial Attorney)</span>
+          <span class="px-4 py-2 rounded-lg bg-navy-900 border border-slate-800">🌐 International Bar Association (IBA)</span>
+        </div>
+      </div>
+    </section>
+
+    <HomeCta lang={lang} />
+  </main>
+
+  <Footer lang={lang} />
+</BaseLayout>

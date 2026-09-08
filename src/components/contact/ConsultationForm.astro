@@ -1,0 +1,188 @@
+---
+import { useTranslations, type SupportedLang } from '@/i18n';
+
+interface Props {
+  lang: SupportedLang;
+}
+
+const { lang } = Astro.props;
+const t = useTranslations(lang);
+---
+
+<div class="glass-card rounded-3xl p-7 sm:p-10 border border-gold-500/30 bg-navy-950/80 shadow-2xl">
+  <div class="mb-8">
+    <h2 class="text-2xl sm:text-3xl font-bold text-white mb-2">
+      {t.contact.formTitle}
+    </h2>
+    <p class="text-xs sm:text-sm text-slate-300 leading-relaxed">
+      {t.contact.formDesc}
+    </p>
+  </div>
+
+  <form id="consultation-form" class="space-y-5" data-lang={lang}>
+    <!-- Success Banner -->
+    <div id="form-success" class="hidden p-4 rounded-xl bg-emerald-950/80 border border-emerald-500/40 text-emerald-200 text-sm">
+      ✓ {t.contact.successMsg}
+    </div>
+
+    <!-- Error Banner -->
+    <div id="form-error" class="hidden p-4 rounded-xl bg-rose-950/80 border border-rose-500/40 text-rose-200 text-sm">
+      ✕ {t.contact.errorMsg}
+    </div>
+
+    <!-- Name -->
+    <div>
+      <label for="client-name" class="block text-xs font-semibold uppercase tracking-wider text-slate-300 mb-2">
+        {t.contact.fieldName}
+      </label>
+      <input
+        type="text"
+        id="client-name"
+        name="name"
+        required
+        class="w-full px-4 py-3 rounded-xl bg-navy-900 border border-slate-700 text-white placeholder-slate-500 focus:outline-none focus:border-gold-400 focus:ring-1 focus:ring-gold-400 text-sm transition-all"
+        placeholder={lang === 'th' ? "เช่น คุณสมชาย ใจดี" : lang === 'zh' ? "例如：张先生 / 李女士" : "e.g., John Doe"}
+      />
+    </div>
+
+    <!-- Email & Phone in 2 Columns -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+      <div>
+        <label for="client-email" class="block text-xs font-semibold uppercase tracking-wider text-slate-300 mb-2">
+          {t.contact.fieldEmail}
+        </label>
+        <input
+          type="email"
+          id="client-email"
+          name="email"
+          required
+          class="w-full px-4 py-3 rounded-xl bg-navy-900 border border-slate-700 text-white placeholder-slate-500 focus:outline-none focus:border-gold-400 focus:ring-1 focus:ring-gold-400 text-sm transition-all"
+          placeholder="yourname@domain.com"
+        />
+      </div>
+
+      <div>
+        <label for="client-phone" class="block text-xs font-semibold uppercase tracking-wider text-slate-300 mb-2">
+          {t.contact.fieldPhone}
+        </label>
+        <input
+          type="tel"
+          id="client-phone"
+          name="phone"
+          required
+          class="w-full px-4 py-3 rounded-xl bg-navy-900 border border-slate-700 text-white placeholder-slate-500 focus:outline-none focus:border-gold-400 focus:ring-1 focus:ring-gold-400 text-sm transition-all"
+          placeholder="+66 8X-XXX-XXXX"
+        />
+      </div>
+    </div>
+
+    <!-- Practice Area Select -->
+    <div>
+      <label for="client-service" class="block text-xs font-semibold uppercase tracking-wider text-slate-300 mb-2">
+        {t.contact.fieldService}
+      </label>
+      <select
+        id="client-service"
+        name="service"
+        required
+        class="w-full px-4 py-3 rounded-xl bg-navy-900 border border-slate-700 text-white focus:outline-none focus:border-gold-400 focus:ring-1 focus:ring-gold-400 text-sm transition-all"
+      >
+        <option value="">{t.contact.selectServiceDefault}</option>
+        {t.services.map((service) => (
+          <option value={service.title}>{service.title}</option>
+        ))}
+      </select>
+    </div>
+
+    <!-- Message -->
+    <div>
+      <label for="client-message" class="block text-xs font-semibold uppercase tracking-wider text-slate-300 mb-2">
+        {t.contact.fieldMessage}
+      </label>
+      <textarea
+        id="client-message"
+        name="message"
+        rows="4"
+        required
+        class="w-full px-4 py-3 rounded-xl bg-navy-900 border border-slate-700 text-white placeholder-slate-500 focus:outline-none focus:border-gold-400 focus:ring-1 focus:ring-gold-400 text-sm transition-all resize-y"
+        placeholder={lang === 'th' ? "โปรดระบุข้อเท็จจริงเบื้องต้น วันที่เกิดเหตุการณ์ หรือความประสงค์ที่ต้องการให้สำนักงานช่วยเหลือ..." : lang === 'zh' ? "请简述咨询事由、关键时间节点或希望律所协助达成的目标..." : "Briefly describe the context, relevant dates, or what legal assistance you are seeking..."}
+      ></textarea>
+    </div>
+
+    <!-- Submit Button -->
+    <button
+      type="submit"
+      id="btn-submit-form"
+      class="w-full py-4 text-sm font-bold uppercase tracking-wider text-navy-950 rounded-xl bg-gradient-to-r from-gold-400 via-gold-500 to-gold-400 hover:from-gold-300 hover:to-gold-400 shadow-xl shadow-gold-500/20 transition-all duration-300 hover:scale-[1.01] active:scale-[0.98]"
+    >
+      <span id="submit-text">{t.contact.fieldSubmit}</span>
+    </button>
+
+    <div class="text-[11px] text-slate-400 text-center leading-relaxed">
+      🔒 {t.contact.subtitle}
+    </div>
+  </form>
+</div>
+
+<script>
+  import { trackFormLead } from '@/utils/tracking';
+
+  function setupConsultationForm() {
+    const form = document.getElementById('consultation-form') as HTMLFormElement | null;
+    const successBox = document.getElementById('form-success');
+    const errorBox = document.getElementById('form-error');
+    const submitBtn = document.getElementById('btn-submit-form') as HTMLButtonElement | null;
+    const submitText = document.getElementById('submit-text');
+    const serviceSelect = document.getElementById('client-service') as HTMLSelectElement | null;
+
+    if (!form) return;
+
+    // Check URL parameters for preselected service
+    const urlParams = new URLSearchParams(window.location.search);
+    const preselectedService = urlParams.get('service');
+    if (preselectedService && serviceSelect) {
+      for (let i = 0; i < serviceSelect.options.length; i++) {
+        if (serviceSelect.options[i].value === preselectedService) {
+          serviceSelect.selectedIndex = i;
+          break;
+        }
+      }
+    }
+
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+
+      if (!form.checkValidity()) {
+        form.reportValidity();
+        return;
+      }
+
+      const lang = form.getAttribute('data-lang') || 'th';
+      const serviceVal = serviceSelect?.value || 'General Consultation';
+
+      // UI Submitting state
+      if (submitBtn && submitText) {
+        submitBtn.disabled = true;
+        submitText.textContent = lang === 'th' ? 'กำลังส่งข้อมูล...' : lang === 'zh' ? '正在提交...' : 'Submitting...';
+      }
+
+      setTimeout(() => {
+        // Track into dataLayer
+        trackFormLead(serviceVal, lang);
+
+        // Show success state
+        successBox?.classList.remove('hidden');
+        errorBox?.classList.add('hidden');
+        form.reset();
+
+        if (submitBtn && submitText) {
+          submitBtn.disabled = false;
+          submitText.textContent = lang === 'th' ? 'ส่งคำขอนัดปรึกษาเรียบร้อย' : lang === 'zh' ? '已成功发送' : 'Submitted Successfully';
+        }
+      }, 600);
+    });
+  }
+
+  document.addEventListener('DOMContentLoaded', setupConsultationForm);
+  document.addEventListener('astro:page-load', setupConsultationForm);
+</script>
