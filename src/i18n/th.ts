@@ -3,7 +3,7 @@ export const th = {
     home: "หน้าแรก",
     services: "ขอบเขตบริการ",
     about: "เกี่ยวกับสำนักงาน",
-    contact: "ติดต่อและนัดปรึกษา",
+    contact: "ติดต่อเรา",
     consultationBtn: "นัดปรึกษาเบื้องต้น"
   },
   brand: {

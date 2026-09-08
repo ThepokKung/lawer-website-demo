@@ -3,7 +3,7 @@ export const en = {
     home: "Home",
     services: "Practice Areas",
     about: "About Us",
-    contact: "Contact & Consultation",
+    contact: "Contact Us",
     consultationBtn: "Book Consultation"
   },
   brand: {
