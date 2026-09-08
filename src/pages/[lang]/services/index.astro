@@ -1,0 +1,100 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import Navbar from '@/components/common/Navbar.astro';
+import Footer from '@/components/common/Footer.astro';
+import HomeCta from '@/components/home/HomeCta.astro';
+import { useTranslations, type SupportedLang } from '@/i18n';
+
+export function getStaticPaths() {
+  return [
+    { params: { lang: 'th' } },
+    { params: { lang: 'en' } },
+    { params: { lang: 'zh' } }
+  ];
+}
+
+const { lang } = Astro.params as { lang: SupportedLang };
+const t = useTranslations(lang);
+---
+
+<BaseLayout
+  title={`${t.servicesSection.title} | ${t.brand.name}`}
+  description={`${t.servicesSection.subtitle} - ${t.brand.legalName}`}
+  lang={lang}
+>
+  <Navbar lang={lang} />
+
+  <main class="pt-12 pb-24">
+    <!-- Header Section -->
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center mb-16">
+      <div class="reveal-init inline-block px-3 py-1 rounded-full bg-navy-900 border border-gold-500/30 text-gold-300 text-xs font-semibold uppercase tracking-wider mb-4">
+        {t.servicesSection.sectionBadge}
+      </div>
+      <h1 class="reveal-init stagger-1 text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white tracking-tight mb-6">
+        {t.servicesSection.title}
+      </h1>
+      <p class="reveal-init stagger-2 max-w-3xl mx-auto text-base sm:text-lg text-slate-300 leading-relaxed">
+        {t.servicesSection.subtitle}
+      </p>
+    </div>
+
+    <!-- Practice Areas Grid -->
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {t.services.map((service, index) => (
+          <article
+            class:list={[
+              "reveal-init glass-card glass-card-hover rounded-2xl p-8 flex flex-col justify-between group",
+              `stagger-${(index % 3) + 1}`
+            ]}
+          >
+            <div>
+              <div class="w-14 h-14 rounded-xl bg-navy-900 border border-gold-500/30 flex items-center justify-center text-gold-400 mb-6 group-hover:bg-gold-500 group-hover:text-navy-950 group-hover:border-gold-400 transition-all duration-300">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M12 2v20" />
+                  <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" />
+                </svg>
+              </div>
+
+              <h2 class="text-2xl font-bold text-slate-100 group-hover:text-gold-300 transition-colors mb-3">
+                {service.title}
+              </h2>
+
+              <p class="text-sm text-slate-300 leading-relaxed mb-6">
+                {service.shortDesc}
+              </p>
+
+              <!-- Preview Bullet Points -->
+              <ul class="space-y-2 mb-8 text-xs text-slate-400">
+                {service.keyPoints.slice(0, 3).map((point) => (
+                  <li class="flex items-start gap-2">
+                    <span class="text-gold-400 mt-0.5">•</span>
+                    <span class="line-clamp-2">{point}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            <div class="pt-5 border-t border-slate-800/80">
+              <a
+                href={`/${lang}/services/${service.slug}/`}
+                class="inline-flex items-center text-sm font-semibold text-gold-400 group-hover:text-gold-300 transition-colors"
+              >
+                <span>{t.servicesSection.learnMore}</span>
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 ml-1.5 transform group-hover:translate-x-1.5 transition-transform" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M5 12h14" />
+                  <path d="m12 5 7 7-7 7" />
+                </svg>
+              </a>
+            </div>
+          </article>
+        ))}
+      </div>
+    </div>
+
+    <!-- Bottom Consultation CTA -->
+    <HomeCta lang={lang} />
+  </main>
+
+  <Footer lang={lang} />
+</BaseLayout>

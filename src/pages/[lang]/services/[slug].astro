@@ -1,0 +1,230 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import Navbar from '@/components/common/Navbar.astro';
+import Footer from '@/components/common/Footer.astro';
+import { useTranslations, type SupportedLang } from '@/i18n';
+
+export function getStaticPaths() {
+  const locales: SupportedLang[] = ['th', 'en', 'zh'];
+  const paths: Array<{ params: { lang: SupportedLang; slug: string } }> = [];
+
+  locales.forEach((lang) => {
+    const t = useTranslations(lang);
+    t.services.forEach((service) => {
+      paths.push({
+        params: {
+          lang,
+          slug: service.slug
+        }
+      });
+    });
+  });
+
+  return paths;
+}
+
+const { lang, slug } = Astro.params as { lang: SupportedLang; slug: string };
+const t = useTranslations(lang);
+
+const service = t.services.find((s) => s.slug === slug);
+if (!service) {
+  throw new Error(`Service not found: ${slug}`);
+}
+
+const steps = {
+  th: [
+    { num: "01", title: "รับฟังข้อเท็จจริงและตรวจเอกสาร", desc: "ทนายความผู้เชี่ยวชาญรับฟังรายละเอียดและตรวจความสมบูรณ์ของเอกสารเบื้องต้นอย่างเป็นความลับ" },
+    { num: "02", title: "วางกลยุทธ์และประเมินความเสี่ยง", desc: "วิเคราะห์ข้อกฎหมาย วางแผนโครงสร้างทางนิติกรรมหรือแผนการดำเนินคดี พร้อมชี้แจงกรอบเวลาและค่าใช้จ่าย" },
+    { num: "03", title: "ดำเนินการทางกฎหมายอย่างแม่นยำ", desc: "ยื่นคำขอ เจรจาต่อรอง หรือว่าความในศาลอย่างรัดกุม รวดเร็ว พร้อมรายงานความคืบหน้าให้ท่านทราบสม่ำเสมอ" },
+    { num: "04", title: "ติดตามผลและคุ้มครองผลประโยชน์", desc: "ดูแลจนสิ้นสุดกระบวนการ บังคับใช้สิทธิตามกฎหมาย และให้คำแนะนำเชิงป้องกันสำหรับอนาคต" }
+  ],
+  en: [
+    { num: "01", title: "Confidential Fact-Finding", desc: "Senior attorneys conduct a thorough, privileged review of all underlying facts and commercial documentation." },
+    { num: "02", title: "Strategic Legal Appraisal", desc: "We evaluate statutory risks, architect transaction structures or litigation plans, and present transparent budgets." },
+    { num: "03", title: "Meticulous Execution", desc: "Prompt submission of filings, high-stakes commercial negotiations, or vigorous courtroom advocacy with regular reporting." },
+    { num: "04", title: "Enforcement & Long-Term Shield", desc: "Post-resolution enforcement, securing definitive rights, and implementing proactive risk mitigation protocols." }
+  ],
+  zh: [
+    { num: "01", title: "初审案情与绝密证据调档", desc: "涉外主办律师在法定保密特权下，深度审阅全案事实、商业合同及底层往来凭证。" },
+    { num: "02", title: "顶层战略研判与合规方案", desc: "精准剖析泰方法律适格性，出具可行性方案、风控推演模型与阶段性明确预算。" },
+    { num: "03", title: "精细化法律实操落地", desc: "官方申报、谈判博弈或法庭辩论，由专属团队全权代理出庭，定期同步案件全流程进展。" },
+    { num: "04", title: "裁决执行与长效防线构建", desc: "推动判决书或行政批复强制执行，确保商业权益完全落地，并制定企业长期防范预案。" }
+  ]
+}[lang];
+---
+
+<BaseLayout
+  title={`${service.title} | ${t.brand.name}`}
+  description={`${service.shortDesc} - ${t.brand.legalName}`}
+  lang={lang}
+>
+  <Navbar lang={lang} />
+
+  <main class="pt-8 pb-24">
+    <!-- Breadcrumbs -->
+    <nav class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-4 mb-8" aria-label="Breadcrumb">
+      <ol class="flex items-center space-x-2 text-xs text-slate-400">
+        <li>
+          <a href={`/${lang}/`} class="hover:text-gold-300 transition-colors">{t.nav.home}</a>
+        </li>
+        <li><span>/</span></li>
+        <li>
+          <a href={`/${lang}/services/`} class="hover:text-gold-300 transition-colors">{t.nav.services}</a>
+        </li>
+        <li><span>/</span></li>
+        <li class="text-gold-400 font-medium truncate max-w-xs">{service.title}</li>
+      </ol>
+    </nav>
+
+    <!-- Service Header Banner -->
+    <section class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 mb-16">
+      <div class="glass-card rounded-3xl p-8 sm:p-12 lg:p-16 border border-gold-500/30 bg-gradient-to-br from-navy-850 to-navy-950 shadow-2xl relative overflow-hidden">
+        <div class="max-w-3xl">
+          <div class="reveal-init inline-flex items-center gap-2 px-3 py-1 rounded-full bg-navy-900 border border-gold-500/30 text-gold-300 text-xs font-semibold uppercase tracking-wider mb-6">
+            <span>⚖️</span>
+            <span>{t.servicesSection.sectionBadge}</span>
+          </div>
+
+          <h1 class="reveal-init stagger-1 text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white tracking-tight mb-6">
+            {service.title}
+          </h1>
+
+          <p class="reveal-init stagger-2 text-base sm:text-lg text-slate-300 leading-relaxed mb-8">
+            {service.overview}
+          </p>
+
+          <div class="reveal-init stagger-3 flex flex-wrap gap-4">
+            <a
+              href={`/${lang}/contact/?service=${encodeURIComponent(service.title)}`}
+              class="inline-flex items-center justify-center px-7 py-3.5 text-sm font-semibold uppercase tracking-wider text-navy-950 rounded-xl bg-gradient-to-r from-gold-400 via-gold-500 to-gold-400 hover:from-gold-300 hover:to-gold-400 shadow-lg shadow-gold-500/20 transition-all hover:scale-[1.02] active:scale-[0.98]"
+            >
+              {t.hero.ctaConsultation}
+            </a>
+
+            <a
+              href={`tel:${t.contact.phoneValue.replace(/\s+/g, '')}`}
+              class="track-call inline-flex items-center justify-center px-6 py-3.5 text-sm font-semibold text-slate-200 hover:text-white rounded-xl bg-navy-900 border border-slate-700 hover:border-gold-500/40 transition-all"
+              data-phone={t.contact.phoneValue}
+            >
+              <span class="mr-2">📞</span>
+              <span>{t.contact.phoneValue}</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Key Strategic Capabilities Section -->
+    <section class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 mb-20">
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-12">
+        
+        <!-- Left: Scope of Practice -->
+        <div class="lg:col-span-2 space-y-8">
+          <div class="reveal-init">
+            <h2 class="text-2xl sm:text-3xl font-bold text-white mb-6">
+              {lang === 'th' ? 'ขอบเขตความเชี่ยวชาญและการดำเนินการ' : lang === 'zh' ? '业务具体范围与核心法律服务' : 'Specific Scope of Practice & Capabilities'}
+            </h2>
+            <div class="space-y-4">
+              {service.keyPoints.map((point) => (
+                <div class="glass-card rounded-xl p-5 flex items-start gap-4 border border-gold-500/20">
+                  <div class="w-7 h-7 rounded-lg bg-gold-500/15 border border-gold-500/30 flex items-center justify-center text-gold-400 shrink-0 mt-0.5 font-bold text-xs">
+                    ✓
+                  </div>
+                  <p class="text-sm sm:text-base text-slate-200 leading-relaxed">
+                    {point}
+                  </p>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          <!-- Ideal Clients -->
+          <div class="reveal-init glass-card rounded-2xl p-6 sm:p-8 border border-slate-800">
+            <h3 class="text-lg font-bold text-gold-300 mb-3">
+              {lang === 'th' ? 'บริการนี้เหมาะสำหรับใคร' : lang === 'zh' ? '核心受众与适用对象' : 'Who This Service Is For'}
+            </h3>
+            <p class="text-sm sm:text-base text-slate-300 leading-relaxed">
+              {service.forWhom}
+            </p>
+          </div>
+        </div>
+
+        <!-- Right: Quick Contact & Consultation Sidebar -->
+        <div class="lg:col-span-1">
+          <div class="reveal-init glass-card rounded-2xl p-6 sm:p-8 border border-gold-500/30 sticky top-28 space-y-6">
+            <h3 class="text-lg font-bold text-white">
+              {t.contact.formTitle}
+            </h3>
+            <p class="text-xs text-slate-300 leading-relaxed">
+              {t.contact.formDesc}
+            </p>
+
+            <div class="space-y-3 pt-2">
+              <a
+                href={`/${lang}/contact/?service=${encodeURIComponent(service.title)}`}
+                class="w-full inline-flex items-center justify-center py-3 text-xs font-semibold uppercase tracking-wider text-navy-950 rounded-lg bg-gradient-to-r from-gold-400 to-gold-500 shadow-md transition-all hover:scale-[1.02]"
+              >
+                {t.contact.fieldSubmit}
+              </a>
+
+              <a
+                href="https://line.me/R/ti/p/@vanguardlaw"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="track-line w-full inline-flex items-center justify-center py-2.5 text-xs font-semibold text-[#06C755] rounded-lg bg-[#06C755]/10 border border-[#06C755]/30 hover:bg-[#06C755]/20 transition-all"
+              >
+                LINE Official: {t.contact.lineValue}
+              </a>
+
+              <a
+                href={`tel:${t.contact.phoneValue.replace(/\s+/g, '')}`}
+                class="track-call w-full inline-flex items-center justify-center py-2.5 text-xs font-semibold text-slate-200 rounded-lg bg-navy-900 border border-slate-700 hover:border-gold-500/40 transition-all"
+                data-phone={t.contact.phoneValue}
+              >
+                📞 {t.contact.phoneValue}
+              </a>
+            </div>
+
+            <div class="pt-4 border-t border-slate-800 text-[11px] text-slate-400">
+              🔒 {t.contact.subtitle}
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 4-Step Process Section -->
+    <section class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 mb-20">
+      <div class="text-center max-w-2xl mx-auto mb-12">
+        <h2 class="reveal-init text-2xl sm:text-3xl font-bold text-white mb-3">
+          {lang === 'th' ? 'ขั้นตอนการทำงานและการให้บริการ' : lang === 'zh' ? '全案服务标准化实操流程' : 'Our Advisory & Representation Process'}
+        </h2>
+        <p class="reveal-init stagger-1 text-sm text-slate-400">
+          {lang === 'th' ? 'มาตรฐานการทำงานที่โปร่งใส ชัดเจนในทุกขั้นตอน' : lang === 'zh' ? '透明高效的标准作业流程，全流程由合伙人严密督导' : 'Transparent, disciplined execution from consultation to completion.'}
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        {steps.map((st, i) => (
+          <div class:list={["reveal-init glass-card rounded-2xl p-6 relative flex flex-col justify-between", `stagger-${i + 1}`]}>
+            <div>
+              <div class="text-3xl font-extrabold gold-gradient-text mb-4">
+                {st.num}
+              </div>
+              <h3 class="text-lg font-bold text-slate-100 mb-2">
+                {st.title}
+              </h3>
+              <p class="text-xs sm:text-sm text-slate-400 leading-relaxed">
+                {st.desc}
+              </p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </section>
+
+  </main>
+
+  <Footer lang={lang} />
+</BaseLayout>
