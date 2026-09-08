@@ -15,17 +15,18 @@ const t = useTranslations(lang);
 
   <div class="relative max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
     
-    <!-- Sharp Luxury Crest -->
-    <div class="reveal-init mb-6 inline-flex items-center justify-center">
-      <div class="w-14 h-14 rounded-[2px] overflow-hidden border border-gold-500/50 shadow-sm bg-navy-950 p-1">
-        <img src="/images/logo.svg" alt="Montclaire & Sterling Crest" class="w-full h-full object-contain" width="56" height="56" />
+    <!-- Top Center Logo & Badge Stack (Strictly Vertical) -->
+    <div class="reveal-init flex flex-col items-center justify-center mb-8">
+      <!-- Logo strictly on top -->
+      <div class="w-16 h-16 rounded-[2px] overflow-hidden shadow-sm mb-4 transition-transform hover:scale-105 duration-300">
+        <img src="/images/logo.svg" alt="Montclaire & Sterling Crest" class="w-full h-full object-contain" width="64" height="64" />
       </div>
-    </div>
 
-    <!-- Sharp Prestige Badge -->
-    <div class="reveal-init stagger-1 inline-flex items-center gap-2.5 px-3.5 py-1.5 rounded-[2px] bg-gold-100 border border-gold-300/80 text-gold-800 text-xs font-bold tracking-widest uppercase mb-8 shadow-xs">
-      <span class="w-2 h-2 rounded-xs bg-gold-600"></span>
-      {t.hero.badge}
+      <!-- Prestige Badge centered below logo -->
+      <div class="inline-flex items-center gap-2.5 px-3.5 py-1.5 rounded-[2px] bg-gold-100 border border-gold-300/80 text-gold-800 text-xs font-bold tracking-widest uppercase shadow-xs">
+        <span class="w-2 h-2 rounded-xs bg-gold-600"></span>
+        {t.hero.badge}
+      </div>
     </div>
 
     <!-- Apple-style Big Staggered Typography with Sharp Architectural Authority -->
