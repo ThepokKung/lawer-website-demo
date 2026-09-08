@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
+  <rect width="64" height="64" rx="14" fill="#060D1E"/>
+  <rect x="2" y="2" width="60" height="60" rx="12" stroke="#C5A059" stroke-opacity="0.3" stroke-width="2"/>
+  <!-- Scales of Justice Minimalist Icon -->
+  <path d="M32 14V50" stroke="#C5A059" stroke-width="2.5" stroke-linecap="round"/>
+  <path d="M22 50H42" stroke="#C5A059" stroke-width="2.5" stroke-linecap="round"/>
+  <path d="M16 22H48" stroke="#C5A059" stroke-width="2.5" stroke-linecap="round"/>
+  <path d="M16 22L11 34C11 37.5 14 40 18.5 40C23 40 26 37.5 26 34L21 22" stroke="#DFBA73" stroke-width="2" stroke-linejoin="round"/>
+  <path d="M48 22L43 34C43 37.5 46 40 50.5 40C55 40 58 37.5 58 34L53 22" stroke="#DFBA73" stroke-width="2" stroke-linejoin="round"/>
+  <circle cx="32" cy="14" r="2.5" fill="#DFBA73"/>
+</svg>
