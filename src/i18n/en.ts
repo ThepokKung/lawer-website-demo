@@ -159,21 +159,21 @@ export const en = {
     subtitle: "Headed by seasoned legal practitioners with notable courtroom victories and corporate advisory credentials.",
     members: [
       {
-        name: "Pattarapon Sitthidet",
+        name: "Dr. Nititham Sucharitpreecha (Fictional Profile)",
         role: "Managing Partner & Head of Dispute Resolution",
         credentials: "Barrister-at-Law (Thai Bar) • LL.M. Chulalongkorn University • Member of the Lawyers Council of Thailand",
         experience: "Over 22 years representing Fortune 500 conglomerates in complex commercial litigation, economic white-collar defense, and international arbitrations.",
         image: "/images/partner-chaiwat.jpg"
       },
       {
-        name: "Anchalee Rattanachot",
+        name: "Karnpitcha Voranitikarn (Fictional Profile)",
         role: "Senior Partner — Corporate & Foreign Direct Investment",
         credentials: "LL.B. (Thammasat) • LL.M. International Commercial Law (London) • Certified Notarial Services Attorney",
         experience: "Specialist in structuring foreign corporate investments, multimillion-dollar M&A transactions, and regulatory BOI incentivization.",
         image: "/images/partner-kanya.jpg"
       },
       {
-        name: "Wisrut Chaipreecha",
+        name: "Thanapol Chainitimongkol (Fictional Profile)",
         role: "Partner & Head of China-Thailand Desk",
         credentials: "LL.B. (Honors) • LL.M. Peking University (北京大学) • Fluent Native-Level Mandarin",
         experience: "Lead counsel to major state-owned and private Chinese enterprises, tech firms, and high-net-worth investors establishing regional headquarters in Thailand.",

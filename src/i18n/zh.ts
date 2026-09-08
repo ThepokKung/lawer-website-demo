@@ -159,21 +159,21 @@ export const zh = {
     subtitle: "由在泰国诉讼界与涉外商事领域享有崇高声誉的知名合伙人领衔挂帅。",
     members: [
       {
-        name: "帕塔拉朋·西提德 (Pattarapon Sitthidet)",
+        name: "尼蒂塔姆·苏查里特 (虚拟合伙人)",
         role: "管理合伙人 / 诉讼与争议解决部主任",
         credentials: "泰国最高法院出庭大律师 (Barrister) • 朱拉隆功大学法学硕士 (LL.M.) • 泰国律师公会常务会员",
         experience: "执业逾 22 年，专攻重大商事合同纠纷、外资重大维权、跨国职务侵占辩护及国际商事仲裁，具备卓越法庭影响力。",
         image: "/images/partner-chaiwat.jpg"
       },
       {
-        name: "安查莉·拉塔纳乔特 (Anchalee Rattanachot)",
+        name: "甘碧查·沃拉尼蒂甘 (虚拟合伙人)",
         role: "高级合伙人 / 公司法与外商投资部主任",
         credentials: "法政大学法学学士 • 伦敦大学国际商法硕士 • 泰国公证人律师认证资格",
         experience: "擅长搭建外资合规控股架构、申请泰国 BOI 最高免税优惠及主导数十亿泰铢规模的跨国企业收购与兼并项目。",
         image: "/images/partner-kanya.jpg"
       },
       {
-        name: "威斯鲁·猜普里查 (Wisrut Chaipreecha)",
+        name: "塔纳蓬·猜尼蒂蒙昆 (虚拟合伙人)",
         role: "合伙人 / 泰中法律事务部主任 (China Desk)",
         credentials: "泰国名校法学荣誉学士 • 北京大学法学院研究生 (LL.M.) • 中文母语级流利",
         experience: "中国出海企业常年首席泰方法律顾问，深谙两国商业文化与政策差异，长期为数百家中国制造业巨头及高科技企业赴泰投资护航。",

@@ -26,7 +26,7 @@ const navItems = [
       <div class="flex-1 flex items-center justify-start">
         <a href={`/${lang}/`} class="flex items-center gap-3 group shrink-0">
           <div class="w-11 h-11 rounded-[2px] overflow-hidden border border-navy-900 group-hover:border-gold-500 group-hover:shadow-md transition-all duration-300 shrink-0 bg-navy-950">
-            <img src="/images/logo.svg" alt="Montclaire & Sterling Legal Logo" class="w-full h-full object-cover" width="44" height="44" />
+            <img src="/images/logo.svg" alt="Montclaire & Sterling Legal Logo" class="w-full h-full object-cover" width="44" height="44" loading="eager" decoding="async" />
           </div>
           <div>
             <span class="block text-lg font-extrabold tracking-wider text-navy-950 uppercase font-sans leading-tight">
@@ -66,7 +66,7 @@ const navItems = [
 
         <a
           href={`/${lang}/contact/`}
-          class="relative w-40 h-10 shrink-0 inline-flex items-center justify-center text-xs font-bold uppercase tracking-wider text-white rounded-[2px] bg-gradient-to-r from-gold-600 via-gold-500 to-gold-600 hover:from-gold-700 hover:to-gold-600 transition-all duration-300 shadow-sm hover:shadow active:scale-95 text-center whitespace-nowrap"
+          class="relative min-w-[170px] h-11 px-5 shrink-0 inline-flex items-center justify-center text-xs sm:text-[13px] font-bold uppercase tracking-wider text-white rounded-[2px] bg-gradient-to-r from-gold-600 via-gold-500 to-gold-600 hover:from-gold-700 hover:to-gold-600 transition-all duration-300 shadow-sm hover:shadow-md active:scale-95 text-center whitespace-nowrap"
         >
           {t.nav.consultationBtn}
         </a>

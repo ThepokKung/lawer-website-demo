@@ -17,175 +17,152 @@ const t = useTranslations(lang);
 
 const policyContent = {
   th: {
-    title: "นโยบายการใช้คุกกี้ (Cookie Policy)",
-    updated: "ปรับปรุงล่าสุด: กันยายน 2026",
-    intro: "สำนักงานกฎหมาย มงต์แคลร์ แอนด์ สเตอร์ลิง ('สำนักงาน') ให้ความสำคัญกับความเป็นส่วนตัวของท่าน นโยบายนี้อธิบายถึงประเภทของคุกกี้และเทคโนโลยีการติดตามที่เราใช้บนเว็บไซต์นี้ ตลอดจนวิธีการที่ท่านสามารถจัดการการตั้งค่าคุกกี้ของท่านได้ตาม พ.ร.บ. คุ้มครองข้อมูลส่วนบุคคล พ.ศ. 2562 (PDPA)",
-    whatIsCookie: "คุกกี้คืออะไร?",
-    whatIsCookieDesc: "คุกกี้คือไฟล์ข้อความขนาดเล็กที่จัดเก็บไว้ในคอมพิวเตอร์หรืออุปกรณ์พกพาของท่านเมื่อเข้าชมเว็บไซต์ ช่วยให้เว็บไซต์จดจำการตั้งค่า (เช่น ภาษา) และช่วยให้เราเข้าใจการใช้งานเว็บไซต์เพื่อปรับปรุงการบริการ",
-    categoriesTitle: "ประเภทของคุกกี้ที่เราใช้",
-    preferencesTitle: "ศูนย์จัดการการยินยอมคุกกี้ (Cookie Consent Manager)",
-    saveBtn: "บันทึกการตั้งค่า",
-    savedMsg: "บันทึกการตั้งค่าคุกกี้ของท่านเรียบร้อยแล้ว",
-    necessaryTitle: "1. คุกกี้ที่มีความจำเป็นอย่างยิ่ง (Strictly Necessary Cookies)",
-    necessaryDesc: "คุกกี้เหล่านี้จำเป็นต่อการทำงานพื้นฐานของเว็บไซต์ เช่น การนำทางหน้าเว็บ การแสดงผลภาษา และการรักษาความปลอดภัยของระบบ เว็บไซต์ไม่สามารถทำงานได้อย่างถูกต้องหากไม่มีคุกกี้นี้ (เปิดใช้งานตลอดเวลา)",
-    analyticsTitle: "2. คุกกี้เพื่อการวิเคราะห์และวัดผล (Analytics & Performance Cookies)",
-    analyticsDesc: "ช่วยให้เรานับจำนวนผู้เข้าชม ทราบแหล่งที่มาของการเข้าชม และเข้าใจพฤติกรรมการใช้งานหน้าเว็บ (ผ่าน Google Tag Manager, Google Analytics 4, Microsoft Clarity) เพื่อพัฒนาการออกแบบและเนื้อหาของสำนักงาน ข้อมูลทั้งหมดเป็นแบบนิรนาม (Anonymized)",
-    marketingTitle: "3. คุกกี้เพื่อการตลาดและการกำหนดเป้าหมาย (Marketing Cookies)",
-    marketingDesc: "ใช้เพื่อวัดประสิทธิผลของแคมเปญโฆษณาและการประชาสัมพันธ์ทางกฎหมาย (เช่น Google Ads) เพื่อให้ท่านได้รับข้อมูลข่าวสารทางกฎหมายที่ตรงกับความสนใจ"
+    pageTitle: "นโยบายการใช้คุกกี้",
+    settingsTitle: "การตั้งค่าคุกกี้ขั้นสูง (Advanced Cookie Settings)",
+    necessaryDesc: "คุกกี้เหล่านี้ช่วยให้เว็บไซต์สามารถทำงานพื้นฐานได้อย่างถูกต้อง เช่น ความปลอดภัย การยืนยันตัวตน และการจัดการเครือข่าย คุกกี้เหล่านี้ไม่สามารถปิดใช้งานได้",
+    marketingTitle: "เปิดใช้งานคุกกี้เพื่อการตลาด (Enable Marketing Cookies)",
+    marketingDesc: "คุกกี้เหล่านี้ใช้ในการติดตามประสิทธิผลของการโฆษณา เพื่อให้บริการที่ตรงกับความต้องการและนำเสนอข้อมูลที่เหมาะสมกับความสนใจของท่าน",
+    functionalTitle: "เปิดใช้งานคุกกี้เพื่อการทำงานของเว็บไซต์ (Enable Functional Cookies)",
+    functionalDesc: "คุกกี้เหล่านี้รวบรวมข้อมูลเพื่อจดจำตัวเลือกที่ผู้ใช้กำหนด เพื่อปรับปรุงและมอบประสบการณ์การใช้งานที่ตรงตามความต้องการเฉพาะบุคคล",
+    analyticsTitle: "เปิดใช้งานคุกกี้เพื่อการวิเคราะห์ (Enable Analytics Cookies)",
+    analyticsDesc: "คุกกี้เหล่านี้ช่วยให้เราเข้าใจปฏิสัมพันธ์ของผู้เข้าชมกับเว็บไซต์ ค้นหาข้อผิดพลาด และพัฒนาการวิเคราะห์ภาพรวมของเว็บไซต์ให้ดียิ่งขึ้น",
+    saveBtn: "บันทึก",
+    savedAlert: "บันทึกการตั้งค่าคุกกี้ของท่านเรียบร้อยแล้ว"
   },
   en: {
-    title: "Cookie Policy",
-    updated: "Last Updated: September 2026",
-    intro: "Montclaire & Sterling Legal Counsel ('we', 'us', or 'the Firm') is committed to safeguarding your privacy. This policy elucidates our utilization of cookies and tracking technologies in strict accordance with the Thailand Personal Data Protection Act B.E. 2562 (PDPA) and international standards.",
-    whatIsCookie: "What are Cookies?",
-    whatIsCookieDesc: "Cookies are small text files placed on your browser or device when you navigate a website. They allow the platform to remember your preferences (such as selected language) and assist us in evaluating user engagement to enhance our digital legal services.",
-    categoriesTitle: "Categories of Cookies We Deploy",
-    preferencesTitle: "Cookie Consent & Preferences Manager",
-    saveBtn: "Save Preferences",
-    savedMsg: "Your cookie preferences have been successfully updated.",
-    necessaryTitle: "1. Strictly Necessary Cookies",
-    necessaryDesc: "Indispensable for core site functionality, including security protocols, network management, and accessibility. These cannot be switched off in our systems.",
-    analyticsTitle: "2. Analytics & Performance Cookies",
-    analyticsDesc: "Enable us to aggregate visitor metrics, traffic pathways, and user interaction data (via Google Tag Manager, GA4, and Microsoft Clarity) to optimize site responsiveness and user journey. All collected data is strictly anonymized.",
-    marketingTitle: "3. Marketing & Remarketing Cookies",
-    marketingDesc: "Deployed to gauge the effectiveness of legal advisory awareness campaigns (such as Google Ads) and present relevant legal updates aligned with your corporate requirements."
+    pageTitle: "Cookie Policy",
+    settingsTitle: "Advanced Cookie Settings",
+    necessaryDesc: "These cookies enable core functionality such as security, verification of identity and network management. These cookies can't be disabled.",
+    marketingTitle: "Enable Marketing Cookies",
+    marketingDesc: "These cookies are used to track advertising effectiveness to provide a more relevant service and deliver better ads to suit your interests.",
+    functionalTitle: "Enable Functional Cookies",
+    functionalDesc: "These cookies collect data to remember choices users make to improve and give a more personalised experience.",
+    analyticsTitle: "Enable Analytics Cookies",
+    analyticsDesc: "These cookies help us to understand how visitors interact with our website, discover errors and provide a better overall analytics.",
+    saveBtn: "Save",
+    savedAlert: "Your cookie settings have been saved successfully."
   },
   zh: {
-    title: "Cookie 政策说明 (Cookie Policy)",
-    updated: "最近更新日期：2026年9月",
-    intro: "蒙克莱尔·斯特林国际律师事务所（以下简称'本律所'）高度重视您的隐私权利。本政策依据泰国《个人数据保护法》(PDPA B.E. 2562) 及国际通用数据合规准则，详细说明本网站所采用之 Cookie 及追踪技术的具体类型、用途及管理方式。",
-    whatIsCookie: "什么是 Cookie？",
-    whatIsCookieDesc: "Cookie 是在您访问网站时存储于您的计算机或移动设备中的微型文本文件。其主要功能在于记忆您的浏览偏好（如语言选择），并协助我们统计分析网站互动指标，从而持续提升法律咨询服务品质。",
-    categoriesTitle: "我们所使用的 Cookie 分类",
-    preferencesTitle: "Cookie 隐私偏好自主管理中心",
-    saveBtn: "保存偏好设置",
-    savedMsg: "您的 Cookie 偏好设置已成功保存并立即生效。",
-    necessaryTitle: "1. 必要性技术 Cookie (Strictly Necessary Cookies)",
-    necessaryDesc: "此类 Cookie 为保障网站基本安全及核心功能运行所必需（如路由跳转、界面渲染、安全验证），无法在系统设置中单独关闭（始终处于启用状态）。",
-    analyticsTitle: "2. 分析与性能统计 Cookie (Analytics & Performance)",
-    analyticsDesc: "帮助律所统计访问流量、访客来源及页面停留路径（通过 Google Tag Manager、GA4 及 Microsoft Clarity），以便优化网站架构及专业内容呈现。所有数据均采用匿名化脱敏处理。",
-    marketingTitle: "3. 营销与推广优化 Cookie (Marketing Cookies)",
-    marketingDesc: "用于评估涉外法律普及推广活动（如 Google Ads）的实际转化成效，以便向您提供更具针对性的法律合规资讯。"
+    pageTitle: "Cookie 政策说明",
+    settingsTitle: "高级 Cookie 设置 (Advanced Cookie Settings)",
+    necessaryDesc: "此类 Cookie 用于实现网站核心功能，如安全性、身份验证及网络管理，无法禁用。",
+    marketingTitle: "启用营销推广 Cookie (Enable Marketing Cookies)",
+    marketingDesc: "此类 Cookie 用于衡量广告宣传成效，以提供更贴合您需求的服务并呈现符合您兴趣的内容。",
+    functionalTitle: "启用功能性 Cookie (Enable Functional Cookies)",
+    functionalDesc: "此类 Cookie 用于记录并记忆用户的偏好设置，以优化并提供更加个性化的浏览体验。",
+    analyticsTitle: "启用数据分析 Cookie (Enable Analytics Cookies)",
+    analyticsDesc: "此类 Cookie 帮助我们了解访客与网站的互动情况、发现错误并提供更完善的综合数据分析。",
+    saveBtn: "保存",
+    savedAlert: "您的 Cookie 设置已成功保存。"
   }
 }[lang];
 ---
 
 <BaseLayout
-  title={`${policyContent.title} | ${t.brand.name}`}
-  description={policyContent.intro.slice(0, 150)}
+  title={`${policyContent.pageTitle} | ${t.brand.name}`}
+  description={policyContent.necessaryDesc}
   lang={lang}
 >
   <Navbar lang={lang} />
 
-  <main class="pt-12 pb-24">
-    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+  <main class="pt-12 pb-24 bg-slate-50">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6">
       
-      <!-- Policy Header -->
-      <div class="mb-12 text-center">
-        <div class="reveal-init inline-block px-3 py-1 rounded-[2px] bg-gold-100 border border-gold-300 text-gold-800 text-xs font-bold uppercase tracking-wider mb-4">
-          PDPA Compliance
-        </div>
-        <h1 class="reveal-init stagger-1 text-3xl sm:text-4xl lg:text-5xl font-extrabold text-navy-950 tracking-tight mb-4">
-          {policyContent.title}
+      <!-- Page Breadcrumb / Mini Header -->
+      <div class="mb-8 text-center sm:text-left">
+        <h1 class="text-2xl sm:text-3xl font-extrabold text-navy-950 tracking-tight">
+          {policyContent.pageTitle}
         </h1>
-        <p class="reveal-init stagger-2 text-xs sm:text-sm text-gold-700 font-semibold">
-          {policyContent.updated}
+        <p class="text-xs text-slate-500 mt-1">
+          {t.brand.legalName}
         </p>
       </div>
 
-      <!-- Introduction Card -->
-      <div class="reveal-init rounded-[2px] p-8 sm:p-10 border border-slate-200 bg-white shadow-sm mb-10 space-y-6 text-slate-700 text-sm sm:text-base leading-relaxed">
-        <p>{policyContent.intro}</p>
+      <!-- Advanced Cookie Settings Card (Exact match to reference) -->
+      <div class="rounded-[2px] bg-white border border-slate-300 shadow-sm overflow-hidden">
         
-        <div class="pt-4 border-t border-slate-100">
-          <h2 class="text-lg font-bold text-navy-950 mb-2">{policyContent.whatIsCookie}</h2>
-          <p class="text-slate-600">{policyContent.whatIsCookieDesc}</p>
-        </div>
-      </div>
-
-      <!-- Interactive Cookie Consent Preference Box -->
-      <div class="reveal-init rounded-[2px] p-8 sm:p-10 border border-slate-200 bg-white shadow-sm mb-12">
-        <div class="flex items-center gap-3 mb-6">
-          <span class="text-2xl">⚙️</span>
-          <h2 class="text-xl sm:text-2xl font-extrabold text-navy-950">
-            {policyContent.preferencesTitle}
+        <!-- Header Section -->
+        <div class="p-6 sm:p-8 border-b border-slate-200">
+          <h2 class="text-xl sm:text-2xl font-bold text-slate-900 mb-3">
+            {policyContent.settingsTitle}
           </h2>
+          <p class="text-xs sm:text-sm text-slate-600 leading-relaxed max-w-2xl">
+            {policyContent.necessaryDesc}
+          </p>
         </div>
 
-        <div id="consent-saved-alert" class="hidden mb-6 p-4 rounded-[2px] bg-emerald-50 border border-emerald-300 text-emerald-800 text-sm font-semibold">
-          ✓ {policyContent.savedMsg}
+        <!-- Success Notification -->
+        <div id="consent-saved-alert" class="hidden mx-6 sm:mx-8 mt-6 p-3.5 rounded-[2px] bg-emerald-50 border border-emerald-300 text-emerald-900 text-xs sm:text-sm font-medium flex items-center gap-2">
+          <svg class="w-4 h-4 text-emerald-600 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+          </svg>
+          <span>{policyContent.savedAlert}</span>
         </div>
 
-        <div class="space-y-4">
-          <!-- Necessary (Disabled / Always Active) -->
-          <div class="p-5 rounded-[2px] bg-slate-50 border border-slate-200 flex items-start justify-between gap-4">
-            <div>
-              <div class="flex items-center gap-2 mb-1">
-                <h3 class="text-base font-bold text-navy-950">{policyContent.necessaryTitle}</h3>
-                <span class="px-2 py-0.5 rounded-[2px] text-[10px] font-bold bg-gold-100 text-gold-800 border border-gold-300 uppercase">
-                  {lang === 'th' ? 'จำเป็น' : lang === 'zh' ? '必需' : 'Required'}
-                </span>
-              </div>
-              <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
-                {policyContent.necessaryDesc}
-              </p>
-            </div>
-            <div class="pt-1 shrink-0">
-              <input type="checkbox" checked disabled class="w-5 h-5 accent-gold-600 cursor-not-allowed opacity-80" />
-            </div>
-          </div>
-
-          <!-- Analytics (GA4, GTM, Clarity) -->
-          <div class="p-5 rounded-[2px] bg-slate-50 border border-slate-200 flex items-start justify-between gap-4">
-            <div>
-              <h3 class="text-base font-bold text-navy-950 mb-1">{policyContent.analyticsTitle}</h3>
-              <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
-                {policyContent.analyticsDesc}
-              </p>
-              <div class="mt-2 text-[11px] text-slate-500 font-mono">
-                Google Analytics 4 • Google Tag Manager • Microsoft Clarity
-              </div>
-            </div>
-            <div class="pt-1 shrink-0">
-              <input
-                type="checkbox"
-                id="toggle-analytics"
-                class="w-5 h-5 accent-navy-900 cursor-pointer rounded-[2px]"
-              />
-            </div>
-          </div>
-
-          <!-- Marketing & Remarketing -->
-          <div class="p-5 rounded-[2px] bg-slate-50 border border-slate-200 flex items-start justify-between gap-4">
-            <div>
-              <h3 class="text-base font-bold text-navy-950 mb-1">{policyContent.marketingTitle}</h3>
+        <!-- Cookie Categories List -->
+        <div class="divide-y divide-slate-200">
+          
+          <!-- Marketing Cookies -->
+          <div class="p-6 sm:p-8 flex items-start justify-between gap-6 hover:bg-slate-50/50 transition-colors">
+            <div class="space-y-1.5 max-w-xl">
+              <h3 class="text-sm sm:text-base font-semibold text-slate-900">
+                {policyContent.marketingTitle}
+              </h3>
               <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
                 {policyContent.marketingDesc}
               </p>
-              <div class="mt-2 text-[11px] text-slate-500 font-mono">
-                Google Ads Conversion Tracking & Remarketing
-              </div>
             </div>
-            <div class="pt-1 shrink-0">
-              <input
-                type="checkbox"
-                id="toggle-marketing"
-                class="w-5 h-5 accent-navy-900 cursor-pointer rounded-[2px]"
-              />
-            </div>
+            <label class="relative inline-flex items-center cursor-pointer shrink-0 mt-1">
+              <input type="checkbox" id="toggle-marketing" class="sr-only peer" />
+              <div class="w-12 h-7 bg-slate-300 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-slate-300 after:border after:rounded-full after:h-6 after:w-6 after:transition-all peer-checked:bg-navy-900"></div>
+            </label>
           </div>
+
+          <!-- Functional Cookies -->
+          <div class="p-6 sm:p-8 flex items-start justify-between gap-6 hover:bg-slate-50/50 transition-colors">
+            <div class="space-y-1.5 max-w-xl">
+              <h3 class="text-sm sm:text-base font-semibold text-slate-900">
+                {policyContent.functionalTitle}
+              </h3>
+              <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
+                {policyContent.functionalDesc}
+              </p>
+            </div>
+            <label class="relative inline-flex items-center cursor-pointer shrink-0 mt-1">
+              <input type="checkbox" id="toggle-functional" class="sr-only peer" checked />
+              <div class="w-12 h-7 bg-slate-300 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-slate-300 after:border after:rounded-full after:h-6 after:w-6 after:transition-all peer-checked:bg-navy-900"></div>
+            </label>
+          </div>
+
+          <!-- Analytics Cookies -->
+          <div class="p-6 sm:p-8 flex items-start justify-between gap-6 hover:bg-slate-50/50 transition-colors">
+            <div class="space-y-1.5 max-w-xl">
+              <h3 class="text-sm sm:text-base font-semibold text-slate-900">
+                {policyContent.analyticsTitle}
+              </h3>
+              <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
+                {policyContent.analyticsDesc}
+              </p>
+            </div>
+            <label class="relative inline-flex items-center cursor-pointer shrink-0 mt-1">
+              <input type="checkbox" id="toggle-analytics" class="sr-only peer" />
+              <div class="w-12 h-7 bg-slate-300 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-slate-300 after:border after:rounded-full after:h-6 after:w-6 after:transition-all peer-checked:bg-navy-900"></div>
+            </label>
+          </div>
+
         </div>
 
-        <!-- Action Save -->
-        <div class="mt-8 pt-6 border-t border-slate-200 flex justify-end">
+        <!-- Footer / Action Area -->
+        <div class="p-6 sm:p-8 bg-slate-50/70 border-t border-slate-200 flex items-center justify-end">
           <button
             type="button"
             id="btn-save-preferences"
-            class="px-8 py-3 rounded-[2px] text-xs font-bold uppercase tracking-wider text-white bg-navy-900 hover:bg-gold-600 shadow-sm transition-all active:scale-[0.98]"
+            class="min-w-[130px] px-9 py-3.5 rounded-[2px] text-sm font-bold uppercase tracking-wider text-white bg-black hover:bg-navy-900 transition-all active:scale-[0.98] shadow-sm"
           >
             {policyContent.saveBtn}
           </button>
         </div>
+
       </div>
 
     </div>
@@ -198,25 +175,28 @@ const policyContent = {
   import { getStoredConsent, saveConsent } from '@/utils/consent';
 
   function initCookieSettings() {
-    const toggleAnalytics = document.getElementById('toggle-analytics') as HTMLInputElement | null;
     const toggleMarketing = document.getElementById('toggle-marketing') as HTMLInputElement | null;
+    const toggleFunctional = document.getElementById('toggle-functional') as HTMLInputElement | null;
+    const toggleAnalytics = document.getElementById('toggle-analytics') as HTMLInputElement | null;
     const btnSave = document.getElementById('btn-save-preferences');
     const alertBox = document.getElementById('consent-saved-alert');
 
-    if (!toggleAnalytics || !toggleMarketing || !btnSave) return;
+    if (!toggleMarketing || !toggleFunctional || !toggleAnalytics || !btnSave) return;
 
-    // Load current values
+    // Load stored values
     const current = getStoredConsent();
     if (current) {
-      toggleAnalytics.checked = !!current.analytics;
       toggleMarketing.checked = !!current.marketing;
+      toggleFunctional.checked = current.functional !== false;
+      toggleAnalytics.checked = !!current.analytics;
     } else {
-      toggleAnalytics.checked = false;
       toggleMarketing.checked = false;
+      toggleFunctional.checked = true;
+      toggleAnalytics.checked = false;
     }
 
     btnSave.addEventListener('click', () => {
-      saveConsent(toggleAnalytics.checked, toggleMarketing.checked);
+      saveConsent(toggleAnalytics.checked, toggleMarketing.checked, toggleFunctional.checked);
       alertBox?.classList.remove('hidden');
       setTimeout(() => {
         alertBox?.classList.add('hidden');

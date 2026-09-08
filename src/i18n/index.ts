@@ -17,8 +17,29 @@ export const translations = {
   zh
 };
 
+import { SITE_CONFIG } from '@/config/site';
+
 export function useTranslations(lang: SupportedLang = 'th') {
-  return translations[lang] || translations[defaultLang];
+  const base = translations[lang] || translations[defaultLang];
+  const localizedAddress = lang === 'th'
+    ? (SITE_CONFIG.addressTh || base.contact.addressValue)
+    : lang === 'zh'
+    ? (SITE_CONFIG.addressZh || base.contact.addressValue)
+    : (SITE_CONFIG.addressEn || base.contact.addressValue);
+
+  return {
+    ...base,
+    contact: {
+      ...base.contact,
+      emailValue: SITE_CONFIG.email,
+      phoneValue: SITE_CONFIG.phone,
+      phoneMobile: SITE_CONFIG.phoneMobile,
+      lineValue: SITE_CONFIG.line,
+      wechatValue: SITE_CONFIG.wechat,
+      whatsappValue: SITE_CONFIG.whatsapp,
+      addressValue: localizedAddress
+    }
+  };
 }
 
 export function getLangFromUrl(url: URL): SupportedLang {

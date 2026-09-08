@@ -79,11 +79,13 @@ const ethics = {
                 alt="Montclaire & Sterling Sathorn Headquarters Boardroom"
                 class="w-full h-56 object-cover filter brightness-[1.02] contrast-[1.02] group-hover:scale-105 transition-transform duration-500"
                 loading="lazy"
+                decoding="async"
                 width="600"
                 height="300"
               />
-              <div class="absolute bottom-2 left-2 px-2.5 py-1 rounded-[2px] bg-navy-950/80 backdrop-blur-md text-[11px] text-white font-medium border border-white/10">
-                📍 Sathorn Square Tower 28th Fl. Executive Suite
+              <div class="absolute bottom-2 left-2 px-2.5 py-1 rounded-[2px] bg-navy-950/80 backdrop-blur-md text-[11px] text-white font-medium border border-white/10 flex items-center gap-1.5">
+                <span class="w-1.5 h-1.5 rounded-full bg-gold-400"></span>
+                <span>Sathorn Square Tower 28th Fl. Executive Suite</span>
               </div>
             </div>
           </div>
@@ -126,6 +128,7 @@ const ethics = {
                   alt={member.name}
                   class="w-full h-full object-cover object-top filter brightness-[1.02] contrast-[1.02] group-hover/photo:scale-105 transition-transform duration-500"
                   loading="lazy"
+                  decoding="async"
                   width="400"
                   height="300"
                 />
@@ -168,10 +171,10 @@ const ethics = {
           {lang === 'th' ? 'การรับรองและสมาชิกภาพองค์กรวิชาชีพกฎหมาย' : lang === 'zh' ? '官方律师执业认证与国际仲裁公会资质' : 'Professional Accreditations & Bar Affiliations'}
         </h3>
         <div class="flex flex-wrap items-center justify-center gap-4 sm:gap-6 text-xs sm:text-sm text-slate-700 font-medium">
-          <span class="px-4 py-2.5 rounded-[2px] bg-slate-50 border border-slate-200">🏛️ สภาทนายความแห่งประเทศไทย (Lawyers Council)</span>
-          <span class="px-4 py-2.5 rounded-[2px] bg-slate-50 border border-slate-200">⚖️ สำนักอบรมศึกษากฎหมายแห่งเนติบัณฑิตยสภา (Thai Bar)</span>
-          <span class="px-4 py-2.5 rounded-[2px] bg-slate-50 border border-slate-200">📜 ทนายความผู้ทำคำรับรองลายมือชื่อ (Notarial Attorney)</span>
-          <span class="px-4 py-2.5 rounded-[2px] bg-slate-50 border border-slate-200">🌐 International Bar Association (IBA)</span>
+          <span class="px-4 py-2.5 rounded-[2px] bg-slate-50 border border-slate-200">สภาทนายความแห่งประเทศไทย (Lawyers Council)</span>
+          <span class="px-4 py-2.5 rounded-[2px] bg-slate-50 border border-slate-200">สำนักอบรมศึกษากฎหมายแห่งเนติบัณฑิตยสภา (Thai Bar)</span>
+          <span class="px-4 py-2.5 rounded-[2px] bg-slate-50 border border-slate-200">ทนายความผู้ทำคำรับรองลายมือชื่อ (Notarial Attorney)</span>
+          <span class="px-4 py-2.5 rounded-[2px] bg-slate-50 border border-slate-200">International Bar Association (IBA)</span>
         </div>
       </div>
     </section>

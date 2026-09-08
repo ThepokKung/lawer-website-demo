@@ -19,7 +19,7 @@ const t = useTranslations(lang);
     <div class="reveal-init flex flex-col items-center justify-center mb-8">
       <!-- Logo strictly on top -->
       <div class="w-16 h-16 rounded-[2px] overflow-hidden shadow-sm mb-4 transition-transform hover:scale-105 duration-300">
-        <img src="/images/logo.svg" alt="Montclaire & Sterling Crest" class="w-full h-full object-contain" width="64" height="64" />
+        <img src="/images/logo.svg" alt="Montclaire & Sterling Crest" class="w-full h-full object-contain" width="64" height="64" loading="eager" fetchpriority="high" decoding="async" />
       </div>
 
       <!-- Prestige Badge centered below logo -->
@@ -40,13 +40,13 @@ const t = useTranslations(lang);
     </p>
 
     <!-- Sharp CTAs -->
-    <div class="reveal-init stagger-3 flex flex-col sm:flex-row items-center justify-center gap-4">
+    <div class="reveal-init stagger-3 flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-5 pt-3">
       <a
         href={`/${lang}/contact/`}
-        class="w-full sm:w-auto sm:min-w-[240px] h-13 inline-flex items-center justify-center px-8 text-sm font-bold uppercase tracking-wider text-white rounded-[2px] bg-navy-900 hover:bg-gold-600 transition-all duration-300 shadow-md hover:shadow-lg active:scale-[0.98] text-center"
+        class="w-full sm:w-auto sm:min-w-[260px] inline-flex items-center justify-center px-9 py-4 sm:py-4.5 text-sm sm:text-base font-bold uppercase tracking-wider text-white rounded-[2px] bg-navy-900 hover:bg-gold-600 border border-navy-950 hover:border-gold-600 transition-all duration-300 shadow-md hover:shadow-xl active:scale-[0.98] text-center group"
       >
         <span>{t.hero.ctaConsultation}</span>
-        <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 ml-2" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 ml-2.5 transition-transform duration-300 group-hover:translate-x-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
           <path d="M5 12h14" />
           <path d="m12 5 7 7-7 7" />
         </svg>
@@ -54,7 +54,7 @@ const t = useTranslations(lang);
 
       <a
         href={`/${lang}/services/`}
-        class="w-full sm:w-auto sm:min-w-[220px] h-13 inline-flex items-center justify-center px-8 text-sm font-bold uppercase tracking-wider text-navy-950 hover:text-navy-900 rounded-[2px] bg-white hover:bg-slate-50 border border-slate-300/90 transition-all duration-300 shadow-xs hover:border-navy-900 active:scale-[0.98] text-center"
+        class="w-full sm:w-auto sm:min-w-[240px] inline-flex items-center justify-center px-9 py-4 sm:py-4.5 text-sm sm:text-base font-bold uppercase tracking-wider text-navy-950 hover:text-white rounded-[2px] bg-white hover:bg-navy-900 border-2 border-slate-300 hover:border-navy-900 transition-all duration-300 shadow-xs hover:shadow-md active:scale-[0.98] text-center"
       >
         {t.hero.ctaServices}
       </a>

@@ -114,3 +114,34 @@ d:\Work_Dir\Law\
 4. **SEO & Schema Integrity:**
    * All pages must emit canonical URL, alternate hreflang tags for `th`, `en`, `zh-Hans`, and `x-default`.
    * `LegalService` JSON-LD schema must be injected in `BaseLayout.astro`.
+
+5. **Strict `.env` Rule (Zero Hardcoding):**
+   * Never hardcode contact information, URLs, or external endpoints into template components.
+   * All configuration values (Email, Phone, Mobile, LINE, WeChat, WhatsApp, Maps Embed URL, Google Script URL, Site URL, Analytics IDs) are defined in `.env` and exposed through `src/config/site.ts`.
+
+6. **Interactive Google Maps Embed:**
+   * Contact page (`src/pages/[lang]/contact.astro`) displays an interactive embedded Google Map powered by `PUBLIC_GOOGLE_MAPS_EMBED_URL`.
+
+7. **Cloudflare Workers Free Tier Architecture:**
+   * Deploy using `wrangler.jsonc` with `assets.directory = "./dist"`.
+   * Static assets run on Cloudflare Edge CDN with 0ms CPU time and do NOT count towards the 100,000 req/day CPU execution limit.
+   * `public/_redirects` performs edge 301 redirects from `/` to `/th/`.
+   * `public/_headers` enforces browser caching (1 year for `_astro/*`) and security headers.
+   * Deploy command: `npm run deploy`.
+
+8. **Strict Zero Emoji Policy & Clean Legal Privacy Standards:**
+   * NEVER use playful emojis (e.g. 🗺️, 📍, 📞, ✉️, 🕒, 🏛️, ⚖️, 📜, 🌐, 🧭, ⚙️, 🔒, 🚇) in user-facing components. Always use crisp SVG icons or sleek typographic badges.
+   * Cookie settings and privacy notices must remain concise and professional: do NOT mention internal third-party tool names (e.g. GTM, GA4, Clarity) in public policy copy.
+
+9. **Anti-Spam Shield & Prestige Typography:**
+   * Consultation form (`ConsultationForm.astro`) features a two-tier anti-spam protection:
+     1. Invisible Honeypot field (`company_url_hp`) and Time Trap (< 2.0s reject) running client-side with zero human friction.
+     2. Optional Cloudflare Turnstile managed challenge when `PUBLIC_TURNSTILE_SITE_KEY` is present.
+   * Bot submissions are neutralized silently (mocked success to the bot without writing to Google Sheets or sending notification emails).
+   * Google Fonts (`Sarabun` for formal Thai legal typography, `Cormorant Garamond` for prestige legal serif headings) are preconnected and integrated into `tailwind.config.mjs` and `global.css`.
+
+10. **Priority Hints & Core Web Vitals Optimization:**
+   * Preload critical LCP assets early in `<head>`: `<link rel="preload" href="/images/logo.svg" as="image" type="image/svg+xml" fetchpriority="high" />`.
+   * Apply `fetchpriority="high"` and `loading="eager"` to top-of-page LCP visual elements (Hero emblem).
+   * All below-the-fold images (`Footer`, `TeamPreview`, `about.astro`) must strictly use `loading="lazy"` and `decoding="async"` to prevent bandwidth contention and avoid Dev Toolbar audit warnings.
+   * Connect fonts via `<link rel="preconnect">` and load stylesheets with `fetchpriority="high"`.

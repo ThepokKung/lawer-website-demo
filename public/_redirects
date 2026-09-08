@@ -1,0 +1,3 @@
+# Cloudflare Edge Redirects
+# Immediate 301 redirect from root to default language
+/  /th/  301

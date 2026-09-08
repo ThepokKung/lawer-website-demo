@@ -1,0 +1,20 @@
+# Cloudflare Edge Headers & Security Policies
+
+# Global Security Headers
+/*
+  X-Content-Type-Options: nosniff
+  X-Frame-Options: SAMEORIGIN
+  Referrer-Policy: strict-origin-when-cross-origin
+  Permissions-Policy: camera=(), microphone=(), geolocation=()
+
+# Astro Build Assets (Hashed and Immutable - Cache for 1 Year)
+/_astro/*
+  Cache-Control: public, max-age=31536000, immutable
+
+# Static Images & Vector Logos
+/images/*
+  Cache-Control: public, max-age=86400, stale-while-revalidate=604800
+
+# HTML Documents (Must revalidate to guarantee visitors always see the latest deploy)
+/*.html
+  Cache-Control: public, max-age=0, must-revalidate

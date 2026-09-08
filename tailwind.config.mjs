@@ -35,7 +35,9 @@ export default {
         '3xl': '12px'
       },
       fontFamily: {
-        sans: ['Inter', 'system-ui', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'sans-serif']
+        sans: ['Sarabun', 'Inter', 'system-ui', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Noto Sans SC', 'sans-serif'],
+        serif: ['"Cormorant Garamond"', 'Georgia', 'Cambria', 'serif'],
+        heading: ['"Cormorant Garamond"', 'Sarabun', 'sans-serif']
       },
       transitionTimingFunction: {
         'apple-ease': 'cubic-bezier(0.16, 1, 0.3, 1)'

@@ -1,6 +1,7 @@
 ---
 import { ClientRouter } from 'astro:transitions';
 import CookieBanner from '@/components/common/CookieBanner.astro';
+import { SITE_CONFIG } from '@/config/site';
 import '@/styles/global.css';
 
 interface Props {
@@ -17,9 +18,8 @@ const {
   canonical
 } = Astro.props;
 
-const siteUrl = import.meta.env.PUBLIC_SITE_URL || 'https://ms-legal.example.com';
-const gtmId = import.meta.env.PUBLIC_GTM_ID || 'GTM-XXXXXXX';
-const clarityId = import.meta.env.PUBLIC_CLARITY_ID || '';
+const siteUrl = SITE_CONFIG.url;
+const gtmId = SITE_CONFIG.gtmId;
 
 // Clean current pathname to build alternates
 const currentPath = Astro.url.pathname;
@@ -33,26 +33,26 @@ const zhUrl = new URL(`/zh${pathWithoutLang === '/' ? '' : pathWithoutLang}`, si
 const schemaData = {
   "@context": "https://schema.org",
   "@type": "LegalService",
-  "name": "Montclaire & Sterling Legal Counsel",
+  "name": SITE_CONFIG.firmName,
   "alternateName": [
-    "สำนักงานกฎหมาย มงต์แคลร์ แอนด์ สเตอร์ลิง",
-    "蒙克莱尔·斯特林国际律师事务所"
+    SITE_CONFIG.firmNameTh,
+    SITE_CONFIG.firmNameZh
   ],
   "image": `${siteUrl}/images/logo-crest.jpg`,
   "url": siteUrl,
-  "telephone": "+66-2-123-4567",
-  "email": "contact@ms-legal.example.com",
+  "telephone": SITE_CONFIG.phone,
+  "email": SITE_CONFIG.email,
   "address": {
     "@type": "PostalAddress",
-    "streetAddress": "88/1 Sathorn Square Tower, 28th Floor, North Sathorn Rd, Silom, Bang Rak",
+    "streetAddress": SITE_CONFIG.addressEn,
     "addressLocality": "Bangkok",
     "postalCode": "10500",
     "addressCountry": "TH"
   },
   "geo": {
     "@type": "GeoCoordinates",
-    "latitude": 13.7226,
-    "longitude": 100.5292
+    "latitude": SITE_CONFIG.latitude,
+    "longitude": SITE_CONFIG.longitude
   },
   "openingHoursSpecification": [
     {
@@ -95,6 +95,23 @@ const schemaData = {
     <meta property="og:image" content={`${siteUrl}/favicon.svg`} />
     <meta property="og:locale" content={lang === 'th' ? 'th_TH' : lang === 'zh' ? 'zh_CN' : 'en_US'} />
 
+    <!-- Priority Hints & Asset Preloading -->
+    <link rel="preload" href="/images/logo.svg" as="image" type="image/svg+xml" fetchpriority="high" />
+
+    <!-- Google Fonts: Sarabun (Official Thai Legal Standard) & Cormorant Garamond (Prestige Legal Serif) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600;1,700&family=Sarabun:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,600&display=swap"
+      fetchpriority="high"
+    />
+
+    <!-- Cloudflare Turnstile API (Loaded when Turnstile key is configured) -->
+    {SITE_CONFIG.turnstileSiteKey && (
+      <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
+    )}
+
     <!-- Google Consent Mode v2 Default Setup (Must execute before GTM) -->
     <script is:inline>
       window.dataLayer = window.dataLayer || [];
@@ -130,17 +147,6 @@ const schemaData = {
         j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
         })(window,document,'script','dataLayer',gtmId);
-      </script>
-    )}
-
-    <!-- Microsoft Clarity -->
-    {clarityId && (
-      <script is:inline define:vars={{ clarityId }}>
-        (function(c,l,a,r,i,t,y){
-          c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-          t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-          y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-        })(window, document, "clarity", "script", clarityId);
       </script>
     )}
 

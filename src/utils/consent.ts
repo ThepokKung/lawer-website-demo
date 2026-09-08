@@ -2,6 +2,7 @@ import { trackEvent } from './tracking';
 
 export interface CookieConsent {
   necessary: true;
+  functional: boolean;
   analytics: boolean;
   marketing: boolean;
   timestamp: string;
@@ -19,9 +20,10 @@ export function getStoredConsent(): CookieConsent | null {
   }
 }
 
-export function saveConsent(analytics: boolean, marketing: boolean): CookieConsent {
+export function saveConsent(analytics: boolean, marketing: boolean, functional: boolean = true): CookieConsent {
   const consent: CookieConsent = {
     necessary: true,
+    functional,
     analytics,
     marketing,
     timestamp: new Date().toISOString()
