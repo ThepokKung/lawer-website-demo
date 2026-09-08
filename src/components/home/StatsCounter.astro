@@ -1,0 +1,40 @@
+---
+import { useTranslations, type SupportedLang } from '@/i18n';
+
+interface Props {
+  lang: SupportedLang;
+}
+
+const { lang } = Astro.props;
+const t = useTranslations(lang);
+
+const statsList = [
+  t.stats.experience,
+  t.stats.successRate,
+  t.stats.corporateClients,
+  t.stats.assetsProtected
+];
+---
+
+<section class="py-12 border-y border-gold-500/15 bg-navy-950/50 backdrop-blur-md">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-6 lg:gap-8">
+      {statsList.map((stat, index) => (
+        <div class:list={[
+          "reveal-init text-center p-4 sm:p-6 rounded-2xl glass-card",
+          `stagger-${index + 1}`
+        ]}>
+          <div class="text-3xl sm:text-4xl lg:text-5xl font-extrabold gold-gradient-text tracking-tight mb-2">
+            {stat.value}
+          </div>
+          <div class="text-sm font-semibold text-slate-200 mb-1">
+            {stat.label}
+          </div>
+          <div class="text-xs text-slate-400">
+            {stat.sub}
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

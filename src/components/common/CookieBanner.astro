@@ -1,0 +1,128 @@
+---
+interface Props {
+  lang?: 'th' | 'en' | 'zh';
+}
+
+const { lang = 'th' } = Astro.props;
+
+const content = {
+  th: {
+    title: "การคุ้มครองข้อมูลส่วนบุคคลและคุกกี้ (PDPA)",
+    desc: "สำนักงานของเราใช้คุกกี้ที่จำเป็นและคุกกี้เพื่อการวิเคราะห์ (Google Analytics / GTM) เพื่อพัฒนาการให้บริการและมอบประสบการณ์ที่ดีที่สุดแก่ท่าน",
+    acceptAll: "ยอมรับทั้งหมด",
+    decline: "ปฏิเสธคุกกี้ที่ไม่จำเป็น",
+    policy: "อ่านนโยบายคุกกี้",
+    policyHref: "/th/cookie-policy"
+  },
+  en: {
+    title: "Privacy & Cookie Preferences (PDPA)",
+    desc: "Our firm uses essential cookies and performance analytics (Google Analytics / GTM) to enhance user experience and improve our legal consultation services.",
+    acceptAll: "Accept All",
+    decline: "Decline Non-Essential",
+    policy: "Read Cookie Policy",
+    policyHref: "/en/cookie-policy"
+  },
+  zh: {
+    title: "隐私与 Cookie 偏好 (PDPA)",
+    desc: "本律所使用必要的技术 Cookie 及分析类 Cookie (Google Analytics / GTM) 来优化我们的法律咨询服务并提供卓越体验。",
+    acceptAll: "全部接受",
+    decline: "拒绝非必要",
+    policy: "阅读 Cookie 政策",
+    policyHref: "/zh/cookie-policy"
+  }
+}[lang];
+---
+
+<aside
+  id="vanguard-cookie-banner"
+  role="dialog"
+  aria-labelledby="cookie-banner-title"
+  aria-describedby="cookie-banner-desc"
+  class="fixed bottom-6 left-4 right-4 md:left-auto md:right-8 md:max-w-xl z-50 transition-all duration-500 transform translate-y-32 opacity-0 pointer-events-none"
+>
+  <div class="glass-card rounded-2xl p-5 md:p-6 shadow-2xl border border-gold-500/30 backdrop-blur-xl bg-navy-900/90 text-slate-100">
+    <div class="flex items-start gap-4">
+      <div class="w-10 h-10 rounded-xl bg-gold-500/10 border border-gold-500/20 flex items-center justify-center text-gold-400 shrink-0">
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M12 2a10 10 0 1 0 10 10 4 4 0 0 1-5-5 4 4 0 0 1-5-5" />
+          <path d="M8.5 8.5v.01" />
+          <path d="M16 15.5v.01" />
+          <path d="M12 12v.01" />
+          <path d="M11 17v.01" />
+          <path d="M7 13v.01" />
+        </svg>
+      </div>
+
+      <div class="space-y-2">
+        <h3 id="cookie-banner-title" class="font-semibold text-base text-gold-300">
+          {content.title}
+        </h3>
+        <p id="cookie-banner-desc" class="text-xs md:text-sm text-slate-300 leading-relaxed">
+          {content.desc}
+        </p>
+      </div>
+    </div>
+
+    <div class="mt-5 pt-4 border-t border-slate-800/80 flex flex-wrap items-center justify-between gap-3">
+      <a
+        href={content.policyHref}
+        class="text-xs text-gold-400 hover:text-gold-300 underline underline-offset-4 transition-colors"
+      >
+        {content.policy}
+      </a>
+
+      <div class="flex items-center gap-2.5 ml-auto">
+        <button
+          type="button"
+          id="btn-cookie-decline"
+          class="px-4 py-2 rounded-lg text-xs font-medium text-slate-300 hover:text-white bg-slate-800/80 hover:bg-slate-750 border border-slate-700 transition-all active:scale-95"
+        >
+          {content.decline}
+        </button>
+        <button
+          type="button"
+          id="btn-cookie-accept-all"
+          class="px-4 py-2 rounded-lg text-xs font-semibold text-navy-950 bg-gradient-to-r from-gold-400 to-gold-500 hover:from-gold-300 hover:to-gold-400 shadow-md shadow-gold-500/10 transition-all active:scale-95"
+        >
+          {content.acceptAll}
+        </button>
+      </div>
+    </div>
+  </div>
+</aside>
+
+<script>
+  import { getStoredConsent, saveConsent } from '@/utils/consent';
+
+  function initCookieBanner() {
+    const banner = document.getElementById('vanguard-cookie-banner');
+    const btnAccept = document.getElementById('btn-cookie-accept-all');
+    const btnDecline = document.getElementById('btn-cookie-decline');
+
+    if (!banner) return;
+
+    const stored = getStoredConsent();
+    if (!stored) {
+      setTimeout(() => {
+        banner.classList.remove('translate-y-32', 'opacity-0', 'pointer-events-none');
+      }, 1000);
+    }
+
+    btnAccept?.addEventListener('click', () => {
+      saveConsent(true, true);
+      hideBanner();
+    });
+
+    btnDecline?.addEventListener('click', () => {
+      saveConsent(false, false);
+      hideBanner();
+    });
+
+    function hideBanner() {
+      banner?.classList.add('translate-y-32', 'opacity-0', 'pointer-events-none');
+    }
+  }
+
+  document.addEventListener('DOMContentLoaded', initCookieBanner);
+  document.addEventListener('astro:page-load', initCookieBanner);
+</script>

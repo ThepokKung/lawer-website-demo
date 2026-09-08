@@ -1,0 +1,42 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import Navbar from '@/components/common/Navbar.astro';
+import Footer from '@/components/common/Footer.astro';
+import Hero from '@/components/home/Hero.astro';
+import StatsCounter from '@/components/home/StatsCounter.astro';
+import ServicesGrid from '@/components/home/ServicesGrid.astro';
+import WhyChooseUs from '@/components/home/WhyChooseUs.astro';
+import TeamPreview from '@/components/home/TeamPreview.astro';
+import HomeCta from '@/components/home/HomeCta.astro';
+import { useTranslations, type SupportedLang } from '@/i18n';
+
+export function getStaticPaths() {
+  return [
+    { params: { lang: 'th' } },
+    { params: { lang: 'en' } },
+    { params: { lang: 'zh' } }
+  ];
+}
+
+const { lang } = Astro.params as { lang: SupportedLang };
+const t = useTranslations(lang);
+---
+
+<BaseLayout
+  title={`${t.brand.name} | ${t.brand.tagline}`}
+  description={t.brand.description}
+  lang={lang}
+>
+  <Navbar lang={lang} />
+  
+  <main>
+    <Hero lang={lang} />
+    <StatsCounter lang={lang} />
+    <ServicesGrid lang={lang} />
+    <WhyChooseUs lang={lang} />
+    <TeamPreview lang={lang} />
+    <HomeCta lang={lang} />
+  </main>
+
+  <Footer lang={lang} />
+</BaseLayout>

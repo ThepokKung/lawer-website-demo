@@ -1,0 +1,77 @@
+---
+import { useTranslations, type SupportedLang } from '@/i18n';
+
+interface Props {
+  lang: SupportedLang;
+}
+
+const { lang } = Astro.props;
+const t = useTranslations(lang);
+---
+
+<section class="py-20 lg:py-28 relative">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    
+    <div class="text-center max-w-3xl mx-auto mb-16">
+      <div class="reveal-init inline-block px-3 py-1 rounded-full bg-navy-900 border border-gold-500/30 text-gold-300 text-xs font-semibold uppercase tracking-wider mb-3">
+        {t.teamSection.sectionBadge}
+      </div>
+      <h2 class="reveal-init stagger-1 text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-white mb-4">
+        {t.teamSection.title}
+      </h2>
+      <p class="reveal-init stagger-2 text-base sm:text-lg text-slate-400">
+        {t.teamSection.subtitle}
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      {t.teamSection.members.map((member, index) => (
+        <div
+          class:list={[
+            "reveal-init glass-card glass-card-hover rounded-2xl p-7 flex flex-col justify-between",
+            `stagger-${index + 1}`
+          ]}
+        >
+          <div>
+            <!-- Avatar Placeholder with Gold Scales -->
+            <div class="w-20 h-20 rounded-2xl bg-gradient-to-br from-navy-800 to-navy-950 border border-gold-500/30 flex items-center justify-center text-gold-400 mb-6 shadow-md">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-10 h-10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2" />
+                <circle cx="12" cy="7" r="4" />
+              </svg>
+            </div>
+
+            <h3 class="text-xl font-bold text-slate-100 mb-1">
+              {member.name}
+            </h3>
+            <p class="text-xs font-semibold uppercase tracking-wider text-gold-400 mb-4">
+              {member.role}
+            </p>
+
+            <div class="p-3 rounded-xl bg-navy-950/70 border border-slate-800/80 mb-4 text-xs text-slate-300">
+              {member.credentials}
+            </div>
+
+            <p class="text-sm text-slate-400 leading-relaxed">
+              {member.experience}
+            </p>
+          </div>
+
+          <div class="mt-6 pt-4 border-t border-slate-800/80">
+            <a
+              href={`/${lang}/contact/?attorney=${encodeURIComponent(member.name)}`}
+              class="inline-flex items-center text-xs font-semibold uppercase tracking-wider text-gold-400 hover:text-gold-300"
+            >
+              <span>{t.contact.formTitle}</span>
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-3.5 h-3.5 ml-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M5 12h14" />
+                <path d="m12 5 7 7-7 7" />
+              </svg>
+            </a>
+          </div>
+        </div>
+      ))}
+    </div>
+
+  </div>
+</section>
