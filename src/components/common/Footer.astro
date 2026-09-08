@@ -166,20 +166,20 @@ const currentYear = new Date().getFullYear();
 </footer>
 
 <script>
-  import { trackCall, trackEmail, trackLine, trackWeChat, trackWhatsApp } from '@/utils/tracking';
+  import { trackEvent } from '@/utils/tracking';
 
   function attachFooterTracking() {
     document.querySelectorAll('.track-call').forEach((el) => {
       el.addEventListener('click', () => {
         const phone = el.getAttribute('data-phone') || '';
-        trackCall(phone);
+        trackEvent('click_call', { contact_method: 'phone', phone_number: phone });
       });
     });
 
     document.querySelectorAll('.track-email').forEach((el) => {
       el.addEventListener('click', () => {
         const email = el.getAttribute('data-email') || '';
-        trackEmail(email);
+        trackEvent('click_email', { contact_method: 'email', email_address: email });
       });
     });
 
@@ -191,17 +191,16 @@ const currentYear = new Date().getFullYear();
 
     document.querySelectorAll('.track-wechat').forEach((el) => {
       el.addEventListener('click', () => {
-        trackWeChat();
+        trackEvent('click_wechat', { channel: 'wechat' });
       });
     });
 
     document.querySelectorAll('.track-whatsapp').forEach((el) => {
       el.addEventListener('click', () => {
-        trackWhatsApp();
+        trackEvent('click_whatsapp', { channel: 'whatsapp' });
       });
     });
   }
 
-  document.addEventListener('DOMContentLoaded', attachFooterTracking);
   document.addEventListener('astro:page-load', attachFooterTracking);
 </script>

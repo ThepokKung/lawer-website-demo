@@ -8,12 +8,7 @@ interface Props {
 const { lang } = Astro.props;
 const t = useTranslations(lang);
 
-const statsList = [
-  t.stats.experience,
-  t.stats.successRate,
-  t.stats.corporateClients,
-  t.stats.assetsProtected
-];
+const statsList = Object.values(t.stats);
 ---
 
 <section class="py-12 bg-white border-b border-slate-200">

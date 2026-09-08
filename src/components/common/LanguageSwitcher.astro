@@ -51,7 +51,7 @@ const localesList: Array<{ code: SupportedLang; label: string; href: string }> =
 </div>
 
 <script>
-  import { trackLanguageSwitch } from '@/utils/tracking';
+  import { trackEvent } from '@/utils/tracking';
 
   function setupLangSwitchTracking() {
     document.querySelectorAll('.lang-switch-btn').forEach((btn) => {
@@ -60,12 +60,11 @@ const localesList: Array<{ code: SupportedLang; label: string; href: string }> =
         const fromLang = target.getAttribute('data-from-lang') || 'th';
         const toLang = target.getAttribute('data-to-lang') || 'th';
         if (fromLang !== toLang) {
-          trackLanguageSwitch(fromLang, toLang);
+          trackEvent('switch_language', { from_lang: fromLang, to_lang: toLang });
         }
       });
     });
   }
 
-  document.addEventListener('DOMContentLoaded', setupLangSwitchTracking);
   document.addEventListener('astro:page-load', setupLangSwitchTracking);
 </script>

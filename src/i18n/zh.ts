@@ -35,22 +35,22 @@ export const zh = {
       {
         title: "中英泰三语资深涉外律师团",
         desc: "无缝跨越语言及法系壁垒，深度理解中国企业商业模式与泰国政策法规，沟通精准高效，杜绝文化误解。",
-        icon: "globe"
+
       },
       {
         title: "最高规格保密特权 (Strict Privilege)",
         desc: "全面遵守律师法定保密义务与泰国个人数据保护法 (PDPA)，配备先进加密保障，确保商业秘密万无一失。",
-        icon: "shield"
+
       },
       {
         title: "前瞻性战略与结果导向 (Proactive Strategy)",
         desc: "预先识别商业死穴，在合同设计、商业谈判与法庭抗辩中均采取主动制胜布局，力求商业利益最大化。",
-        icon: "scale"
+
       },
       {
         title: "公开透明且合理的收费结构",
         desc: "客观评估诉讼前景与维权成本，提供清晰的阶段性收费清单与常年顾问方案，绝无任何隐形附加开支。",
-        icon: "check"
+
       }
     ]
   },
@@ -66,7 +66,7 @@ export const zh = {
       slug: "foreign-investment-boi",
       title: "外商赴泰投资与 BOI 投资优惠申请",
       shortDesc: "外资企业设立、泰国投资促进委员会 (BOI) 免税优惠、外商经营许可证 (FBL) 及 LTR 长居/工作签证办理。",
-      icon: "building",
+
       overview: "泰国作为东南亚重要门户与制造枢纽，营商机遇广阔。我们的公司法团队全程指导中资及跨国企业合规落地，协助争取最优税收优惠与用地权限。",
       keyPoints: [
         "设立外商独资公司、合资企业、外国公司分支机构及区域办事处",
@@ -81,7 +81,7 @@ export const zh = {
       slug: "litigation-dispute-resolution",
       title: "商事争议解决、诉讼出庭与国际仲裁",
       shortDesc: "泰国各级民商事及刑事法庭出庭辩护、重大违约索赔、商业诈骗维权及国内外仲裁委员会 (THAC, SIAC) 代理。",
-      icon: "gavel",
+
       overview: "在商业纠纷陷入僵局时，先锋出庭律师团队以扎实的举证攻防、雄辩的法庭辩护与精湛的谈判技巧，全力挽回委托人经济损失并赢得诉讼裁决。",
       keyPoints: [
         "重大民商事纠纷、合同违约追偿、股权争议与股东代位诉讼",
@@ -96,7 +96,7 @@ export const zh = {
       slug: "real-estate-property",
       title: "房地产尽职调查与产权交易合规",
       shortDesc: "泰国土地局产权地契深度尽调 (Title Search)、公寓住宅买卖合同审阅、30年长期租赁权及地上权设立登记。",
-      icon: "home",
+
       overview: "海外置业及土地收购法律风险极高。我们提供多维度的产权尽调与严密的购房法律审查，从根本上隔离产权争议与期房烂尾风险。",
       keyPoints: [
         "土地局官方地契真实性、质押抵押记录及历史产权沿革深度调档",
@@ -111,7 +111,7 @@ export const zh = {
       slug: "corporate-commercial-contracts",
       title: "公司法务、并购重组 (M&A) 与常年法律顾问",
       shortDesc: "企业常年法律顾问服务、跨境并购尽职调查、中英双语商业合同定制、公司治理及合规审查。",
-      icon: "briefcase",
+
       overview: "稳健的企业运营离不开严密的契约治理。我们作为企业的外部法务军师，在公司设立、日常营运、重大交易到解散清算的每一节点保驾护航。",
       keyPoints: [
         "跨国企业在泰日常运营常年法律顾问 (Corporate Retainer)",
@@ -126,7 +126,7 @@ export const zh = {
       slug: "family-wealth-inheritance",
       title: "家族财富传承、中泰遗嘱订立与家事法律",
       shortDesc: "跨国家族财富顶层设计、中泰双语合法遗嘱订立、泰国法院遗产继承代理、婚前财产协议及家事纷争化解。",
-      icon: "users",
+
       overview: "助力高净值人士实现财富的安全代际传承。依托对中泰两国家庭法与财产继承法的精深造诣，制定无缝衔接且具法律约束力的传承方案。",
       keyPoints: [
         "起草符合泰国法律效力并在国际被广泛认可的中英泰双语遗嘱",
@@ -141,7 +141,7 @@ export const zh = {
       slug: "notarial-legal-translation",
       title: "公证人律师认证 (Notary) 与涉外法律翻译",
       shortDesc: "泰国司法部执业公证人律师 (Notarial Services Attorney) 签名公证、文件见证、领事双认证及法庭级翻译。",
-      icon: "file-check",
+
       overview: "跨境流转的文件均需具备法定公证效力方可被法庭、使领馆及官方机构采信。我们的公证人律师团队提供权威、便捷、合规的公证见证服务。",
       keyPoints: [
         "见证各类商业合同、授权委托书 (POA) 及法定代表人签字公证",
@@ -209,7 +209,7 @@ export const zh = {
     fieldService: "需求业务领域 *",
     fieldMessage: "咨询事项简要描述 *",
     fieldSubmit: "提交法律咨询申请",
-    submitting: "正在提交...",
+
     successMsg: "咨询申请已成功提交。我们的高级顾问律师已收到您的案件简报，将尽快与您取得联系。",
     errorMsg: "提交发生故障，请检查网络后重试，或直接拨打律所中文专线电话咨询。",
     selectServiceDefault: "-- 请选择所需法律服务领域 --"

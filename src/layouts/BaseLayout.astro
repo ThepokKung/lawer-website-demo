@@ -196,8 +196,7 @@ const schemaData = {
         }
       }
 
-      // Run on initial load and on Astro View Transition navigation
-      document.addEventListener('DOMContentLoaded', initAppleScrollReveal);
+      // Run on Astro View Transition navigation
       document.addEventListener('astro:page-load', initAppleScrollReveal);
     </script>
   </body>
