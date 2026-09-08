@@ -178,8 +178,6 @@ const turnstileSiteKey = SITE_CONFIG.turnstileSiteKey;
 
     if (!form) return;
 
-    // Track when form was mounted to protect against sub-second automated bot submissions
-    const formMountedAt = Date.now();
 
     // Handle preselected service parameter from query string (e.g. ?service=...)
     const urlParams = new URLSearchParams(window.location.search);

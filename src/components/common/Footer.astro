@@ -185,7 +185,7 @@ const currentYear = new Date().getFullYear();
 
     document.querySelectorAll('.track-line').forEach((el) => {
       el.addEventListener('click', () => {
-        trackLine(el.getAttribute('href') || '');
+        trackEvent('click_line', { channel: 'line', link_url: el.getAttribute('href') || '' });
       });
     });
 
