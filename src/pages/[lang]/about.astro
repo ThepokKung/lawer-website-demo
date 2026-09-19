@@ -9,8 +9,7 @@ import { useTranslations, type SupportedLang } from '@/i18n';
 export function getStaticPaths() {
   return [
     { params: { lang: 'th' } },
-    { params: { lang: 'en' } },
-    { params: { lang: 'zh' } }
+    { params: { lang: 'en' } }
   ];
 }
 
@@ -27,11 +26,6 @@ const ethics = {
     { title: "Unyielding Integrity & Candor", desc: "We provide honest, unvarnished legal risk appraisals without false assurances or inflated promises." },
     { title: "Sacrosanct Professional Privilege", desc: "Client data is safeguarded with institutional-grade encryption protocols and backed by strict statutory privilege." },
     { title: "Relentless Commitment to Excellence", desc: "We exhaustively research legal precedents and design trial strategy to deliver definitive commercial victories." }
-  ],
-  zh: [
-    { title: "恪守诚信与客观研判", desc: "如实陈述案件事实与法律依据，客观剖析胜诉面与潜在风险，绝不对委托人作出虚假承诺。" },
-    { title: "顶级保密机制与特权保护", desc: "全案档案与通讯均纳入律师法定保密特权范围，采用银行级严密数字加密与物理隔离存储。" },
-    { title: "精益求精的制胜追求", desc: "深度穷尽判例检索与成文法法理，全方位推演攻防棋局，力求为委托人赢得最佳商业结果。" }
   ]
 }[lang];
 ---
@@ -63,86 +57,97 @@ const ethics = {
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
           <div class="space-y-6">
             <h2 class="text-2xl sm:text-3xl font-extrabold text-navy-950 leading-tight">
-              {lang === 'th' ? 'มุ่งมั่นในการให้บริการด้านกฎหมายที่ครบวงจรและเป็นเลิศ' : lang === 'zh' ? '立足曼谷，恪守诚信，提供全方位务实法律护航' : 'Dedicated to Comprehensive & Practical Legal Protection'}
+              {lang === 'th' ? 'มุ่งมั่นในการให้บริการด้านกฎหมายที่ครบวงจรและเป็นเลิศ' : 'Dedicated to Comprehensive & Practical Legal Protection'}
             </h2>
             <p class="text-sm sm:text-base text-slate-600 leading-relaxed">
               {lang === 'th'
                 ? 'บริษัท ธันปรัท ทนายความ จำกัด ก่อตั้งขึ้นในปี พ.ศ. 2561 ด้วยปณิธานอันแน่วแน่ในการเป็นที่พึ่งพาด้านกฎหมายให้แก่องค์กรธุรกิจและบุคคลทั่วไป โดยยึดมั่นในหลักความซื่อสัตย์ ความโปร่งใส และการสร้างความสำเร็จร่วมกันกับลูกค้า ภายใต้การนำของ คุณปรัชญา วิชาโคตร ผู้มีประสบการณ์ว่าความและที่ปรึกษากฎหมายมากว่า 26 ปี'
-                : lang === 'zh'
-                ? '泰国丹普拉特律师事务所（THANPRAT LAWYER CO., LTD.）创立于 2018 年，由拥有逾 26 年资深执业经验的普拉查亚·维查科特主任律师领衔创设。律所秉承诚信、透明、敬业与共赢宗旨，致力于在签约前、投资前及诉前为企业构筑坚不可摧的法务合规防线。'
                 : 'Established in 2018, THANPRAT LAWYER CO., LTD. is a premier boutique Thai law firm based in Dusit, Bangkok. Founded by Managing Director Pratchaya Vichakote (practicing since 2000), our team protects clients’ interests with uncompromising integrity, legal precision, and proactive risk mitigation.'}
             </p>
-
-            <!-- Firm Imagery -->
-            <div class="rounded-[2px] overflow-hidden border border-slate-200 shadow-sm relative group">
-              <img
-                src="/images/thanprat/legal-scales.jpg"
-                alt="THANPRAT LAWYER CO., LTD. - Legal Precision & Justice"
-                class="w-full h-56 object-cover filter brightness-[1.02] contrast-[1.02] group-hover:scale-105 transition-transform duration-500"
-                loading="lazy"
-                decoding="async"
-                width="600"
-                height="300"
-              />
-              <div class="absolute bottom-2 left-2 px-2.5 py-1 rounded-[2px] bg-navy-950/85 backdrop-blur-md text-[11px] text-white font-medium border border-white/10 flex items-center gap-1.5">
-                <span class="w-1.5 h-1.5 rounded-full bg-gold-400"></span>
-                <span>Theoddamri Bldg., Nakornchaisri Rd, Dusit, Bangkok</span>
-              </div>
-            </div>
           </div>
 
-          <!-- Ethics Box -->
           <div class="space-y-4">
-            {ethics.map((item, i) => (
-              <div class="p-5 rounded-[2px] bg-slate-50 border border-slate-200 hover:border-gold-500 transition-colors">
-                <h3 class="text-base font-bold text-navy-950 mb-1">
-                  <span class="text-gold-600 mr-1.5 font-mono">0{i + 1}.</span>
-                  {item.title}
-                </h3>
-                <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">{item.desc}</p>
+            <div class="p-6 rounded-[2px] bg-slate-50 border border-slate-200">
+              <div class="text-2xl sm:text-3xl font-bold font-serif text-gold-700 mb-1">2018</div>
+              <div class="text-xs sm:text-sm font-semibold text-slate-800">
+                {lang === 'th' ? 'ปีที่ก่อตั้งสำนักงาน' : 'Year Established'}
               </div>
-            ))}
+              <div class="text-xs text-slate-500 mt-1">
+                {lang === 'th' ? 'จดทะเบียนนิติบุคคลตามกฎหมายไทยอย่างเป็นทางการ' : 'Officially incorporated under the Department of Business Development'}
+              </div>
+            </div>
+
+            <div class="p-6 rounded-[2px] bg-slate-50 border border-slate-200">
+              <div class="text-2xl sm:text-3xl font-bold font-serif text-gold-700 mb-1">26+</div>
+              <div class="text-xs sm:text-sm font-semibold text-slate-800">
+                {lang === 'th' ? 'ปีแห่งประสบการณ์ทางวิชาชีพ' : 'Years of Combined Practice Leadership'}
+              </div>
+              <div class="text-xs text-slate-500 mt-1">
+                {lang === 'th' ? 'หัวหน้าสำนักงานเริ่มต้นงานวิชาชีพกฎหมายตั้งแต่ปี 2543' : 'Managing Director practicing law and corporate advisory since 2000'}
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Detailed Partner Roster -->
+    <!-- Core Ethics & Philosophy -->
     <section class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 mb-20">
-      <div class="text-center max-w-2xl mx-auto mb-14">
-        <h2 class="reveal-init text-3xl sm:text-4xl font-extrabold text-navy-950 leading-[1.3] sm:leading-[1.25] mb-4 sm:mb-5">
-          {t.teamSection.title}
+      <div class="text-center mb-12">
+        <h2 class="text-2xl sm:text-3xl font-extrabold text-navy-950">
+          {lang === 'th' ? 'หลักจรรยาบรรณและมาตรฐานการทำงาน' : 'Our Professional Tenets & Integrity'}
         </h2>
-        <p class="reveal-init stagger-1 text-sm sm:text-base text-slate-600">
-          {t.teamSection.subtitle}
-        </p>
+        <div class="w-12 h-0.5 bg-gold-600 mx-auto mt-4"></div>
       </div>
 
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 lg:gap-6">
-        {t.teamSection.members.map((member, idx) => (
-          <div class:list={["reveal-init rounded-[2px] p-5 sm:p-6 flex flex-col justify-between bg-white border border-slate-200/90 shadow-sm glass-card-hover", `stagger-${idx + 1}`]}>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        {ethics.map((item, idx) => (
+          <div class="reveal-init rounded-[2px] p-6 sm:p-8 border border-slate-200 bg-white hover:border-gold-500/50 hover:shadow-md transition-all">
+            <div class="text-xs font-bold text-gold-700 mb-2">0{idx + 1}</div>
+            <h3 class="text-lg font-bold text-navy-950 mb-3">{item.title}</h3>
+            <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">{item.desc}</p>
+          </div>
+        ))}
+      </div>
+    </section>
+
+    <!-- Leadership & Key Attorneys -->
+    <section class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 mb-20">
+      <div class="text-center mb-12">
+        <span class="text-xs font-bold uppercase tracking-wider text-gold-800">
+          {t.teamSection.sectionBadge}
+        </span>
+        <h2 class="text-2xl sm:text-3xl font-extrabold text-navy-950 mt-2">
+          {t.teamSection.title}
+        </h2>
+        <div class="w-12 h-0.5 bg-gold-600 mx-auto mt-4"></div>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        {t.teamSection.members.map((member) => (
+          <div class="reveal-init group rounded-[2px] p-6 border border-slate-200 bg-white hover:border-gold-500/50 hover:shadow-lg transition-all duration-300 flex flex-col justify-between">
             <div>
-              <!-- Sharp Real Attorney Photo (Portrait) -->
-              <a
-                href={`/${lang}/team/${member.slug}/`}
-                class="relative w-full aspect-[4/5] rounded-[2px] overflow-hidden border border-slate-200 mb-5 shadow-xs group/photo bg-slate-100 block"
-              >
+              <a href={`/${lang}/team/${member.slug}/`} class="block relative aspect-4/5 w-full mb-5 overflow-hidden rounded-[2px] bg-navy-950">
                 <img
                   src={member.image}
                   alt={member.name}
-                  class="w-full h-full object-cover object-top filter brightness-[1.01] contrast-[1.02] group-hover/photo:scale-105 transition-transform duration-500"
+                  class="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-105"
                   loading="lazy"
-                  decoding="async"
                   width="400"
                   height="500"
                 />
-                <div class="absolute inset-0 bg-gradient-to-t from-navy-950/25 via-transparent to-transparent pointer-events-none"></div>
+                <div class="absolute inset-0 bg-gradient-to-t from-navy-950/80 via-transparent to-transparent opacity-60 group-hover:opacity-40 transition-opacity"></div>
               </a>
 
-              <h3 class="text-lg font-bold text-navy-950 mb-1 hover:text-gold-700 transition-colors">
-                <a href={`/${lang}/team/${member.slug}/`}>{member.name}</a>
+              <h3 class="text-lg font-bold text-navy-950 mb-1 leading-snug">
+                <a href={`/${lang}/team/${member.slug}/`} class="hover:text-gold-700 transition-colors">
+                  {member.name}
+                </a>
               </h3>
-              <p class="text-xs font-bold uppercase tracking-wider text-gold-700 mb-3 min-h-[32px] flex items-center">{member.role}</p>
+
+              <p class="text-xs font-bold uppercase tracking-wider text-gold-700 mb-3 min-h-[32px] flex items-center">
+                {member.role}
+              </p>
 
               <div class="p-3 rounded-[2px] bg-slate-100/90 border border-slate-200/90 text-xs text-slate-700 mb-3 min-h-[72px] flex items-center leading-relaxed">
                 {member.credentials}
@@ -158,7 +163,7 @@ const ethics = {
                 href={`/${lang}/team/${member.slug}/`}
                 class="inline-flex items-center text-xs font-bold uppercase tracking-wider text-navy-900 hover:text-gold-700 transition-colors group/link"
               >
-                <span>{lang === 'th' ? 'ดูประวัติเต็ม' : lang === 'zh' ? '查看详细履历' : 'View Profile'}</span>
+                <span>{lang === 'th' ? 'ดูประวัติเต็ม' : 'View Profile'}</span>
                 <svg xmlns="http://www.w3.org/2000/svg" class="w-3.5 h-3.5 ml-1 transform group-hover/link:translate-x-1 transition-transform" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                   <path d="M5 12h14" />
                   <path d="m12 5 7 7-7 7" />
@@ -169,7 +174,7 @@ const ethics = {
                 href={`/${lang}/contact/?attorney=${encodeURIComponent(member.name)}`}
                 class="text-xs font-semibold text-gold-700 hover:text-navy-950 transition-colors shrink-0"
               >
-                {lang === 'th' ? 'นัดปรึกษา' : lang === 'zh' ? '预约咨询' : 'Consult'}
+                {lang === 'th' ? 'นัดปรึกษา' : 'Consult'}
               </a>
             </div>
           </div>
@@ -181,7 +186,7 @@ const ethics = {
     <section class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 mb-20">
       <div class="reveal-init rounded-[2px] p-8 border border-slate-200 bg-white text-center shadow-xs">
         <h3 class="text-xs font-bold uppercase tracking-wider text-gold-800 mb-6">
-          {lang === 'th' ? 'การรับรองและสมาชิกภาพองค์กรวิชาชีพกฎหมาย' : lang === 'zh' ? '官方律师执业认证与国际仲裁公会资质' : 'Professional Accreditations & Bar Affiliations'}
+          {lang === 'th' ? 'การรับรองและสมาชิกภาพองค์กรวิชาชีพกฎหมาย' : 'Professional Accreditations & Bar Affiliations'}
         </h3>
         <div class="flex flex-wrap items-center justify-center gap-4 sm:gap-6 text-xs sm:text-sm text-slate-700 font-medium">
           <span class="px-4 py-2.5 rounded-[2px] bg-slate-50 border border-slate-200">สภาทนายความแห่งประเทศไทย (Lawyers Council)</span>

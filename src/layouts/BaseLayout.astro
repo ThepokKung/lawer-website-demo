@@ -7,7 +7,7 @@ import '@/styles/global.css';
 interface Props {
   title: string;
   description: string;
-  lang?: 'th' | 'en' | 'zh';
+  lang?: 'th' | 'en';
   canonical?: string;
 }
 
@@ -23,20 +23,18 @@ const gtmId = SITE_CONFIG.gtmId;
 
 // Clean current pathname to build alternates
 const currentPath = Astro.url.pathname;
-const pathWithoutLang = currentPath.replace(/^\/(th|en|zh)/, '') || '/';
+const pathWithoutLang = currentPath.replace(/^\/(th|en)/, '') || '/';
 
 const canonicalUrl = canonical || new URL(currentPath, siteUrl).href;
 const thUrl = new URL(`/th${pathWithoutLang === '/' ? '' : pathWithoutLang}`, siteUrl).href;
 const enUrl = new URL(`/en${pathWithoutLang === '/' ? '' : pathWithoutLang}`, siteUrl).href;
-const zhUrl = new URL(`/zh${pathWithoutLang === '/' ? '' : pathWithoutLang}`, siteUrl).href;
 
 const schemaData = {
   "@context": "https://schema.org",
   "@type": "LegalService",
   "name": SITE_CONFIG.firmName,
   "alternateName": [
-    SITE_CONFIG.firmNameTh,
-    SITE_CONFIG.firmNameZh
+    SITE_CONFIG.firmNameTh
   ],
   "image": `${siteUrl}/images/thanprat/logo.png`,
   "url": siteUrl,
@@ -64,7 +62,7 @@ const schemaData = {
   ],
   "priceRange": "$$$$",
   "areaServed": "Thailand",
-  "knowsLanguage": ["th", "en", "zh"]
+  "knowsLanguage": ["th", "en"]
 };
 ---
 
@@ -84,7 +82,6 @@ const schemaData = {
     <!-- Multilingual Hreflang Tags -->
     <link rel="alternate" hreflang="th" href={thUrl} />
     <link rel="alternate" hreflang="en" href={enUrl} />
-    <link rel="alternate" hreflang="zh-Hans" href={zhUrl} />
     <link rel="alternate" hreflang="x-default" href={thUrl} />
 
     <!-- Open Graph / Social -->
@@ -93,7 +90,7 @@ const schemaData = {
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
     <meta property="og:image" content={`${siteUrl}/images/thanprat/logo.png`} />
-    <meta property="og:locale" content={lang === 'th' ? 'th_TH' : lang === 'zh' ? 'zh_CN' : 'en_US'} />
+    <meta property="og:locale" content={lang === 'th' ? 'th_TH' : 'en_US'} />
 
     <!-- Priority Hints & Asset Preloading -->
     <link rel="preload" href="/images/thanprat/logo.png" as="image" type="image/png" fetchpriority="high" />

@@ -11,12 +11,10 @@ export const SITE_CONFIG = {
   // Firm Information
   firmName: 'THANPRAT LAWYER CO., LTD.',
   firmNameTh: 'บริษัท ธันปรัท ทนายความ จำกัด',
-  firmNameZh: '泰国丹普拉特律师事务所 (THANPRAT LAWYER CO., LTD.)',
 
   // Addresses per locale
   addressTh: '1131/221 อาคารเทอดดำริ ถนนนครไชยศรี แขวงถนนนครไชยศรี เขตดุสิต กรุงเทพมหานคร 10300',
   addressEn: '1131/221 Theoddamri Bldg., Nakornchaisri Road, Thanon Nakornchaisri, Dusit, Bangkok 10300 Thailand',
-  addressZh: '泰国曼谷律实区那空猜西路1131/221号 Theoddamri大厦 邮编10300',
 
   // Geographic Coordinates (THANPRAT LAWYER CO., LTD. - Dusit / Sam Sen)
   latitude: 13.7778516,

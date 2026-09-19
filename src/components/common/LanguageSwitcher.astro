@@ -19,16 +19,11 @@ const localesList: Array<{ code: SupportedLang; label: string; href: string }> =
     code: 'en',
     label: 'EN',
     href: `/en${cleanPath === '/' ? '' : cleanPath}`
-  },
-  {
-    code: 'zh',
-    label: '中文',
-    href: `/zh${cleanPath === '/' ? '' : cleanPath}`
   }
 ];
 ---
 
-<div class="inline-flex items-center justify-center p-0.5 rounded-[2px] bg-slate-100 border border-slate-300/80 h-9 w-[114px] shrink-0 select-none">
+<div class="inline-flex items-center justify-center p-0.5 rounded-[2px] bg-slate-100 border border-slate-300/80 h-9 w-[78px] shrink-0 select-none">
   {localesList.map((locale) => {
     const isActive = locale.code === currentLang;
     return (

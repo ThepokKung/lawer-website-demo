@@ -6,7 +6,7 @@ import { useTranslations, type SupportedLang } from '@/i18n';
 import { SITE_CONFIG } from '@/config/site';
 
 export function getStaticPaths() {
-  const locales: SupportedLang[] = ['th', 'en', 'zh'];
+  const locales: SupportedLang[] = ['th', 'en'];
   const paths: Array<{ params: { lang: SupportedLang; slug: string } }> = [];
 
   locales.forEach((lang) => {

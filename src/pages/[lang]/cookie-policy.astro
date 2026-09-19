@@ -7,8 +7,7 @@ import { useTranslations, type SupportedLang } from '@/i18n';
 export function getStaticPaths() {
   return [
     { params: { lang: 'th' } },
-    { params: { lang: 'en' } },
-    { params: { lang: 'zh' } }
+    { params: { lang: 'en' } }
   ];
 }
 
@@ -41,19 +40,6 @@ const policyContent = {
     analyticsDesc: "These cookies help us to understand how visitors interact with our website, discover errors and provide a better overall analytics.",
     saveBtn: "Save",
     savedAlert: "Your cookie settings have been saved successfully."
-  },
-  zh: {
-    pageTitle: "Cookie 政策说明",
-    settingsTitle: "高级 Cookie 设置 (Advanced Cookie Settings)",
-    necessaryDesc: "此类 Cookie 用于实现网站核心功能，如安全性、身份验证及网络管理，无法禁用。",
-    marketingTitle: "启用营销推广 Cookie (Enable Marketing Cookies)",
-    marketingDesc: "此类 Cookie 用于衡量广告宣传成效，以提供更贴合您需求的服务并呈现符合您兴趣的内容。",
-    functionalTitle: "启用功能性 Cookie (Enable Functional Cookies)",
-    functionalDesc: "此类 Cookie 用于记录并记忆用户的偏好设置，以优化并提供更加个性化的浏览体验。",
-    analyticsTitle: "启用数据分析 Cookie (Enable Analytics Cookies)",
-    analyticsDesc: "此类 Cookie 帮助我们了解访客与网站的互动情况、发现错误并提供更完善的综合数据分析。",
-    saveBtn: "保存",
-    savedAlert: "您的 Cookie 设置已成功保存。"
   }
 }[lang];
 ---

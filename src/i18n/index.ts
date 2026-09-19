@@ -1,11 +1,9 @@
 import { th } from './th';
 import { en } from './en';
-import { zh } from './zh';
 
 export const languages = {
   th: 'ไทย',
-  en: 'English',
-  zh: '中文'
+  en: 'English'
 } as const;
 
 export type SupportedLang = keyof typeof languages;
@@ -41,8 +39,7 @@ export interface AttorneyProfile {
 
 export const translations = {
   th,
-  en,
-  zh
+  en
 };
 
 import { SITE_CONFIG } from '@/config/site';
@@ -51,8 +48,6 @@ export function useTranslations(lang: SupportedLang = 'th') {
   const base = translations[lang] || translations[defaultLang];
   const localizedAddress = lang === 'th'
     ? (SITE_CONFIG.addressTh || base.contact.addressValue)
-    : lang === 'zh'
-    ? (SITE_CONFIG.addressZh || base.contact.addressValue)
     : (SITE_CONFIG.addressEn || base.contact.addressValue);
 
   return {
@@ -73,5 +68,5 @@ export function useTranslations(lang: SupportedLang = 'th') {
 }
 
 export function getCleanPathWithoutLang(pathname: string): string {
-  return pathname.replace(/^\/(th|en|zh)/, '') || '/';
+  return pathname.replace(/^\/(th|en)/, '') || '/';
 }

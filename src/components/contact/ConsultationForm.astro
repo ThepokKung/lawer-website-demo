@@ -72,7 +72,7 @@ const turnstileSiteKey = SITE_CONFIG.turnstileSiteKey;
         name="name"
         required
         class="w-full px-4 py-3 rounded-[2px] bg-white border border-slate-300 text-slate-900 placeholder-slate-400 focus:outline-none focus:border-navy-900 focus:ring-1 focus:ring-navy-900 text-sm transition-all shadow-xs"
-        placeholder={lang === 'th' ? "ระบุชื่อ - นามสกุลของคุณ" : lang === 'zh' ? "请填写您的姓名" : "Enter your full name"}
+        placeholder={lang === 'th' ? "ระบุชื่อ - นามสกุลของคุณ" : "Enter your full name"}
       />
     </div>
 
@@ -136,7 +136,7 @@ const turnstileSiteKey = SITE_CONFIG.turnstileSiteKey;
         rows="4"
         required
         class="w-full px-4 py-3 rounded-[2px] bg-white border border-slate-300 text-slate-900 placeholder-slate-400 focus:outline-none focus:border-navy-900 focus:ring-1 focus:ring-navy-900 text-sm transition-all resize-y shadow-xs"
-        placeholder={lang === 'th' ? "โปรดระบุข้อเท็จจริงเบื้องต้น วันที่เกิดเหตุการณ์ หรือความประสงค์ที่ต้องการให้สำนักงานช่วยเหลือ..." : lang === 'zh' ? "请简述咨询事由、关键时间节点或希望律所协助达成的目标..." : "Briefly describe the context, relevant dates, or what legal assistance you are seeking..."}
+        placeholder={lang === 'th' ? "โปรดระบุข้อเท็จจริงเบื้องต้น วันที่เกิดเหตุการณ์ หรือความประสงค์ที่ต้องการให้สำนักงานช่วยเหลือ..." : "Briefly describe the context, relevant dates, or what legal assistance you are seeking..."}
       ></textarea>
     </div>
 
@@ -205,7 +205,7 @@ const turnstileSiteKey = SITE_CONFIG.turnstileSiteKey;
 
       if (submitBtn && submitText) {
         submitBtn.disabled = true;
-        submitText.textContent = lang === 'th' ? 'กำลังส่งข้อมูล...' : lang === 'zh' ? '正在提交...' : 'Submitting...';
+        submitText.textContent = lang === 'th' ? 'กำลังส่งข้อมูล...' : 'Submitting...';
       }
 
       const payload: Record<string, any> = Object.fromEntries(formData);
@@ -240,7 +240,7 @@ const turnstileSiteKey = SITE_CONFIG.turnstileSiteKey;
         form.reset();
 
         if (submitText) {
-          submitText.textContent = lang === 'th' ? 'ส่งคำขอนัดปรึกษาเรียบร้อย' : lang === 'zh' ? '已成功发送' : 'Submitted Successfully';
+          submitText.textContent = lang === 'th' ? 'ส่งคำขอนัดปรึกษาเรียบร้อย' : 'Submitted Successfully';
         }
       } catch (err) {
         console.error('Form submission failed:', err);
@@ -248,7 +248,7 @@ const turnstileSiteKey = SITE_CONFIG.turnstileSiteKey;
         successBox?.classList.add('hidden');
 
         if (submitText) {
-          submitText.textContent = lang === 'th' ? 'เกิดข้อผิดพลาด ลองใหม่อีกครั้ง' : lang === 'zh' ? '提交失败，请重试' : 'Error, please retry';
+          submitText.textContent = lang === 'th' ? 'เกิดข้อผิดพลาด ลองใหม่อีกครั้ง' : 'Error, please retry';
         }
       } finally {
         if (submitBtn) {
