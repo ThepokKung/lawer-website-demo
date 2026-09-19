@@ -7,3 +7,4 @@ dist/
 *.log
 .wrangler/
 lh-*.json
+temp_data/

@@ -7,220 +7,245 @@ export const zh = {
     consultationBtn: "预约法律咨询"
   },
   brand: {
-    name: "蒙克莱尔·斯特林国际律师事务所",
-    legalName: "蒙克莱尔·斯特林法律顾问有限责任公司 (Montclaire & Sterling)",
-    tagline: "明法笃行，鼎立相助，护航商业成功",
-    description: "泰国领先的涉外综合性商业律师事务所，精于外商直接投资、企业合规、大型诉讼仲裁、房地产及私人财富管理，秉承专业严谨与最高职业操守。"
+    name: "THANPRAT LAWYER",
+    shortName: "丹普拉特",
+    subName: "律师事务所",
+    legalName: "泰国丹普拉特律师事务所有限公司 (THANPRAT LAWYER CO., LTD.)",
+    tagline: "精准法理，护航商业 (Legal Precision. Business Protection.)",
+    description: "泰国知名商业精品律师事务所，致力于在签约前、投资前及争议发生前为企业与投资者全面排查并化解法律风险。融合高端商事顾问、精准合同架构设计与泰国全国法庭出庭诉讼实力。"
   },
   stats: {
-    experience: { value: "20+", label: "年卓越法律服务经验", sub: "创立于 2004 年" },
-    successRate: { value: "98.4%", label: "重大案件与交易胜诉率", sub: "处理逾 2,400 起法务事宜" },
-    corporateClients: { value: "1,500+", label: "长期信赖企业客户", sub: "涵盖跨国集团及中资出海名企" },
-    assetsProtected: { value: "100亿+", label: "泰铢 护航交易与争议标的", sub: "商事合同与维权诉讼" }
+    experience: { value: "26+", label: "年主任律师执业资历", sub: "自 2000 年起深耕泰方法律" },
+    founded: { value: "2018", label: "律所正式创立年份", sub: "全方位精品商事法务团队" },
+    corporateClients: { value: "50+", label: "知名中泰名企信赖合作", sub: "涵盖上市企业与大型国企央企" },
+    nationwideCourts: { value: "100%", label: "泰国全境法庭出庭覆盖", sub: "民商事、刑事、行政庭及仲裁" }
   },
   hero: {
-    badge: "泰国顶尖涉外法律顾问团队",
+    badge: "泰国精品商事法律顾问与全境出庭辩护团队",
     title1: "精准法理剖析",
-    title2: "护航出海企业稳健长远",
-    lead: "蒙克莱尔·斯特林律所（Montclaire & Sterling）融合对泰国本土成文法与判例的深刻洞察与国际顶尖商事思维，以中英泰三语为跨国企业及投资者铸就坚不可摧的法律屏障。",
-    ctaConsultation: "预约专属保密咨询",
+    title2: "护航商业稳健长远",
+    lead: "泰国丹普拉特律师事务所（THANPRAT LAWYER CO., LTD.）立足曼谷，秉承“诚信、专业、共赢”之理念，为出海中资企业、跨国机构及投资者提供全面卓越的一站式法律护航。",
+    ctaConsultation: "预约保密法律咨询",
     ctaServices: "浏览全部业务领域",
-    trustNote: "严格恪守律师职业保密特权 • 中文、英文、泰文无障碍全方位服务"
+    trustNote: "恪守最高执业道德 • 法定特权保密保障 • 中英泰涉外无缝沟通"
   },
   whyUs: {
-    sectionBadge: "选择蒙克莱尔·斯特林",
-    title: "铸就卓越信誉的核心优势",
-    subtitle: "我们不仅是您的法律代理人，更是深谙商业逻辑、助您预判风险并确立市场竞争优势的战略伙伴。",
+    sectionBadge: "立所宗旨",
+    title: "WHAT WE STAND FOR — 我们的核心价值与优势",
+    subtitle: "“一份优秀的法律文件不仅在于字面合规，更在于切实捍卫委托人的商业命脉与经济利益。”",
     pillars: [
       {
-        title: "中英泰三语资深涉外律师团",
-        desc: "无缝跨越语言及法系壁垒，深度理解中国企业商业模式与泰国政策法规，沟通精准高效，杜绝文化误解。",
-
+        title: "Integrity & Transparency (诚信正直与透明沟通)",
+        desc: "坚持客观求实的沟通原则，如实剖析案件事实、胜诉概率与实际维权成本，绝不向委托人作虚假承诺。"
       },
       {
-        title: "最高规格保密特权 (Strict Privilege)",
-        desc: "全面遵守律师法定保密义务与泰国个人数据保护法 (PDPA)，配备先进加密保障，确保商业秘密万无一失。",
-
+        title: "Attention to Detail (精益求精的细节洞察)",
+        desc: "全面深挖案件事实、法理适用、合同细节及潜在操作风险，于细微之处筑牢法律风险防火墙。"
       },
       {
-        title: "前瞻性战略与结果导向 (Proactive Strategy)",
-        desc: "预先识别商业死穴，在合同设计、商业谈判与法庭抗辩中均采取主动制胜布局，力求商业利益最大化。",
-
+        title: "Strict Confidentiality (最高级别职业保密)",
+        desc: "严格恪守律师法定保密特权与泰国个人数据保护法（PDPA），对客户商业秘密与战略布局执行严密防护。"
       },
       {
-        title: "公开透明且合理的收费结构",
-        desc: "客观评估诉讼前景与维权成本，提供清晰的阶段性收费清单与常年顾问方案，绝无任何隐形附加开支。",
-
+        title: "Commercial Understanding (深谙商业运营逻辑)",
+        desc: "超越单纯法条的局限，从商业收益、现金流、商业谈判博弈等多维视角，助力决策层从容决断。"
       }
     ]
   },
   servicesSection: {
-    sectionBadge: "专业法律服务",
-    title: "全方位业务领域",
-    subtitle: "全面覆盖外商赴泰投资、跨境商事合规、法庭出庭辩护、重大仲裁及高净值资产传承。",
-    viewAll: "查看全部服务领域",
+    sectionBadge: "专业领域",
+    title: "CORE LEGAL SERVICES — 核心法律业务板块",
+    subtitle: "涵盖公司日常合规、跨境投资并购、合同顶层设计、金融债务重组及泰国全境诉讼仲裁。",
+    viewAll: "查看全部业务领域",
     learnMore: "了解详情"
   },
   services: [
     {
-      slug: "foreign-investment-boi",
-      title: "外商赴泰投资与 BOI 投资优惠申请",
-      shortDesc: "外资企业设立、泰国投资促进委员会 (BOI) 免税优惠、外商经营许可证 (FBL) 及 LTR 长居/工作签证办理。",
-
-      overview: "泰国作为东南亚重要门户与制造枢纽，营商机遇广阔。我们的公司法团队全程指导中资及跨国企业合规落地，协助争取最优税收优惠与用地权限。",
+      slug: "corporate-commercial-investment",
+      title: "公司商事、跨境投资与并购 (Corporate & Investment)",
+      shortDesc: "泰国公司设立、外商经营许可证 (FBL)、BOI 投资委员会优惠申请、法律尽职调查 (Due Diligence) 及企业并购。",
+      overview: "我们为赴泰投资的中资企业及国际投资者量身定制合法稳健的合资架构，全方位把控投资落地合规风险。",
       keyPoints: [
-        "设立外商独资公司、合资企业、外国公司分支机构及区域办事处",
-        "申请泰国投资促进委员会 (BOI) 最高等级企业所得税减免与机械进口免税",
-        "办理外商经营许可证 (FBL) 及相关特许行业牌照申请",
-        "办理 10 年长期居留签证 (LTR Visa)、Smart 智慧签证及高级外籍员工工作许可证",
-        "进出口关税筹划、外汇合规及工厂建设环保规划许可"
+        "办理各类有限责任公司、合资公司、跨国公司分支机构及办事处注册登记",
+        "申请泰国投资促进委员会 (BOI) 免税优惠与外商经营许可证 (Foreign Business License - FBL)",
+        "企业并购重组 (M&A)、股权买卖协议 (SPA)、资产收购及增资减资合规",
+        "法律尽职调查 (Due Diligence)：全方位排查公司资格、土地房产、经营牌照、负债及涉诉隐患",
+        "常年法律顾问 (Corporate Retainer) 与商业税务合规筹划"
       ],
-      forWhom: "赴泰出海中资企业、跨国工业制造集团、海外高新技术团队及私募基金机构。"
+      forWhom: "赴泰出海中资企业、跨国工业制造集团、国际投资机构及在泰创新型成长企业。"
     },
     {
       slug: "litigation-dispute-resolution",
-      title: "商事争议解决、诉讼出庭与国际仲裁",
-      shortDesc: "泰国各级民商事及刑事法庭出庭辩护、重大违约索赔、商业诈骗维权及国内外仲裁委员会 (THAC, SIAC) 代理。",
-
-      overview: "在商业纠纷陷入僵局时，先锋出庭律师团队以扎实的举证攻防、雄辩的法庭辩护与精湛的谈判技巧，全力挽回委托人经济损失并赢得诉讼裁决。",
+      title: "法庭诉讼辩护与重大商事争议解决 (Litigation & Disputes)",
+      shortDesc: "泰国全境各级法院代理出庭：民商事纠纷、刑事辩护、行政诉讼、税务、知识产权、破产重整及境内外仲裁。",
+      overview: "我们在诉前风险评估 (Early Case Assessment)、诉前保密和解谈判、各级法庭出庭辩论及判决强制执行全链条提供强有力的法治护盾。",
       keyPoints: [
-        "重大民商事纠纷、合同违约追偿、股权争议与股东代位诉讼",
-        "白领经济犯罪、合同诈骗、职务侵占及高管职务责任辩护",
-        "代理泰国仲裁院 (THAC, TAI) 及新加坡国际仲裁中心 (SIAC) 仲裁程序",
-        "跨国生效判决在泰承认与执行、财产保全调查、冻结及法院强制拍卖",
-        "商事争议保密和解谈判及多方替代性争议化解"
+        "民商事诉讼：房产土地争议、重大违约赔偿、侵权纠纷、股东权益纠纷、债权催收及复杂合同争议",
+        "刑事案件代理：伪造票证、金融诈骗、商业侵占、职务侵占、侵犯商业秘密及经济犯罪控告与辩护",
+        "专门法庭代理：泰国中央行政法庭、税务法庭、中央劳动法庭、中央知识产权与国际贸易法庭、破产法庭",
+        "多元化争议化解 (ADR)：代理泰国仲裁院 (THAC, TAI) 等仲裁程序与商业调解 (Mediation)",
+        "生效判决与仲裁裁决强制执行、泰国全境财产线索调查、司法查封与资产冻结"
       ],
-      forWhom: "涉诉中国企业法定代表人、董事股东、涉跨国贸易纠纷进出口商及在泰涉诉当事人。"
+      forWhom: "在泰遭遇商业纠纷、涉及经济官司的企业法定代表人、董事股东、出海进出口贸易商及涉诉当事人。"
     },
     {
-      slug: "real-estate-property",
-      title: "房地产尽职调查与产权交易合规",
-      shortDesc: "泰国土地局产权地契深度尽调 (Title Search)、公寓住宅买卖合同审阅、30年长期租赁权及地上权设立登记。",
-
-      overview: "海外置业及土地收购法律风险极高。我们提供多维度的产权尽调与严密的购房法律审查，从根本上隔离产权争议与期房烂尾风险。",
+      slug: "contract-drafting-review",
+      title: "商业合同架构设计与法律意见书 (Contracts & Legal Opinion)",
+      shortDesc: "量身定制商业合同架构、审阅修改重大商业合作协议、排除合同漏洞，出具权威中英泰文法律意见书 (Legal Opinion)。",
+      overview: "合同是企业最重要的商业盾牌。我们结合企业实际业务机制定制严谨条款，杜绝模板化合同带来的潜在致命漏洞。",
       keyPoints: [
-        "土地局官方地契真实性、质押抵押记录及历史产权沿革深度调档",
-        "公寓 (Condo)、独栋别墅及工业用地买卖意向书与正式合同起草审阅",
-        "合法合规设计外籍人士不动产权益架构（合法长租 30 年、地上权 Superficies、用益权 Usufruct）",
-        "开发商资质信誉核查、建筑施工许可证 (EIA) 及预售资金监管审查",
-        "开发商延期交房、烂尾退款索赔诉讼与定金返还维权"
+        "根据客户专属商业模式架构量身拟定具有实战防御力的商业合同 (Contract Architecture)",
+        "严谨审阅及谈判分销协议、供应链采购合同、特许经营 (Franchise) 协议及跨国供货协议",
+        "起草合资协议 (Joint Venture Agreement) 与股东协议 (Shareholders Agreement) 妥善防范僵局",
+        "出具符合泰国法定要求的保密协议 (NDA)、合作备忘录 (MOU) 及高管聘用协议",
+        "针对重大商业决策、跨境融资放款、监管审批出具权威法律意见书 (Formal Legal Opinion)"
       ],
-      forWhom: "在泰购置房产的华人买家、商业不动产开发商、仓储物流投资方及家族办公室。"
+      forWhom: "企业法务总监、商业发展部门、采购及外包团队以及需要法律意见书背书的高管团队。"
     },
     {
-      slug: "corporate-commercial-contracts",
-      title: "公司法务、并购重组 (M&A) 与常年法律顾问",
-      shortDesc: "企业常年法律顾问服务、跨境并购尽职调查、中英双语商业合同定制、公司治理及合规审查。",
-
-      overview: "稳健的企业运营离不开严密的契约治理。我们作为企业的外部法务军师，在公司设立、日常营运、重大交易到解散清算的每一节点保驾护航。",
+      slug: "banking-debt-reorganization",
+      title: "银行金融法、不良资产与债务重组 (Banking & Debt Restructuring)",
+      shortDesc: "金融合规、大额债务催收、抵押担保物处置、企业危机化解、债务重组谈判及破产重整申请。",
+      overview: "律所核心骨干深具泰国大型国有银行资产保全部门负责人资历，深度通晓泰国银行风控审核及债务化解实操方案。",
       keyPoints: [
-        "跨国企业在泰日常运营常年法律顾问 (Corporate Retainer)",
-        "跨境并购重组 (M&A) 方案设计、法律尽职调查与交割文件起草",
-        "中英双语股东协议 (SHA)、合资合同 (JVA)、竞业禁止及分销协议定制",
-        "公司治理结构规范、资本金增资减资、重组与破产清算法律服务",
-        "知识产权保护、中泰商标专利注册及商业秘密维权体系构建"
+        "企业与大型金融机构、主要商业债权人之间的一对一债务重组 (Debt Restructuring) 方案设计与谈判",
+        "代理金融借贷纠纷诉讼、抵押房产司法拍卖、质押担保权利行使及连带保证人责任抗辩",
+        "代理符合法定条件的困境企业向泰国破产法院提起破产重整申请 (Business Reorganization)",
+        "银行授信授信合同合法性审查、跨境银团贷款担保物完善度核实",
+        "防范和化解企业资金链断裂及连带担保追索之法律风险"
       ],
-      forWhom: "在泰运营企业、中资上市公司境外子公司、跨境电商平台及初创高新企业。"
+      forWhom: "面临资金链重组需求的出海企业、金融投资机构、大额债务人以及为在泰借贷承担担保的各方。"
     },
     {
-      slug: "family-wealth-inheritance",
-      title: "家族财富传承、中泰遗嘱订立与家事法律",
-      shortDesc: "跨国家族财富顶层设计、中泰双语合法遗嘱订立、泰国法院遗产继承代理、婚前财产协议及家事纷争化解。",
-
-      overview: "助力高净值人士实现财富的安全代际传承。依托对中泰两国家庭法与财产继承法的精深造诣，制定无缝衔接且具法律约束力的传承方案。",
+      slug: "notarial-services",
+      title: "公证律师认证服务 (Notarial Services Attorney)",
+      shortDesc: "经泰国律师公会特许的 Notarial Services Attorney 公证认证，用于驻泰使领馆、涉外机构、政府各部委及跨国诉讼。",
+      overview: "出海文件跨国使用时，必须经过具备法定资格的公证律师认证。我们提供快速、严谨且获国际广泛认可的公证服务。",
       keyPoints: [
-        "起草符合泰国法律效力并在国际被广泛认可的中英泰双语遗嘱",
-        "代理向泰国法院申请指定遗产管理人 (Executor) 及不动产过户确权",
-        "跨国婚姻财产筹划、中泰婚前财产协议 (Prenuptial Agreement) 订立",
-        "外籍人士在泰银行存款、保险金及不动产的继承手续全程代理",
-        "涉外离婚纠纷调解、共同财产分割及跨国子女监护权诉讼"
+        "商业文书、跨国买卖合同及授权委托书 (Power of Attorney - POA) 签字见证与公证",
+        "企业营业执照、公司章程、董事股东决议、股东名册及学术学历证书复印件与原件相符公证",
+        "企业法人代表身份适格性认证及签字盖章权限认证",
+        "中英泰三语法律文书译文真实性公证与声明书公证",
+        "协助对接泰国各驻泰使馆领事认证及泰国外交部领事司双认证流程"
       ],
-      forWhom: "跨国家庭、在泰定居高净值华人人士 (HNWI)、持有泰国资产的中国境内家庭。"
+      forWhom: "跨国企业、涉外投资机构、留学生及需向泰国驻外使领馆或境外法院提交证据文书的当事人。"
     },
     {
-      slug: "notarial-legal-translation",
-      title: "公证人律师认证 (Notary) 与涉外法律翻译",
-      shortDesc: "泰国司法部执业公证人律师 (Notarial Services Attorney) 签名公证、文件见证、领事双认证及法庭级翻译。",
-
-      overview: "跨境流转的文件均需具备法定公证效力方可被法庭、使领馆及官方机构采信。我们的公证人律师团队提供权威、便捷、合规的公证见证服务。",
+      slug: "labor-ip-property",
+      title: "劳动法合规、知识产权与不动产 (Labor, IP & Property)",
+      shortDesc: "泰国劳动用工合规与员工手册、商标专利注册侵权维权、泰国土地房产买卖尽调及高净值资产传承规划。",
+      overview: "系统性保护企业人力资本、核心品牌声誉及不动产资产，构筑无懈可击的长期资产防御体系。",
       keyPoints: [
-        "见证各类商业合同、授权委托书 (POA) 及法定代表人签字公证",
-        "公司注册证明、财务报表、个人身份证明等官方文件的真实副本核证 (Certified True Copy)",
-        "出具法定代表人身份、企业良好存续证明 (Good Standing) 等法律意见公证书",
-        "中英泰三语法律文书精准翻译与具有法庭证明力的译本盖章认证",
-        "协助办理泰国外交部 (MFA) 领事认证及中国驻泰使领馆双认证流程"
+        "量身定制符合泰国《劳动保护法》的企业员工工作规章制度、劳务合同及竞业限制协议",
+        "合法合规裁员解聘辅导、法定经济补偿金筹划及劳动法院出庭抗辩",
+        "泰国商标注册申报 (Trademark)、专利申请、版权保护及防伪打假维权",
+        "土地产权地契深入核查 (Title Due Diligence)、公寓厂房买卖合同审阅及30年长期租约登记",
+        "中英双语涉外遗嘱订立、婚前财产协议 (Prenuptial Agreement) 及在泰遗产法定继承诉讼"
       ],
-      forWhom: "跨国经贸企业、需向使领馆提交文件的出国人员、留学生及境外涉诉当事人。"
+      forWhom: "企业人事行政管理层、品牌出海企业主、不动产购置方及中泰跨境高净值家族。"
     }
   ],
+  clientsSection: {
+    sectionBadge: "客户信赖见证",
+    title: "OUR CLIENTS — 长期合作之知名企业与机构客户",
+    subtitle: "我们深感自豪能够成为中泰众多旗舰企业、金融巨头、上市公司与跨国集团长期信赖的泰方法律护航者。",
+    clients: [
+      "Bank of China (Thailand) Public Company Limited (中国银行泰国)",
+      "Don Muang Tollway Public Co., Ltd. (曼谷廊曼高架高速公路大众有限公司)",
+      "Stock Exchange of Thailand (SET - 泰国证券交易所)",
+      "Thailand Securities Depository Company Limited (TSD - 泰国证券存管有限公司)",
+      "China State Construction Engineering (Thailand) Co., Ltd. (中建泰国)",
+      "Boon Rawd Trading Co., Ltd. (胜狮啤酒贸易有限公司)",
+      "CITIC Heavy Machinery Co., Ltd. (中信重工)",
+      "China Petroleum Pipeline Bureau (CPP - 中石油管道局)",
+      "Greenland Holding (Thailand) Co., Ltd. (绿地控股泰国)",
+      "Rotary Engineering (Thailand) Co., Ltd.",
+      "Shenzhen Supertex Textile Co., Ltd. (深圳纺织)",
+      "PTS Progressive Engineering Co., Ltd.",
+      "Reangwa Standard Industry Co., Ltd.",
+      "Quality Star Engineering Co., Ltd.",
+      "SCIVIC (Thailand) Co., Ltd.",
+      "Century Tire (Thailand) Co., Ltd. (青岛森麒麟轮胎)",
+      "Top Shipping Logistics (Thailand) Co., Ltd.",
+      "Growatt New Energy Technology (Thailand) Co., Ltd. (古瑞瓦特新能源)"
+    ]
+  },
   teamSection: {
-    sectionBadge: "合伙人团队",
-    title: "经验卓绝的资深主任律师",
-    subtitle: "由在泰国诉讼界与涉外商事领域享有崇高声誉的知名合伙人领衔挂帅。",
+    sectionBadge: "合伙人与主办律师",
+    title: "OUR LEGAL TEAM — 核心主办律师团队",
+    subtitle: "团队由深具商事法务、全境诉讼抗辩、银行金融风控、合同架构及涉外公证资历的资深专家领衔。",
     members: [
       {
-        name: "尼蒂塔姆·苏查里特 (虚拟合伙人)",
-        role: "管理合伙人 / 诉讼与争议解决部主任",
-        credentials: "泰国最高法院出庭大律师 (Barrister) • 朱拉隆功大学法学硕士 (LL.M.) • 泰国律师公会常务会员",
-        experience: "执业逾 22 年，专攻重大商事合同纠纷、外资重大维权、跨国职务侵占辩护及国际商事仲裁，具备卓越法庭影响力。",
-        image: "/images/partner-chaiwat.jpg"
+        name: "普拉查亚·维查科特 (Pratchaya Vichakote)",
+        role: "主任律师 · 创办人 (Managing Director & Founder)",
+        credentials: "法学学士 (蓝甘杏大学) • 泰国律政公会出庭大律师 (第58届) • 法学硕士 (商法) • 法学高级文凭 (法政大学) • 涉外公证律师资格 (第1届) • 执业证书 1592/2543",
+        experience: "自 2000 年起执业至今，拥有逾 26 年法务与诉讼功力。精于重大民商事与刑事辩护、跨国投资合规，长期受聘担任沃拉蓬·索卡蒂亚努拉克博士 (Dr. Vorapol Socatiyanurak) 专属法务顾问。",
+        image: "/images/thanprat/lawyer-pratchaya.jpg"
       },
       {
-        name: "甘碧查·沃拉尼蒂甘 (虚拟合伙人)",
-        role: "高级合伙人 / 公司法与外商投资部主任",
-        credentials: "法政大学法学学士 • 伦敦大学国际商法硕士 • 泰国公证人律师认证资格",
-        experience: "擅长搭建外资合规控股架构、申请泰国 BOI 最高免税优惠及主导数十亿泰铢规模的跨国企业收购与兼并项目。",
-        image: "/images/partner-kanya.jpg"
+        name: "差亚通·维查科特 (Chayathon Vichakote)",
+        role: "主办出庭律师 (Attorney at Law)",
+        credentials: "法学学士 • 泰国律政公会出庭大律师 (第58届) • 蓝甘杏大学商法法学硕士 • 泰国律师公会注册执业律师",
+        experience: "曾任泰国国有政府储蓄银行 (Government Savings Bank) 资产保全与债权管控部高级主管 (1999–2022 年)，深谙银行法、资产强制执行、大额债务追索及重大商事出庭。",
+        image: "/images/thanprat/lawyer-chayathon.jpg"
       },
       {
-        name: "塔纳蓬·猜尼蒂蒙昆 (虚拟合伙人)",
-        role: "合伙人 / 泰中法律事务部主任 (China Desk)",
-        credentials: "泰国名校法学荣誉学士 • 北京大学法学院研究生 (LL.M.) • 中文母语级流利",
-        experience: "中国出海企业常年首席泰方法律顾问，深谙两国商业文化与政策差异，长期为数百家中国制造业巨头及高科技企业赴泰投资护航。",
-        image: "/images/partner-michael.jpg"
+        name: "桑冠斯里·帕蓬 (Sanguansri Phaphong)",
+        role: "主办出庭律师 (Attorney at Law)",
+        credentials: "蓝甘杏大学法学学士 • 泰国律师公会注册执业律师 (执业证号 395/2553，2010 年取得)",
+        experience: "专注于泰国各级法院民商事、刑事出庭辩护、行政争议、涉外破产重组、劳动法及商业调解仲裁，具备极为过硬的法庭抗辩与证据质证攻防实战经验。",
+        image: "/images/thanprat/lawyer-sanguansri.jpg"
+      },
+      {
+        name: "蒂拉雅·赫姆齐纳库 (Teeraya Hemchinakul)",
+        role: "涉外主办律师 · 公证律师 (Attorney at Law & Notary)",
+        credentials: "易三仓大学 (ABAC) 国际法学学士 • 泰国律政公会出庭大律师 (第72届) • 涉外公证律师资格 (第22期) • 英国莱斯特大学 (Univ. of Leicester) 英文法学培训",
+        experience: "曾任远东法律顾问公司 (Far East Legal Counsellors) 主办律师 (2013–2019 年)，擅长涉外商事谈判、多语种合同拟定、涉外使馆公证认证及中泰民商事诉讼代理。",
+        image: "/images/thanprat/lawyer-teeraya.jpg"
       }
     ]
   },
   contact: {
-    sectionBadge: "即刻联络",
-    title: "预约高保密法律专案咨询",
-    subtitle: "您的所有问询与初审案情均受到律师法定保密特权的最高保护，绝不泄露给任何第三方。",
-    infoTitle: "直接联络方式",
-    addressLabel: "律所曼谷总部地址",
-    addressValue: "泰国曼谷挽叻县是隆街道北沙吞路 沙吞广场大厦 28 层 88/1 号（Sathorn Square Tower, 邮编 10500）",
-    phoneLabel: "前台服务总机",
-    phoneValue: "+66 2 123 4567",
-    phoneMobile: "+66 81 999 8888 (中文专线)",
-    emailLabel: "官方问询邮箱",
-    emailValue: "contact@ms-legal.example.com",
-    hoursLabel: "对外接待时间",
-    hoursValue: "周一至周五: 08:30 – 18:00 (周末仅接受提前预约)",
+    sectionBadge: "联系律所",
+    title: "预约专属保密法律咨询",
+    subtitle: "所有咨询事项与沟通细节均依法受泰国律师职业保密特权绝对保护。",
+    infoTitle: "直达联络通道",
+    addressLabel: "总部办公地址",
+    addressValue: "泰国曼谷律实区那空猜西路1131/221号 Theoddamri大厦 邮编10300",
+    phoneLabel: "总机与专线电话",
+    phoneValue: "+66 82 156 5651",
+    phoneMobile: "+66 64 829 8888",
+    emailLabel: "官方收案与案件往来邮箱",
+    emailValue: "thanprat.lawyer@gmail.com",
+    hoursLabel: "工作时间",
+    hoursValue: "周一至周五: 08:30 – 17:30 (周末如需面谈请提前预约)",
     lineLabel: "LINE 官方账号",
-    lineValue: "@mslegal",
-    wechatLabel: "微信客服号 (WeChat)",
-    wechatValue: "MSLegalBKK",
-    whatsappLabel: "WhatsApp 专线",
-    whatsappValue: "+66 81 999 8888",
-    formTitle: "在线预约法律评估",
-    formDesc: "请简要填写您的法律需求，对口专业领域的资深律师团队将在 24 小时内与您联系。",
+    lineValue: "@thanpratlawyer",
+    facebookLabel: "Facebook 专页",
+    facebookValue: "Thanprat Lawyer",
+    wechatLabel: "微信客服 (中国企业专属)",
+    wechatValue: "ThanpratLawyer",
+    whatsappLabel: "WhatsApp",
+    whatsappValue: "+66 82 156 5651",
+    formTitle: "咨询需求快速登记表",
+    formDesc: "请填写案件基本概要，主办律师将在 24 小时内与您进行保密对接。",
     fieldName: "您的姓名 *",
     fieldEmail: "电子邮箱 *",
-    fieldPhone: "联系电话 / 微信 *",
-    fieldService: "需求业务领域 *",
-    fieldMessage: "咨询事项简要描述 *",
-    fieldSubmit: "提交法律咨询申请",
-
-    successMsg: "咨询申请已成功提交。我们的高级顾问律师已收到您的案件简报，将尽快与您取得联系。",
-    errorMsg: "提交发生故障，请检查网络后重试，或直接拨打律所中文专线电话咨询。",
-    selectServiceDefault: "-- 请选择所需法律服务领域 --"
+    fieldPhone: "联系电话 (含国家代码) *",
+    fieldService: "所需法务咨询领域 *",
+    fieldMessage: "案件或法律需求简述 *",
+    fieldSubmit: "提交咨询申请",
+    successMsg: "感谢您的联络！泰国丹普拉特律所已收到您的咨询信息，主办律师将尽快与您取得联系。",
+    errorMsg: "提交时发生错误，请稍后重试或直接致电我所热线。",
+    selectServiceDefault: "-- 请选择法律服务领域 --"
   },
   footer: {
-    rights: "版权所有 违者必究",
-    disclaimer: "法律声明：本网站所登载之所有内容仅供一般普法和信息参考之用，不构成正式法律意见。通过本网站递交咨询事宜不自动成立委托代理关系，直至双方正式签署具有法律效力的授权委托书 (Engagement Letter)。",
+    rights: "版权所有，保留所有权利。",
+    disclaimer: "特别声明：本网站所载内容仅供一般法律资讯参考，不构成针对特定个案的正式法律意见。通过本网站发送信息或建立联系在正式签署书面委托协议前，并不在双方之间构成法定的律师与委托人代理关系。",
     quickLinks: "快捷导航",
-    practices: "核心业务",
-    contactUs: "联系方式",
-    privacyPolicy: "个人数据隐私保护政策 (PDPA)",
-    cookiePolicy: "Cookie 政策说明"
+    practices: "业务领域",
+    contactUs: "联系我们",
+    privacyPolicy: "个人数据保护政策 (PDPA)",
+    cookiePolicy: "Cookie 政策声明"
   }
 };

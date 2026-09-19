@@ -38,7 +38,7 @@ const schemaData = {
     SITE_CONFIG.firmNameTh,
     SITE_CONFIG.firmNameZh
   ],
-  "image": `${siteUrl}/images/logo-crest.jpg`,
+  "image": `${siteUrl}/images/thanprat/logo.png`,
   "url": siteUrl,
   "telephone": SITE_CONFIG.phone,
   "email": SITE_CONFIG.email,
@@ -46,7 +46,7 @@ const schemaData = {
     "@type": "PostalAddress",
     "streetAddress": SITE_CONFIG.addressEn,
     "addressLocality": "Bangkok",
-    "postalCode": "10500",
+    "postalCode": "10300",
     "addressCountry": "TH"
   },
   "geo": {
@@ -92,17 +92,17 @@ const schemaData = {
     <meta property="og:url" content={canonicalUrl} />
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
-    <meta property="og:image" content={`${siteUrl}/favicon.svg`} />
+    <meta property="og:image" content={`${siteUrl}/images/thanprat/logo.png`} />
     <meta property="og:locale" content={lang === 'th' ? 'th_TH' : lang === 'zh' ? 'zh_CN' : 'en_US'} />
 
     <!-- Priority Hints & Asset Preloading -->
-    <link rel="preload" href="/images/logo.svg" as="image" type="image/svg+xml" fetchpriority="high" />
+    <link rel="preload" href="/images/thanprat/logo.png" as="image" type="image/png" fetchpriority="high" />
 
     <!-- Self-Hosted Webfonts Preload (Zero External Network Overhead) -->
     <link rel="preload" href="/fonts/sarabun-thai-400.woff2" as="font" type="font/woff2" crossorigin />
     <link rel="preload" href="/fonts/sarabun-latin-400.woff2" as="font" type="font/woff2" crossorigin />
     <link rel="preload" href="/fonts/sarabun-thai-700.woff2" as="font" type="font/woff2" crossorigin />
-    <link rel="preload" href="/fonts/cormorant-garamond-latin-600.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="/fonts/cormorant-garamond-latin-700.woff2" as="font" type="font/woff2" crossorigin />
 
     <!-- Cloudflare Turnstile API (Loaded when Turnstile key is configured) -->
     {SITE_CONFIG.turnstileSiteKey && (
@@ -116,7 +116,7 @@ const schemaData = {
         window.dataLayer.push(arguments);
       }
       try {
-        var saved = localStorage.getItem('ms_legal_cookie_consent');
+        var saved = localStorage.getItem('thanprat_cookie_consent');
         var parsed = saved ? JSON.parse(saved) : null;
         gtag('consent', 'default', {
           ad_storage: parsed && parsed.marketing ? 'granted' : 'denied',

@@ -3,6 +3,7 @@ import BaseLayout from '@/layouts/BaseLayout.astro';
 import Navbar from '@/components/common/Navbar.astro';
 import Footer from '@/components/common/Footer.astro';
 import HomeCta from '@/components/home/HomeCta.astro';
+import ClientsShowcase from '@/components/home/ClientsShowcase.astro';
 import { useTranslations, type SupportedLang } from '@/i18n';
 
 export function getStaticPaths() {
@@ -62,30 +63,30 @@ const ethics = {
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
           <div class="space-y-6">
             <h2 class="text-2xl sm:text-3xl font-extrabold text-navy-950 leading-tight">
-              {lang === 'th' ? 'กว่าสองทศวรรษแห่งการเป็นเกราะป้องกันทางกฎหมาย' : lang === 'zh' ? '逾二十载矢志不渝的泰方法律护航壁垒' : 'Over Two Decades of Uncompromising Legal Advocacy'}
+              {lang === 'th' ? 'มุ่งมั่นในการให้บริการด้านกฎหมายที่ครบวงจรและเป็นเลิศ' : lang === 'zh' ? '立足曼谷，恪守诚信，提供全方位务实法律护航' : 'Dedicated to Comprehensive & Practical Legal Protection'}
             </h2>
             <p class="text-sm sm:text-base text-slate-600 leading-relaxed">
               {lang === 'th'
-                ? 'สำนักงานกฎหมาย มงต์แคลร์ แอนด์ สเตอร์ลิง ก่อตั้งขึ้นด้วยวิสัยทัศน์ที่ต้องการยกระดับมาตรฐานการให้บริการทางกฎหมายในประเทศไทยให้ทัดเทียมสากล เราให้บริการทั้งแก่องค์กรธุรกิจชั้นนำ บริษัทข้ามชาติ และบุคคลทั่วไป ด้วยความเชี่ยวชาญเฉพาะทางในแต่ละสาขากฎหมาย'
+                ? 'บริษัท ธันปรัท ทนายความ จำกัด ก่อตั้งขึ้นในปี พ.ศ. 2561 ด้วยปณิธานอันแน่วแน่ในการเป็นที่พึ่งพาด้านกฎหมายให้แก่องค์กรธุรกิจและบุคคลทั่วไป โดยยึดมั่นในหลักความซื่อสัตย์ ความโปร่งใส และการสร้างความสำเร็จร่วมกันกับลูกค้า ภายใต้การนำของ คุณปรัชญา วิชาโคตร ผู้มีประสบการณ์ว่าความและที่ปรึกษากฎหมายมากว่า 26 ปี'
                 : lang === 'zh'
-                ? '蒙克莱尔·斯特林律所（Montclaire & Sterling）自创立以来，始终立足曼谷商业核心，致力于消除外资企业与本地法律制度之间的沟通鸿沟与风控盲区。我们以极高的职业胜诉率和商业信誉，成为众多跨国集团进军泰国的首选法务军师。'
-                : 'Founded in 2004, Montclaire & Sterling was forged with a singular mission: to deliver international-tier legal precision within Thailand’s evolving statutory environment. We have represented Fortune 500 multinationals, innovative private enterprises, and prominent families across critical junctures.'}
+                ? '泰国丹普拉特律师事务所（THANPRAT LAWYER CO., LTD.）创立于 2018 年，由拥有逾 26 年资深执业经验的普拉查亚·维查科特主任律师领衔创设。律所秉承诚信、透明、敬业与共赢宗旨，致力于在签约前、投资前及诉前为企业构筑坚不可摧的法务合规防线。'
+                : 'Established in 2018, THANPRAT LAWYER CO., LTD. is a premier boutique Thai law firm based in Dusit, Bangkok. Founded by Managing Director Pratchaya Vichakote (practicing since 2000), our team protects clients’ interests with uncompromising integrity, legal precision, and proactive risk mitigation.'}
             </p>
 
-            <!-- Boardroom Photo -->
+            <!-- Firm Imagery -->
             <div class="rounded-[2px] overflow-hidden border border-slate-200 shadow-sm relative group">
               <img
-                src="/images/office-boardroom.jpg"
-                alt="Montclaire & Sterling Sathorn Headquarters Boardroom"
+                src="/images/thanprat/legal-scales.jpg"
+                alt="THANPRAT LAWYER CO., LTD. - Legal Precision & Justice"
                 class="w-full h-56 object-cover filter brightness-[1.02] contrast-[1.02] group-hover:scale-105 transition-transform duration-500"
                 loading="lazy"
                 decoding="async"
                 width="600"
                 height="300"
               />
-              <div class="absolute bottom-2 left-2 px-2.5 py-1 rounded-[2px] bg-navy-950/80 backdrop-blur-md text-[11px] text-white font-medium border border-white/10 flex items-center gap-1.5">
+              <div class="absolute bottom-2 left-2 px-2.5 py-1 rounded-[2px] bg-navy-950/85 backdrop-blur-md text-[11px] text-white font-medium border border-white/10 flex items-center gap-1.5">
                 <span class="w-1.5 h-1.5 rounded-full bg-gold-400"></span>
-                <span>Sathorn Square Tower 28th Fl. Executive Suite</span>
+                <span>Theoddamri Bldg., Nakornchaisri Rd, Dusit, Bangkok</span>
               </div>
             </div>
           </div>
@@ -117,37 +118,37 @@ const ethics = {
         </p>
       </div>
 
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 lg:gap-6">
         {t.teamSection.members.map((member, idx) => (
-          <div class:list={["reveal-init rounded-[2px] p-6 sm:p-8 flex flex-col justify-between bg-white border border-slate-200/90 shadow-sm glass-card-hover", `stagger-${idx + 1}`]}>
+          <div class:list={["reveal-init rounded-[2px] p-5 sm:p-6 flex flex-col justify-between bg-white border border-slate-200/90 shadow-sm glass-card-hover", `stagger-${idx + 1}`]}>
             <div>
-              <!-- Sharp Real Attorney Photo -->
-              <div class="relative w-full aspect-[4/3] rounded-[2px] overflow-hidden border border-slate-200 mb-6 shadow-xs group/photo bg-slate-100">
+              <!-- Sharp Real Attorney Photo (Portrait) -->
+              <div class="relative w-full aspect-[4/5] rounded-[2px] overflow-hidden border border-slate-200 mb-5 shadow-xs group/photo bg-slate-100">
                 <img
                   src={member.image}
                   alt={member.name}
-                  class="w-full h-full object-cover object-top filter brightness-[1.02] contrast-[1.02] group-hover/photo:scale-105 transition-transform duration-500"
+                  class="w-full h-full object-cover object-top filter brightness-[1.01] contrast-[1.02] group-hover/photo:scale-105 transition-transform duration-500"
                   loading="lazy"
                   decoding="async"
                   width="400"
-                  height="300"
+                  height="500"
                 />
-                <div class="absolute inset-0 bg-gradient-to-t from-navy-950/20 via-transparent to-transparent pointer-events-none"></div>
+                <div class="absolute inset-0 bg-gradient-to-t from-navy-950/25 via-transparent to-transparent pointer-events-none"></div>
               </div>
 
-              <h3 class="text-xl font-bold text-navy-950 mb-1">{member.name}</h3>
-              <p class="text-xs font-bold uppercase tracking-wider text-gold-700 mb-4 min-h-[32px] flex items-center">{member.role}</p>
+              <h3 class="text-lg font-bold text-navy-950 mb-1">{member.name}</h3>
+              <p class="text-xs font-bold uppercase tracking-wider text-gold-700 mb-3 min-h-[32px] flex items-center">{member.role}</p>
 
-              <div class="p-3.5 rounded-[2px] bg-slate-100/90 border border-slate-200/90 text-xs text-slate-700 mb-4 min-h-[64px] flex items-center leading-relaxed">
+              <div class="p-3 rounded-[2px] bg-slate-100/90 border border-slate-200/90 text-xs text-slate-700 mb-3 min-h-[72px] flex items-center leading-relaxed">
                 {member.credentials}
               </div>
 
-              <p class="text-sm text-slate-600 leading-relaxed min-h-[72px]">
+              <p class="text-xs sm:text-sm text-slate-600 leading-relaxed min-h-[72px]">
                 {member.experience}
               </p>
             </div>
 
-            <div class="mt-8 pt-4 border-t border-slate-100">
+            <div class="mt-6 pt-4 border-t border-slate-100">
               <a
                 href={`/${lang}/contact/?attorney=${encodeURIComponent(member.name)}`}
                 class="inline-flex items-center text-xs font-bold uppercase tracking-wider text-navy-900 hover:text-gold-700 transition-colors"
@@ -178,6 +179,8 @@ const ethics = {
         </div>
       </div>
     </section>
+
+    <ClientsShowcase lang={lang} />
 
     <HomeCta lang={lang} />
   </main>

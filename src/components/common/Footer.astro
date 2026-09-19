@@ -18,15 +18,15 @@ const currentYear = new Date().getFullYear();
       <!-- Column 1: Brand & Credibility -->
       <div class="lg:col-span-2 space-y-4">
         <div class="flex items-center gap-3">
-          <div class="w-10 h-10 rounded-[2px] overflow-hidden border border-gold-500/40 shrink-0 bg-navy-900">
-            <img src="/images/logo.svg" alt="Montclaire & Sterling Logo" class="w-full h-full object-cover" width="40" height="40" loading="lazy" decoding="async" />
+          <div class="w-10 h-10 rounded-[2px] overflow-hidden p-0.5 border border-forest-500/40 shrink-0 bg-white">
+            <img src="/images/thanprat/logo.png" alt="THANPRAT LAWYER Logo" class="w-full h-full object-contain" width="40" height="40" loading="lazy" decoding="async" />
           </div>
           <div>
             <span class="block text-base font-bold tracking-wider text-slate-100 uppercase">
-              MONTCLAIRE & STERLING
+              {t.brand.name}
             </span>
             <span class="block text-[10px] tracking-widest text-gold-400 uppercase">
-              LEGAL COUNSEL
+              {t.brand.subName}
             </span>
           </div>
         </div>
@@ -36,13 +36,19 @@ const currentYear = new Date().getFullYear();
         </p>
 
         <div class="text-xs text-slate-400 space-y-1 pt-2">
-          <p class="flex items-start gap-2">
-            <svg class="w-4 h-4 text-gold-400 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <a
+            href={SITE_CONFIG.mapsDirectUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="flex items-start gap-2 hover:text-gold-300 transition-colors group"
+            title="Open in Google Maps"
+          >
+            <svg class="w-4 h-4 text-gold-400 shrink-0 mt-0.5 group-hover:scale-110 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
             </svg>
-            <span>{t.contact.addressValue}</span>
-          </p>
+            <span class="group-hover:underline">{t.contact.addressValue}</span>
+          </a>
         </div>
       </div>
 
@@ -125,7 +131,7 @@ const currentYear = new Date().getFullYear();
             <span class="truncate">{t.contact.emailValue}</span>
           </a>
 
-          <div class="pt-2 flex items-center gap-2">
+          <div class="pt-2 flex flex-wrap items-center gap-2">
             <!-- LINE CTA -->
             <a
               href={SITE_CONFIG.lineUrl}
@@ -133,7 +139,17 @@ const currentYear = new Date().getFullYear();
               rel="noopener noreferrer"
               class="track-line px-3 py-1.5 rounded-[2px] bg-[#06C755]/15 hover:bg-[#06C755]/25 border border-[#06C755]/40 text-[#06C755] text-xs font-semibold flex items-center gap-1.5 transition-all"
             >
-              LINE: {t.contact.lineValue}
+              LINE
+            </a>
+
+            <!-- Facebook CTA -->
+            <a
+              href={SITE_CONFIG.facebook}
+              target="_blank"
+              rel="noopener noreferrer"
+              class="px-3 py-1.5 rounded-[2px] bg-[#1877F2]/15 hover:bg-[#1877F2]/25 border border-[#1877F2]/40 text-[#1877F2] text-xs font-semibold flex items-center gap-1.5 transition-all"
+            >
+              Facebook
             </a>
 
             <!-- WeChat CTA -->

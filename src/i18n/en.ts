@@ -7,205 +7,241 @@ export const en = {
     consultationBtn: "Book Consultation"
   },
   brand: {
-    name: "Montclaire & Sterling",
-    legalName: "Montclaire & Sterling Legal Counsel Co., Ltd.",
-    tagline: "Precision in Law. Excellence in Counsel.",
-    description: "A premier international law firm in Bangkok providing comprehensive corporate counsel, foreign direct investment structuring, dispute resolution, and private wealth management with unyielding integrity."
+    name: "THANPRAT LAWYER",
+    shortName: "THANPRAT",
+    subName: "LAWYER CO., LTD.",
+    legalName: "THANPRAT LAWYER CO., LTD.",
+    tagline: "Legal Precision. Business Protection.",
+    description: "A premier boutique Thai business law firm helping business owners, investors, and organizations identify legal risks before signing, investing, or entering into dispute. Combining comprehensive consultancy, contract architecture, and nationwide litigation."
   },
   stats: {
-    experience: { value: "20+", label: "Years of Legal Mastery", sub: "Established in 2004" },
-    successRate: { value: "98.4%", label: "Case & Transaction Success", sub: "Over 2,400 matters resolved" },
-    corporateClients: { value: "1,500+", label: "Corporate Clients Entrusted", sub: "Domestic & multinational" },
-    assetsProtected: { value: "THB 10B+", label: "Assets & Deals Protected", sub: "Commercial contracts & litigation" }
+    experience: { value: "26+", label: "Years of Managing Partner Mastery", sub: "Practicing since 2000" },
+    founded: { value: "2018", label: "Firm Establishment", sub: "Full-service commercial firm" },
+    corporateClients: { value: "50+", label: "Leading Corporate Clients", sub: "Listed companies & multinationals" },
+    nationwideCourts: { value: "100%", label: "Nationwide Court Coverage", sub: "Civil, Criminal, Administrative & ADR" }
   },
   hero: {
-    badge: "Executive Legal Counsel & Advocacy",
-    title1: "Strategic Legal Precision",
-    title2: "Safeguarding Your Enterprise",
-    lead: "Montclaire & Sterling blends deep mastery of Thai jurisprudence with sophisticated international commercial insight to vigorously protect your enterprise and wealth.",
+    badge: "Boutique Business Law & Nationwide Litigation",
+    title1: "Legal Precision.",
+    title2: "Business Protection.",
+    lead: "THANPRAT LAWYER CO., LTD. is a full-service Bangkok-based law firm dedicated to delivering reliable, innovative legal solutions with integrity, precision, and commercial acumen.",
     ctaConsultation: "Schedule a Consultation",
     ctaServices: "Explore Practice Areas",
-    trustNote: "Strict Professional Privilege Guaranteed • Fluent in Thai, English, and Chinese"
+    trustNote: "Uncompromising Integrity • Strict Professional Privilege • Fluent in Thai & English"
   },
   whyUs: {
-    sectionBadge: "Why Montclaire & Sterling",
-    title: "The Pillars of Our Distinction",
-    subtitle: "More than just legal representatives, we serve as strategic partners mitigating existential risks and forging decisive commercial advantages.",
+    sectionBadge: "Core Values",
+    title: "WHAT WE STAND FOR — Our Key Differentiators",
+    subtitle: "“A good legal document should not merely be correct. It should protect the client’s business.”",
     pillars: [
       {
-        title: "Trilingual Legal Specialists",
-        desc: "Seamless, nuance-aware advocacy in Thai, English, and Mandarin, bridging complex local statutory frameworks with global corporate expectations."
+        title: "Integrity & Transparency",
+        desc: "We practice with unwavering honesty and transparent communication, giving clear, realistic assessments without false assurances."
       },
       {
-        title: "Strict Professional Privilege",
-        desc: "Uncompromising adherence to attorney-client privilege, cutting-edge data protection protocols, and full compliance with Thailand's PDPA."
+        title: "Attention to Detail",
+        desc: "We rigorously scrutinize factual issues, legal points, underlying agreements, and practical commercial risks across every assignment."
       },
       {
-        title: "Proactive, Result-Driven Strategy",
-        desc: "We anticipate legal vulnerabilities before they materialize, architecting aggressive negotiation postures and tactical litigation strategies."
+        title: "Strict Confidentiality",
+        desc: "We safeguard our clients' secrets, corporate strategy, and data with institutional rigor and strict adherence to PDPA compliance."
       },
       {
-        title: "Transparent & Accountable Billing",
-        desc: "Candid case evaluations with transparent fee schedules and milestone-based retainers. Zero hidden disbursements or surprise invoices."
+        title: "Commercial Understanding",
+        desc: "We provide advice rooted in commercial realism—not merely textbook statutes—empowering clients to make confident business decisions."
       }
     ]
   },
   servicesSection: {
     sectionBadge: "Legal Capabilities",
-    title: "Comprehensive Practice Areas",
-    subtitle: "End-to-end expertise spanning corporate expansion, cross-border commercial transactions, court advocacy, and wealth succession.",
+    title: "CORE LEGAL SERVICES — Comprehensive Practice Areas",
+    subtitle: "From preventative document architecture to cross-border transactions, negotiation, and high-stakes courtroom litigation.",
     viewAll: "View All Practice Areas",
     learnMore: "Read Details"
   },
   services: [
     {
-      slug: "foreign-investment-boi",
-      title: "Foreign Investment & BOI Privileges",
-      shortDesc: "Company incorporation, Board of Investment (BOI) incentives, Foreign Business Licenses (FBL), and LTR / Work Permit processing.",
-      overview: "As Southeast Asia's premier logistics and manufacturing hub, Thailand presents lucrative commercial opportunities. Our corporate attorneys steer multinational enterprises safely through complex regulatory landscapes.",
+      slug: "corporate-commercial-investment",
+      title: "Corporate, Commercial & Foreign Investment",
+      shortDesc: "Company formation, foreign business licensing (FBL), BOI promotion incentives, M&A due diligence, and commercial agreements.",
+      overview: "We architect legal solutions tailored to corporate business models, joint venture structures, and future risk prevention for Thai and international enterprises.",
       keyPoints: [
-        "Incorporation of limited companies, branch offices, and regional headquarters",
-        "Application for maximum Board of Investment (BOI) tax exemptions and privileges",
-        "Foreign Business License (FBL) and Treaty of Amity certifications",
-        "Long-Term Resident (LTR) Visas, Smart Visas, and high-level Work Permits",
-        "Customs, import/export duty optimization, and regulatory compliance"
+        "Company incorporation (Limited, Public Limited, Partnerships, Branch & Representative Offices)",
+        "Foreign investment structuring, Foreign Business License (FBL) and Board of Investment (BOI) incentives",
+        "Mergers & Acquisitions (M&A), Share Purchase Agreements (SPA), and asset acquisition structuring",
+        "Comprehensive Legal Due Diligence: corporate standing, assets, permits, encumbrances, and liabilities",
+        "Corporate Retainer advisory, corporate governance, and commercial tax planning"
       ],
-      forWhom: "Multinational corporations, international private equity funds, tech ventures, and foreign entrepreneurs expanding into Thailand."
+      forWhom: "Multinational corporations, international investors, entrepreneurs, and Thai companies pursuing sustainable growth."
     },
     {
       slug: "litigation-dispute-resolution",
-      title: "Litigation & Commercial Dispute Resolution",
-      shortDesc: "Aggressive courtroom trial advocacy, civil and criminal defense, commercial disputes, and domestic/international arbitration (THAC, SIAC).",
-      overview: "When commercial disputes escalate, Montclaire & Sterling's courtroom trial attorneys stand resolute. We bring formidable oral advocacy, rigorous cross-examination, and calculated negotiation strategies.",
+      title: "Litigation & Dispute Resolution",
+      shortDesc: "Trial advocacy in courts nationwide: Civil, Criminal, Administrative, Tax, Labor, IP, Bankruptcy, Reorganization, and Arbitration.",
+      overview: "We manage disputes across every critical juncture: early case assessment, strategic negotiation, mediation, and vigorous courtroom litigation across Thailand.",
       keyPoints: [
-        "Complex commercial litigation, breach of contract, and damages recovery",
-        "White-collar criminal defense, fraud, embezzlement, and director liability",
-        "Arbitration representation before THAC, TAI, ICC, and SIAC tribunals",
-        "Post-judgment enforcement, asset tracing, injunctions, and freezes",
-        "Alternative dispute resolution and strategic confidential mediation"
+        "Civil Litigation: Real estate, property, torts, partnership/company disputes, inheritance, family, debt, and specific contracts",
+        "Criminal Defense & Prosecution: Document fraud, corporate crimes, trade offenses, electronic card offenses, offenses against property and liberty",
+        "Specialized Courts: Administrative court, Tax litigation, Labor court, IP & International Trade court, Bankruptcy and Business Reorganization",
+        "Alternative Dispute Resolution (ADR): Domestic & international arbitration, strategic settlement negotiation, and mediation",
+        "Post-judgment execution, asset tracing, injunctions, and enforcement of arbitral awards"
       ],
-      forWhom: "Board directors, corporate executives, institutional investors, and individuals facing high-stakes legal proceedings."
+      forWhom: "Corporate directors, enterprises, shareholders, and individuals facing high-stakes legal proceedings or seeking judicial remedies."
     },
     {
-      slug: "real-estate-property",
-      title: "Real Estate & Title Due Diligence",
-      shortDesc: "In-depth land title investigations, condominium acquisitions, long-term 30-year leases, usufructs, and developer contracts.",
-      overview: "Real estate transactions in Thailand demand meticulous scrutiny. We conduct multi-tiered title searches and draft ironclad purchase contracts to insulate buyers from structural and ownership risks.",
+      slug: "contract-drafting-review",
+      title: "Contract Architecture & Legal Opinions",
+      shortDesc: "Bespoke contract drafting, commercial agreement review, risk mitigation analysis, and formal Legal Opinions for executive decision-making.",
+      overview: "A contract should be an operational shield. We craft contracts specifically aligned with your commercial model, far beyond off-the-shelf templates.",
       keyPoints: [
-        "Exhaustive Land Department title deed verification and historical search",
-        "Drafting and review of condominium, villa, and land sale & purchase agreements",
-        "Structuring legal foreign property rights via leaseholds, usufructs, and superficies",
-        "Due diligence on property developers, building permits, and environmental EIA filings",
-        "Litigation regarding construction delays, developer default, and deposit recovery"
+        "Drafting tailor-made business contracts (Contract Architecture) customized to specific commercial mechanisms",
+        "Reviewing and negotiating commercial agreements, distributorships, supply agreements, and franchise contracts",
+        "Drafting Joint Venture Agreements (JVA), Shareholders' Agreements (SHA), and corporate articles of association",
+        "Non-Disclosure Agreements (NDA), Memorandums of Understanding (MOU), and executive service contracts",
+        "Issuing formal Legal Opinions for financial institutions, overseas investors, and board approval"
       ],
-      forWhom: "Foreign property buyers, institutional developers, family offices, and luxury estate investors."
+      forWhom: "Managing directors, procurement departments, corporate developers, and organizations demanding contract security."
     },
     {
-      slug: "corporate-commercial-contracts",
-      title: "Corporate Law & Mergers and Acquisitions (M&A)",
-      shortDesc: "General counsel retainers, comprehensive legal due diligence, cross-border M&A transactions, and shareholder agreements.",
-      overview: "Sustainable enterprise growth requires robust corporate governance and foresight. We serve as external general counsel, proactively shielding companies from legal exposure across operational lifecycles.",
+      slug: "banking-debt-reorganization",
+      title: "Banking Law & Debt Restructuring",
+      shortDesc: "Financial regulatory compliance, non-performing loan management, strategic debt restructuring, and corporate rehabilitation.",
+      overview: "With senior team background directing bank debt control and legal divisions, we possess unparalleled insight into both lender and corporate debtor perspectives.",
       keyPoints: [
-        "Monthly corporate legal retainer and advisory services",
-        "End-to-end Mergers & Acquisitions (M&A) structuring, drafting, and closing",
-        "Shareholders' Agreements (SHA), Joint Venture Agreements (JVA), and voting trusts",
-        "Capital restructuring, corporate dissolutions, and debt restructuring",
-        "Intellectual property filings, trademark registration, and trade secret protection"
+        "Strategic debt restructuring negotiations with financial institutions and major commercial creditors",
+        "Representation in loan default litigation, mortgage foreclosures, pledges, and guarantor liabilities",
+        "Corporate insolvency defense and filing business rehabilitation petitions under Thai Bankruptcy Law",
+        "Review of credit facility agreements, debenture conditions, and collateral perfection",
+        "Legal advisory on financial regulatory compliance and credit risk mitigation"
       ],
-      forWhom: "Established SMEs, listed corporations, tech unicorns, and regional holding groups."
+      forWhom: "Indebted corporations, financial institutions, investors, and guarantors seeking realistic, lawful financial resolutions."
     },
     {
-      slug: "family-wealth-inheritance",
-      title: "Private Wealth, Wills & Inheritance",
-      shortDesc: "Family business succession planning, bilingual testament drafting, probate court proceedings, and cross-border estate administration.",
-      overview: "Preserve and transition multi-generational wealth seamlessly. We structure tax-efficient family asset holdings and draft clear, unchallengeable wills under Thai and international law.",
+      slug: "notarial-services",
+      title: "Notarial Services Attorney",
+      shortDesc: "Certification of signatures, verification of corporate and personal documents for use overseas, before embassies and international authorities.",
+      overview: "Documents destined for overseas jurisdictions require strict statutory certification. Our certified Notarial Services Attorneys provide swift, compliant certification.",
       keyPoints: [
-        "Bilingual wills and testament preparation compliant with Thai statutory standards",
-        "Court petitions for administrator appointment and probate estate distribution",
-        "Family governance constitutions and private holding company structuring",
-        "Cross-border estate management for expatriates holding Thai real property",
-        "Prenuptial agreements and matrimonial property disputes"
+        "Authentication of signatures on commercial deeds, contracts, and Powers of Attorney (POA) for overseas use",
+        "Certification of true copies of official corporate registrations, identity documents, and academic records",
+        "Verification of corporate directors' legal capacity and execution authority",
+        "Certified legal translations of Thai and English statutory documents",
+        "Coordination with the Department of Consular Affairs, Ministry of Foreign Affairs, and foreign embassies"
       ],
-      forWhom: "High-Net-Worth Individuals (HNWI), family enterprises, expatriates with Thai assets, and transnational couples."
+      forWhom: "Expatriates, international organizations, study-abroad applicants, and Thai companies transacting internationally."
     },
     {
-      slug: "notarial-legal-translation",
-      title: "Notarial Services & Certified Legal Translation",
-      shortDesc: "Licensed Notarial Services Attorneys, document authentication, apostille assistance, and court-certified trilingual translations.",
-      overview: "Documents destined for overseas jurisdictions, embassies, or judicial bodies require accredited verification. Our certified notarial attorneys provide fast, infallible authentication services.",
+      slug: "labor-ip-property",
+      title: "Labor, IP, Real Estate & Asset Protection",
+      shortDesc: "Employment compliance, trademark & patent registration, real estate due diligence, land title searches, and estate planning.",
+      overview: "Safeguard your human capital, intellectual property, and real estate assets through structured legal foresight.",
       keyPoints: [
-        "Verification of signatures and official corporate execution on international deeds",
-        "Certified true copy attestations of government certificates and corporate registries",
-        "Authentication of personal identity, affidavits, and power of attorney documents",
-        "Certified legal translation in Thai, English, and Chinese for official court filings",
-        "Consular legalization and Ministry of Foreign Affairs (MFA) representation"
+        "Drafting employment regulations, labor contracts, non-compete covenants, and workplace compliance",
+        "Representation in unfair dismissal claims, severance negotiations, and Labor Court proceedings",
+        "Intellectual property protection: trademark, copyright, patent applications, and anti-counterfeiting",
+        "Comprehensive land title searches (Title Due Diligence), condominium transfers, and property leaseholds",
+        "Bilingual wills, prenuptial agreements, cross-border estate succession, and probate administration"
       ],
-      forWhom: "Corporations executing cross-border transactions, students, emigrants, and foreign individuals."
+      forWhom: "HR executives, brand owners, property investors, and families managing multi-generational assets."
     }
   ],
+  clientsSection: {
+    sectionBadge: "Trusted by Leaders",
+    title: "OUR CLIENTS — Entrusted by Prestigious Organizations",
+    subtitle: "We take pride in serving as trusted legal counsel to prominent financial institutions, publicly listed corporations, and multinational leaders.",
+    clients: [
+      "Bank of China (Thailand) Public Company Limited",
+      "Don Muang Tollway Public Co., Ltd.",
+      "Stock Exchange of Thailand (SET)",
+      "Thailand Securities Depository Company Limited (TSD)",
+      "China State Construction Engineering (Thailand) Co., Ltd.",
+      "Boon Rawd Trading Co., Ltd.",
+      "CITIC Heavy Machinery Co., Ltd.",
+      "China Petroleum Pipeline Bureau (CPP)",
+      "Greenland Holding (Thailand) Co., Ltd.",
+      "Rotary Engineering (Thailand) Co., Ltd.",
+      "Shenzhen Supertex Textile Co., Ltd.",
+      "PTS Progressive Engineering Co., Ltd.",
+      "Reangwa Standard Industry Co., Ltd.",
+      "Quality Star Engineering Co., Ltd.",
+      "SCIVIC (Thailand) Co., Ltd.",
+      "Century Tire (Thailand) Co., Ltd.",
+      "Top Shipping Logistics (Thailand) Co., Ltd.",
+      "Growatt New Energy Technology (Thailand) Co., Ltd."
+    ]
+  },
   teamSection: {
-    sectionBadge: "Leadership & Partners",
-    title: "Distinguished Senior Counsel",
-    subtitle: "Headed by seasoned legal practitioners with notable courtroom victories and corporate advisory credentials.",
+    sectionBadge: "Leadership & Attorneys",
+    title: "OUR LEGAL TEAM — Experienced Legal Counsel",
+    subtitle: "Our team possesses seasoned foundations across business law, trial advocacy, banking & debt management, contracts, and regulatory advisory.",
     members: [
       {
-        name: "Dr. Nititham Sucharitpreecha (Fictional Profile)",
-        role: "Managing Partner & Head of Dispute Resolution",
-        credentials: "Barrister-at-Law (Thai Bar) • LL.M. Chulalongkorn University • Member of the Lawyers Council of Thailand",
-        experience: "Over 22 years representing Fortune 500 conglomerates in complex commercial litigation, economic white-collar defense, and international arbitrations.",
-        image: "/images/partner-chaiwat.jpg"
+        name: "Pratchaya Vichakote",
+        role: "Managing Director & Founder",
+        credentials: "LL.B. Ramkhamhaeng • Thai Barrister (Class 58) • LL.M. Business Law • Grad. Dip. Business Law (Thammasat) • Notarial Services Attorney (Class 1) • Attorney License 1592/2543",
+        experience: "Practicing attorney since 2000. Extensive mastery in civil & criminal litigation, corporate law, investment structuring. Legal advisor to Dr. Vorapol Socatiyanurak and Dr. Montree Socatiyanurak.",
+        image: "/images/thanprat/lawyer-pratchaya.jpg"
       },
       {
-        name: "Karnpitcha Voranitikarn (Fictional Profile)",
-        role: "Senior Partner — Corporate & Foreign Direct Investment",
-        credentials: "LL.B. (Thammasat) • LL.M. International Commercial Law (London) • Certified Notarial Services Attorney",
-        experience: "Specialist in structuring foreign corporate investments, multimillion-dollar M&A transactions, and regulatory BOI incentivization.",
-        image: "/images/partner-kanya.jpg"
+        name: "Chayathon Vichakote",
+        role: "Attorney at Law",
+        credentials: "LL.B. Ramkhamhaeng • Thai Barrister (Class 58) • LL.M. Business Law (Ramkhamhaeng) • Admitted to the Bar of Thailand",
+        experience: "Former Managing Director of Debt & Legal Group at Government Savings Bank (1999–2022). Deep authority in civil & criminal cases, banking law, debt enforcement, and corporate workouts.",
+        image: "/images/thanprat/lawyer-chayathon.jpg"
       },
       {
-        name: "Thanapol Chainitimongkol (Fictional Profile)",
-        role: "Partner & Head of China-Thailand Desk",
-        credentials: "LL.B. (Honors) • LL.M. Peking University (北京大学) • Fluent Native-Level Mandarin",
-        experience: "Lead counsel to major state-owned and private Chinese enterprises, tech firms, and high-net-worth investors establishing regional headquarters in Thailand.",
-        image: "/images/partner-michael.jpg"
+        name: "Sanguansri Phaphong",
+        role: "Attorney at Law",
+        credentials: "LL.B. Ramkhamhaeng University • Attorney-at-Law License No. 395/2553 (Admitted 2010)",
+        experience: "Specialist in courtroom advocacy across civil, criminal, administrative, bankruptcy, IP, and labor courts. Skilled negotiator and arbitrator in commercial dispute resolution.",
+        image: "/images/thanprat/lawyer-sanguansri.jpg"
+      },
+      {
+        name: "Teeraya Hemchinakul",
+        role: "Attorney at Law & Notary",
+        credentials: "LL.B. Assumption University (ABAC) • Thai Barrister (Class 72) • Notarial Services Attorney (Class 22) • English Programme, Univ. of Leicester (UK)",
+        experience: "Former attorney at Far East Legal Counsellors (2013–2019). Expertise in civil/criminal litigation, commercial contract drafting, and international notarial certification.",
+        image: "/images/thanprat/lawyer-teeraya.jpg"
       }
     ]
   },
   contact: {
-    sectionBadge: "Get in Touch",
-    title: "Schedule a Confidential Legal Consultation",
-    subtitle: "All communications and initial case appraisals are safeguarded by strict legal professional privilege.",
-    infoTitle: "Direct Inquiries",
-    addressLabel: "Head Office Address",
-    addressValue: "88/1 Sathorn Square Tower, 28th Floor, North Sathorn Rd, Silom, Bang Rak, Bangkok 10500, Thailand",
-    phoneLabel: "Telephone",
-    phoneValue: "+66 2 123 4567",
-    phoneMobile: "+66 81 999 8888",
-    emailLabel: "Official Email",
-    emailValue: "contact@ms-legal.example.com",
-    hoursLabel: "Office Hours",
-    hoursValue: "Monday – Friday: 08:30 – 18:00 (Weekends by prior appointment)",
-    lineLabel: "LINE Official ID",
-    lineValue: "@mslegal",
-    wechatLabel: "WeChat Official ID",
-    wechatValue: "MSLegalBKK",
-    whatsappLabel: "WhatsApp Direct",
-    whatsappValue: "+66 81 999 8888",
+    sectionBadge: "Contact Firm",
+    title: "Schedule a Privileged Consultation",
+    subtitle: "All communications and disclosures are strictly protected under statutory attorney-client privilege.",
+    infoTitle: "Direct Contact Information",
+    addressLabel: "Head Office Location",
+    addressValue: "1131/221 Theoddamri Bldg., Nakornchaisri Road, Thanon Nakornchaisri, Dusit, Bangkok 10300 Thailand",
+    phoneLabel: "Telephone Inquiries",
+    phoneValue: "+66 82 156 5651",
+    phoneMobile: "+66 64 829 8888",
+    emailLabel: "Official Case Correspondence",
+    emailValue: "thanprat.lawyer@gmail.com",
+    hoursLabel: "Business Hours",
+    hoursValue: "Monday – Friday: 08:30 – 17:30 (Weekends by prior appointment)",
+    lineLabel: "LINE Official Account",
+    lineValue: "@thanpratlawyer",
+    facebookLabel: "Facebook Page",
+    facebookValue: "Thanprat Lawyer",
+    wechatLabel: "WeChat ID (China Desk)",
+    wechatValue: "ThanpratLawyer",
+    whatsappLabel: "WhatsApp",
+    whatsappValue: "+66 82 156 5651",
     formTitle: "Consultation Request Form",
-    formDesc: "Submit an inquiry below and a senior practice area lead will review your case and respond within 24 business hours.",
+    formDesc: "Submit preliminary case details for a prompt response from our dedicated attorneys within 24 business hours.",
     fieldName: "Full Name *",
     fieldEmail: "Email Address *",
     fieldPhone: "Phone Number *",
-    fieldService: "Practice Area of Interest *",
-    fieldMessage: "Brief Summary of Your Legal Inquiry *",
+    fieldService: "Required Practice Area *",
+    fieldMessage: "Brief Matter Description *",
     fieldSubmit: "Request Consultation",
-    successMsg: "Thank you for reaching out. Your confidential inquiry has been logged, and our senior counsel will contact you shortly.",
-    errorMsg: "An error occurred while transmitting your request. Please try again or contact our emergency telephone line directly.",
-    selectServiceDefault: "-- Please select a practice area --"
+    successMsg: "Thank you for reaching out. THANPRAT LAWYER CO., LTD. has received your inquiry and our attorneys will contact you shortly.",
+    errorMsg: "An error occurred while submitting. Please try again or call us directly.",
+    selectServiceDefault: "-- Select Practice Area --"
   },
   footer: {
-    rights: "All rights reserved",
-    disclaimer: "Disclaimer: The contents of this website are for general informational purposes only and do not constitute formal legal advice. Transmitting inquiries does not establish an attorney-client relationship until a formal written engagement letter is countersigned.",
+    rights: "All rights reserved.",
+    disclaimer: "Disclaimer: Information provided on this website is for general educational purposes only and does not constitute formal legal advice. Transmitting information through this website does not create an attorney-client relationship until an engagement agreement is executed.",
     quickLinks: "Quick Links",
     practices: "Practice Areas",
     contactUs: "Contact Us",

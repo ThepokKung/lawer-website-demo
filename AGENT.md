@@ -1,8 +1,8 @@
 # AGENT.md - Project Context & AI Agent Guidelines
 
-**Project:** Montclaire & Sterling Legal Counsel (สำนักงานกฎหมาย มงต์แคลร์ แอนด์ สเตอร์ลิง / 蒙克莱尔·斯特林国际律师事务所)  
+**Project:** THANPRAT LAWYER CO., LTD. (บริษัท ธันปรัท ทนายความ จำกัด / 泰国丹普拉特律师事务所)  
 **Framework:** Astro 5 (Static Site Generation)  
-**Design Paradigm:** Architectural Sharp & High-Contrast Light Corporate Theme (Off-White `#F8FAFC`, Royal Navy `#0B1B3D`, Brushed Gold `#B38E46`, `rounded-[2px]`) with Apple-grade smooth micro-interactions.  
+**Design Paradigm:** Executive Deep Jungle Theme (Off-White `#F7FAF8`, Deep Jungle `#0B251B`, Forest Green `#1B4D3E`, Warm Champagne Gold `#C59B42`, `rounded-[2px]`) with Apple-grade smooth micro-interactions.  
 **ACTIVE WORKING BRANCH:** `dev` (Strict Rule: All edits, code modifications, and new features must be done in `dev`. Never commit directly to `main`).
 
 ---

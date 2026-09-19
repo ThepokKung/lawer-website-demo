@@ -37,6 +37,8 @@ export function useTranslations(lang: SupportedLang = 'th') {
       lineValue: SITE_CONFIG.line,
       wechatValue: SITE_CONFIG.wechat,
       whatsappValue: SITE_CONFIG.whatsapp,
+      facebookValue: SITE_CONFIG.facebook,
+      facebookLabel: SITE_CONFIG.facebookLabel,
       addressValue: localizedAddress
     }
   };

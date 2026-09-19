@@ -8,7 +8,7 @@ export interface CookieConsent {
   timestamp: string;
 }
 
-const CONSENT_STORAGE_KEY = 'ms_legal_cookie_consent';
+const CONSENT_STORAGE_KEY = 'thanprat_cookie_consent';
 
 export function getStoredConsent(): CookieConsent | null {
   try {
