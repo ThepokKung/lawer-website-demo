@@ -37,6 +37,12 @@ export interface AttorneyProfile {
   languages: string[];
 }
 
+export interface ClientItem {
+  name: string;
+  logo: string;
+  category?: string;
+}
+
 export const translations = {
   th,
   en

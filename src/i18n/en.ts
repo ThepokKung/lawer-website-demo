@@ -150,24 +150,96 @@ export const en = {
     title: "OUR CLIENTS — Entrusted by Prestigious Organizations",
     subtitle: "We take pride in serving as trusted legal counsel to prominent financial institutions, publicly listed corporations, and multinational leaders.",
     clients: [
-      "Bank of China (Thailand) Public Company Limited",
-      "Don Muang Tollway Public Co., Ltd.",
-      "Stock Exchange of Thailand (SET)",
-      "Thailand Securities Depository Company Limited (TSD)",
-      "China State Construction Engineering (Thailand) Co., Ltd.",
-      "Boon Rawd Trading Co., Ltd.",
-      "CITIC Heavy Machinery Co., Ltd.",
-      "China Petroleum Pipeline Bureau (CPP)",
-      "Greenland Holding (Thailand) Co., Ltd.",
-      "Rotary Engineering (Thailand) Co., Ltd.",
-      "Shenzhen Supertex Textile Co., Ltd.",
-      "PTS Progressive Engineering Co., Ltd.",
-      "Reangwa Standard Industry Co., Ltd.",
-      "Quality Star Engineering Co., Ltd.",
-      "SCIVIC (Thailand) Co., Ltd.",
-      "Century Tire (Thailand) Co., Ltd.",
-      "Top Shipping Logistics (Thailand) Co., Ltd.",
-      "Growatt New Energy Technology (Thailand) Co., Ltd."
+      {
+        name: "Bank of China (Thailand) Public Company Limited",
+        logo: "/images/clients/bank-of-china.png",
+        category: "Banking & Financial Services"
+      },
+      {
+        name: "Don Muang Tollway Public Co., Ltd.",
+        logo: "/images/clients/don-muang-tollway.png",
+        category: "Transportation & Infrastructure"
+      },
+      {
+        name: "Stock Exchange of Thailand (SET)",
+        logo: "/images/clients/set.svg",
+        category: "Capital Markets & Securities"
+      },
+      {
+        name: "Thailand Securities Depository Company Limited (TSD)",
+        logo: "/images/clients/tsd.png",
+        category: "Securities Clearing & Depository"
+      },
+      {
+        name: "China State Construction Engineering (Thailand) Co., Ltd.",
+        logo: "/images/clients/cscec.png",
+        category: "Global Construction & EPC"
+      },
+      {
+        name: "Boon Rawd Trading Co., Ltd.",
+        logo: "/images/clients/boon-rawd.png",
+        category: "Consumer Goods & Trading"
+      },
+      {
+        name: "CITIC Heavy Machinery Co., Ltd.",
+        logo: "/images/clients/citic.png",
+        category: "Heavy Industry & Machinery"
+      },
+      {
+        name: "China Petroleum Pipeline Bureau (CPP)",
+        logo: "/images/clients/cnpc-cpp.png",
+        category: "Energy & Pipeline Infrastructure"
+      },
+      {
+        name: "Greenland Holding (Thailand) Co., Ltd.",
+        logo: "/images/clients/greenland.gif",
+        category: "Real Estate & Urban Development"
+      },
+      {
+        name: "Rotary Engineering (Thailand) Co., Ltd.",
+        logo: "/images/clients/rotary.png",
+        category: "Oil, Gas & Petrochemical EPC"
+      },
+      {
+        name: "Growatt New Energy Technology (Thailand) Co., Ltd.",
+        logo: "/images/clients/growatt.png",
+        category: "Renewable Energy & Clean Tech"
+      },
+      {
+        name: "Century Tire (Thailand) Co., Ltd.",
+        logo: "/images/clients/century-tire.png",
+        category: "Automotive & Tire Manufacturing"
+      },
+      {
+        name: "Reangwa Standard Industry Co., Ltd.",
+        logo: "/images/clients/reangwa.png",
+        category: "Industrial Products & Manufacturing"
+      },
+      {
+        name: "Shenzhen Supertex Textile Co., Ltd.",
+        logo: "/images/clients/supertex.svg",
+        category: "International Trade & Textile"
+      },
+      {
+        name: "PTS Progressive Engineering Co., Ltd.",
+        logo: "/images/clients/pts-progressive.svg",
+        category: "Industrial Automation & Systems"
+      },
+      {
+        name: "SCIVIC (Thailand) Co., Ltd.",
+        logo: "/images/clients/scivic.svg",
+        category: "Automotive Industrial Engineering"
+      },
+      {
+        name: "Quality Star Engineering Co., Ltd.",
+        logo: "/images/clients/quality-star.svg",
+        category: "Machinery & Engineering Contracting"
+      },
+      {
+        name: "Top Shipping Logistics (Thailand) Co., Ltd.",
+        logo: "/images/clients/top-shipping.svg",
+        category: "International Freight & Logistics"
+      }
     ]
   },
   teamSection: {
