@@ -383,13 +383,13 @@ export const en = {
     practiceAreasTitle: "Areas of Legal Practice",
     languagesLabel: "Working Languages",
     licenseLabel: "Professional License",
-    scheduleConsultation: "Schedule a Privileged Consultation",
+    scheduleConsultation: "Schedule a Consultation",
     consultationSubtitle: "Contact our firm to request legal counsel or formal courtroom representation.",
     otherAttorneysTitle: "Other Attorneys in Our Firm"
   },
   contact: {
     sectionBadge: "Contact Firm",
-    title: "Schedule a Privileged Consultation",
+    title: "Schedule a Consultation",
     subtitle: "All communications and disclosures are strictly protected under statutory attorney-client privilege.",
     infoTitle: "Direct Contact Information",
     addressLabel: "Head Office Location",
