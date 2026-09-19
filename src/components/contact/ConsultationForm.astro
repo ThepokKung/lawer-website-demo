@@ -162,7 +162,7 @@ const targetEmail = SITE_CONFIG.email;
     <!-- Optional Cloudflare Turnstile Smart Challenge (Rendered only when key is configured) -->
     {turnstileSiteKey && (
       <div class="flex justify-center my-3">
-        <div class="cf-turnstile" data-sitekey={turnstileSiteKey} data-theme="light"></div>
+        <div class="cf-turnstile" data-sitekey={turnstileSiteKey} data-theme="light" data-action="consultation"></div>
       </div>
     )}
 
@@ -445,6 +445,11 @@ const targetEmail = SITE_CONFIG.email;
       } finally {
         if (submitBtn) {
           submitBtn.disabled = false;
+        }
+        if (typeof (window as any).turnstile?.reset === 'function') {
+          try {
+            (window as any).turnstile.reset();
+          } catch (_) {}
         }
       }
     });

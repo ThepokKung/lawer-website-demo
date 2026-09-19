@@ -39,8 +39,16 @@ export const SITE_CONFIG = {
   googleScriptUrl: import.meta.env.PUBLIC_GOOGLE_SCRIPT_URL || '',
 
   // Tag Management (GTM handles GA4, Clarity, and all pixels)
-  gtmId: import.meta.env.PUBLIC_GTM_ID || '',
+  gtmId: (() => {
+    const raw = (import.meta.env.PUBLIC_GTM_ID || '').trim();
+    const isPlaceholder = !raw || /^(none|gtm-none|gtm-xxxxxxx)$/i.test(raw);
+    const isValidFormat = /^GTM-[A-Z0-9]{4,10}$/i.test(raw);
+    return !isPlaceholder && isValidFormat ? raw : '';
+  })(),
 
   // Anti-Spam / Cloudflare Turnstile (Optional - falls back to invisible Honeypot + Time Trap)
-  turnstileSiteKey: import.meta.env.PUBLIC_TURNSTILE_SITE_KEY || ''
+  turnstileSiteKey: (() => {
+    const raw = (import.meta.env.PUBLIC_TURNSTILE_SITE_KEY || '').trim();
+    return raw && raw.toLowerCase() !== 'none' ? raw : '';
+  })()
 };
