@@ -41,7 +41,9 @@ export const SITE_CONFIG = {
   // Tag Management (GTM handles GA4, Clarity, and all pixels)
   gtmId: (() => {
     const raw = (import.meta.env.PUBLIC_GTM_ID || '').trim();
-    return raw && raw.toLowerCase() !== 'none' && raw.startsWith('GTM-') && raw !== 'GTM-XXXXXXX' ? raw : '';
+    const isPlaceholder = !raw || /^(none|gtm-none|gtm-xxxxxxx)$/i.test(raw);
+    const isValidFormat = /^GTM-[A-Z0-9]{4,10}$/i.test(raw);
+    return !isPlaceholder && isValidFormat ? raw : '';
   })(),
 
   // Anti-Spam / Cloudflare Turnstile (Optional - falls back to invisible Honeypot + Time Trap)
