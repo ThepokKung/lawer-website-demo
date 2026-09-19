@@ -1,3 +1,6 @@
 # Cloudflare Edge Redirects
 # Immediate 301 redirect from root to default language
 /  /th/  301
+
+# Canonical Sitemap Redirect
+/sitemap.xml  /sitemap-index.xml  301

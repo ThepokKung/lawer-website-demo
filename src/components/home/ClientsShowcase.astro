@@ -46,6 +46,8 @@ const t = useTranslations(lang);
                   src={clientLogo}
                   alt={clientName}
                   loading="lazy"
+                  width="68"
+                  height="44"
                   class="max-h-10 sm:max-h-11 max-w-[54px] sm:max-w-[68px] w-auto h-auto object-contain transition-transform duration-300 group-hover:scale-105"
                 />
               ) : (
@@ -74,7 +76,7 @@ const t = useTranslations(lang);
     </div>
 
     <!-- Bottom Trust Footer -->
-    <div class="reveal-init stagger-3 mt-10 pt-6 text-center border-t border-slate-100 text-xs text-slate-500">
+    <div class="reveal-init stagger-3 mt-10 pt-6 text-center border-t border-slate-100 text-xs text-slate-600">
       <span>{lang === 'th' ? 'ครอบคลุมทั้งสถาบันการเงิน บริษัทจดทะเบียนในตลาดหลักทรัพย์ และองค์กรข้ามชาติชั้นนำ' : 'Serving financial institutions, publicly listed enterprises, and multinational corporations'}</span>
     </div>
 

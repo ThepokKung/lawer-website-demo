@@ -12,6 +12,7 @@ Allow: /
 User-agent: Baiduspider
 Allow: /
 
-# Canonical Sitemap Index
+# Canonical Sitemap Index & Direct URL Set
 Sitemap: https://law.thepokkung.space/sitemap-index.xml
+Sitemap: https://law.thepokkung.space/sitemap-0.xml
 

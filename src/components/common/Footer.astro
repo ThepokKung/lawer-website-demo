@@ -54,42 +54,42 @@ const currentYear = new Date().getFullYear();
 
       <!-- Column 2: Quick Links -->
       <div class="space-y-3">
-        <h4 class="text-sm font-semibold uppercase tracking-wider text-gold-300">
+        <h3 class="text-sm font-semibold uppercase tracking-wider text-gold-300">
           {t.footer.quickLinks}
-        </h4>
-        <ul class="space-y-2 text-sm">
+        </h3>
+        <ul class="space-y-1 text-sm">
           <li>
-            <a href={`/${lang}/`} class="hover:text-gold-300 transition-colors">{t.nav.home}</a>
+            <a href={`/${lang}/`} class="block py-1 hover:text-gold-300 transition-colors">{t.nav.home}</a>
           </li>
           <li>
-            <a href={`/${lang}/services/`} class="hover:text-gold-300 transition-colors">{t.nav.services}</a>
+            <a href={`/${lang}/services/`} class="block py-1 hover:text-gold-300 transition-colors">{t.nav.services}</a>
           </li>
           <li>
-            <a href={`/${lang}/about/`} class="hover:text-gold-300 transition-colors">{t.nav.about}</a>
+            <a href={`/${lang}/about/`} class="block py-1 hover:text-gold-300 transition-colors">{t.nav.about}</a>
           </li>
           <li>
-            <a href={`/${lang}/contact/`} class="hover:text-gold-300 transition-colors">{t.nav.contact}</a>
+            <a href={`/${lang}/contact/`} class="block py-1 hover:text-gold-300 transition-colors">{t.nav.contact}</a>
           </li>
           <li>
-            <a href={`/${lang}/cookie-policy/`} class="hover:text-gold-300 transition-colors">{t.footer.cookiePolicy}</a>
+            <a href={`/${lang}/cookie-policy/`} class="block py-1 hover:text-gold-300 transition-colors">{t.footer.cookiePolicy}</a>
           </li>
           <li>
-            <a href={`/${lang}/privacy-policy/`} class="hover:text-gold-300 transition-colors">{t.footer.privacyPolicy}</a>
+            <a href={`/${lang}/privacy-policy/`} class="block py-1 hover:text-gold-300 transition-colors">{t.footer.privacyPolicy}</a>
           </li>
         </ul>
       </div>
 
       <!-- Column 3: Practice Areas -->
       <div class="space-y-3">
-        <h4 class="text-sm font-semibold uppercase tracking-wider text-gold-300">
+        <h3 class="text-sm font-semibold uppercase tracking-wider text-gold-300">
           {t.footer.practices}
-        </h4>
-        <ul class="space-y-2 text-sm">
+        </h3>
+        <ul class="space-y-1 text-sm">
           {t.services.map((service) => (
             <li>
               <a
                 href={`/${lang}/services/${service.slug}/`}
-                class="hover:text-gold-300 transition-colors line-clamp-1"
+                class="block py-1 hover:text-gold-300 transition-colors line-clamp-1"
                 title={service.title}
               >
                 {service.title}
@@ -101,9 +101,9 @@ const currentYear = new Date().getFullYear();
 
       <!-- Column 4: Contact & Conversion Channels -->
       <div class="space-y-3">
-        <h4 class="text-sm font-semibold uppercase tracking-wider text-gold-300">
+        <h3 class="text-sm font-semibold uppercase tracking-wider text-gold-300">
           {t.footer.contactUs}
-        </h4>
+        </h3>
         <div class="space-y-2.5 text-sm">
           <a
             href={`tel:${t.contact.phoneValue.replace(/\s+/g, '')}`}
