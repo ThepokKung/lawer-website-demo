@@ -470,7 +470,7 @@ export const en = {
     phoneValue: "+66 82 156 5651",
     phoneMobile: "+66 64 829 8888",
     emailLabel: "Official Case Correspondence",
-    emailValue: "pok23250+test@gmail.com",
+    emailValue: "thanprat.lawyer@gmail.com",
     hoursLabel: "Business Hours",
     hoursValue: "Monday – Friday: 08:30 – 17:30 (Weekends by prior appointment)",
     lineLabel: "LINE Official Account",

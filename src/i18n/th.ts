@@ -470,7 +470,7 @@ export const th = {
     phoneValue: "+66 82 156 5651",
     phoneMobile: "+66 64 829 8888",
     emailLabel: "อีเมลสำหรับติดต่องานคดี",
-    emailValue: "pok23250+test@gmail.com",
+    emailValue: "thanprat.lawyer@gmail.com",
     hoursLabel: "เวลาทำการ",
     hoursValue: "จันทร์ - ศุกร์: 08:30 - 17:30 น. (เสาร์-อาทิตย์ นัดหมายล่วงหน้า)",
     lineLabel: "LINE Official Account",
