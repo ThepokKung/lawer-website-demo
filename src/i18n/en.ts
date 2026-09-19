@@ -176,6 +176,7 @@ export const en = {
     subtitle: "Our team possesses seasoned foundations across business law, trial advocacy, banking & debt management, contracts, and regulatory advisory.",
     members: [
       {
+        slug: "pratchaya-vichakote",
         name: "Pratchaya Vichakote",
         role: "Managing Director & Founder",
         credentials: "LL.B. Ramkhamhaeng • Thai Barrister (Class 58) • LL.M. Business Law • Grad. Dip. Business Law (Thammasat) • Notarial Services Attorney (Class 1) • Attorney License 1592/2543",
@@ -183,20 +184,23 @@ export const en = {
         image: "/images/thanprat/lawyer-pratchaya.jpg"
       },
       {
+        slug: "chayathon-vichakote",
         name: "Chayathon Vichakote",
-        role: "Attorney at Law",
+        role: "Attorney at Law & Banking Specialist",
         credentials: "LL.B. Ramkhamhaeng • Thai Barrister (Class 58) • LL.M. Business Law (Ramkhamhaeng) • Admitted to the Bar of Thailand",
         experience: "Former Managing Director of Debt & Legal Group at Government Savings Bank (1999–2022). Deep authority in civil & criminal cases, banking law, debt enforcement, and corporate workouts.",
         image: "/images/thanprat/lawyer-chayathon.jpg"
       },
       {
+        slug: "sanguansri-phaphong",
         name: "Sanguansri Phaphong",
-        role: "Attorney at Law",
+        role: "Attorney at Law & Senior Trial Counsel",
         credentials: "LL.B. Ramkhamhaeng University • Attorney-at-Law License No. 395/2553 (Admitted 2010)",
         experience: "Specialist in courtroom advocacy across civil, criminal, administrative, bankruptcy, IP, and labor courts. Skilled negotiator and arbitrator in commercial dispute resolution.",
         image: "/images/thanprat/lawyer-sanguansri.jpg"
       },
       {
+        slug: "teeraya-hemchinakul",
         name: "Teeraya Hemchinakul",
         role: "Attorney at Law & Notary",
         credentials: "LL.B. Assumption University (ABAC) • Thai Barrister (Class 72) • Notarial Services Attorney (Class 22) • English Programme, Univ. of Leicester (UK)",
@@ -204,6 +208,184 @@ export const en = {
         image: "/images/thanprat/lawyer-teeraya.jpg"
       }
     ]
+  },
+  attorneys: [
+    {
+      slug: "pratchaya-vichakote",
+      name: "Pratchaya Vichakote",
+      nameEn: "Pratchaya Vichakote",
+      role: "Founder & Managing Director",
+      roleBadge: "Founder & Managing Director",
+      licenseNumber: "Attorney License No. 1592/2543 (Lawyers Council of Thailand)",
+      image: "/images/thanprat/lawyer-pratchaya.jpg",
+      quote: "Legal precision is the most resilient shield for commercial assets and sustainable business growth.",
+      bio: [
+        "Pratchaya Vichakote is the founder and Managing Director of THANPRAT LAWYER CO., LTD. He has been actively practicing law and delivering high-level corporate counsel since 2000, bringing over 24 years of seasoned advocacy across Thai courts and commercial boardrooms.",
+        "Renowned for comprehensive mastery in civil, commercial, and white-collar criminal law, Mr. Vichakote has earned the enduring trust of major business enterprises and prominent national leaders. He served as dedicated legal advisor to Dr. Vorapol Socatiyanurak (former Secretary-General of the Securities and Exchange Commission - SEC Thailand) and Dr. Montree Socatiyanurak.",
+        "In addition, he has served as legal expert and lead researcher on high-profile national policy initiatives, including the Feasibility and Suitability Study for Chiang Khong Industrial Estate in Chiang Rai Province, and the Thai Overseas Labor Deployment System Development Project for the Department of Employment, Ministry of Labor."
+      ],
+      education: [
+        { year: "2010", degree: "Master of Laws in Business Law (LL.M.)", institution: "Faculty of Law, Ramkhamhaeng University" },
+        { year: "2005", degree: "Thai Barrister-at-Law (Class 58)", institution: "Institute of Legal Education of the Thai Bar Association" },
+        { year: "2003", degree: "Certified Notarial Services Attorney (Class 1)", institution: "Lawyers Council of Thailand under Royal Patronage" },
+        { year: "2002", degree: "Graduate Diploma in Business Law (Class 16)", institution: "Faculty of Law, Thammasat University" },
+        { year: "2000", degree: "Admitted to the Bar of Thailand (License No. 1592/2543)", institution: "Lawyers Council of Thailand" },
+        { year: "1999", degree: "Bachelor of Laws (LL.B.)", institution: "Faculty of Law, Ramkhamhaeng University" }
+      ],
+      admissions: [
+        { year: "2000", title: "Attorney-at-Law License No. 1592/2543, Lawyers Council of Thailand" },
+        { year: "2005", title: "Thai Barrister-at-Law, Institute of Legal Education, Thai Bar" },
+        { year: "2003", title: "Certified Notarial Services Attorney (Class 1), Lawyers Council of Thailand" }
+      ],
+      experienceHighlights: [
+        "Founder & Managing Director, THANPRAT LAWYER CO., LTD. (2018 – Present)",
+        "Practicing Trial Advocate & Commercial Legal Consultant (2000 – Present, 24+ Years)",
+        "Legal Advisor to Dr. Vorapol Socatiyanurak (Former Secretary-General, SEC Thailand)",
+        "Legal Advisor to Dr. Montree Socatiyanurak",
+        "Senior Legal Expert & Researcher, Chiang Khong Industrial Estate Strategic Feasibility Project (2015)",
+        "Senior Legal Expert & Researcher, International Labor Deployment Framework, Ministry of Labor (2014)"
+      ],
+      practiceAreas: [
+        "Corporate, M&A, and Foreign Direct Investment (BOI / FBL)",
+        "High-Stakes Commercial Litigation & White-Collar Defense",
+        "Commercial Contracts, Cross-Border JV & Transaction Structuring",
+        "Banking, Bankruptcy & Corporate Debt Reorganization",
+        "Antitrust, Unfair Competition, Energy & Environmental Compliance"
+      ],
+      languages: ["Thai (Native)", "English (Professional)"]
+    },
+    {
+      slug: "chayathon-vichakote",
+      name: "Chayathon Vichakote",
+      nameEn: "Chayathon Vichakote",
+      role: "Attorney at Law & Financial Debt Specialist",
+      roleBadge: "Senior Banking & Debt Specialist",
+      licenseNumber: "Attorney License, Lawyers Council of Thailand (Admitted 1999)",
+      image: "/images/thanprat/lawyer-chayathon.jpg",
+      quote: "Strategic debt resolution requires a rare fusion of statutory mastery and financial pragmatism.",
+      bio: [
+        "Chayathon Vichakote is an Attorney at Law and Senior Financial Banking Specialist at THANPRAT LAWYER CO., LTD., with over 23 years of institutional banking and debt governance leadership.",
+        "From 1999 to 2022, Mr. Vichakote served as Managing Director and Office Manager of the Debt Control and Management Center at the Government Savings Bank (GSB). During his extensive institutional tenure, he orchestrated high-volume commercial loan recoveries, complex corporate debt restructuring, non-performing asset (NPA) liquidations, and multi-tier bankruptcy and reorganization proceedings.",
+        "Joining THANPRAT LAWYER in 2023, he delivers unparalleled executive insight into financial institutional operations, collateral execution (mortgages, pledges, guarantees), and aggressive nationwide asset discovery and court enforcement."
+      ],
+      education: [
+        { year: "2005", degree: "Master of Laws in Business Law (LL.M.)", institution: "Faculty of Law, Ramkhamhaeng University" },
+        { year: "2000", degree: "Thai Barrister-at-Law (Class 58)", institution: "Institute of Legal Education of the Thai Bar Association" },
+        { year: "1999", degree: "Admitted to the Bar of Thailand", institution: "Lawyers Council of Thailand" },
+        { year: "1998", degree: "Bachelor of Laws (LL.B.)", institution: "Faculty of Law, Ramkhamhaeng University" }
+      ],
+      admissions: [
+        { year: "1999", title: "Attorney-at-Law, Lawyers Council of Thailand under Royal Patronage" },
+        { year: "2000", title: "Thai Barrister-at-Law, Thai Bar Association" }
+      ],
+      experienceHighlights: [
+        "Managing Director / Office Manager, Debt Control & Legal Group, Government Savings Bank (1999 – 2022, 23 Years)",
+        "Attorney at Law, THANPRAT LAWYER CO., LTD. (2023 – Present)",
+        "Senior Counsel on Commercial Credit Facilities, Debt Workouts, and Security Realization",
+        "Lead Strategist on Complex Corporate Insolvency, Bankruptcy, and Judicial Asset Seizure"
+      ],
+      practiceAreas: [
+        "Banking & Financial Institution Regulatory Compliance",
+        "Corporate Debt Restructuring, NPL Recovery & NPA Strategy",
+        "Bankruptcy Proceedings & Judicial Business Reorganization",
+        "Asset Tracing, Seizure, and Public Auction Enforcement",
+        "Commercial Contracts & Civil Litigation"
+      ],
+      languages: ["Thai (Native)", "English (Professional)"]
+    },
+    {
+      slug: "sanguansri-phaphong",
+      name: "Sanguansri Phaphong",
+      nameEn: "Sanguansri Phaphong",
+      role: "Attorney at Law & Senior Trial Counsel",
+      roleBadge: "Senior Trial Counsel",
+      licenseNumber: "Attorney License No. 395/2553 (Lawyers Council of Thailand)",
+      image: "/images/thanprat/lawyer-sanguansri.jpg",
+      quote: "Courtroom victory is not won by rhetoric, but by unyielding evidence analysis and forensic precision.",
+      bio: [
+        "Sanguansri Phaphong is a seasoned litigator with over 14 years of rigorous trial advocacy in the courts of Thailand (License No. 395/2553, admitted in 2010). She spearheads dispute proceedings across civil, criminal, labor, tax, intellectual property, and administrative jurisdictions.",
+        "With formidable cross-examination skills and forensic documentary evidence analysis, Ms. Phaphong regularly represents corporate clients and private stakeholders in contentious real estate conflicts, commercial breaches, tort claims, and economic white-collar crimes including corporate forgery, fraud, and defamation.",
+        "Serving as senior trial advocate at THANPRAT LAWYER CO., LTD. since 2018, she manages court proceedings across all judicial regions throughout the Kingdom, ensuring clients' legal rights and commercial assets are vigorously upheld."
+      ],
+      education: [
+        { year: "2010", degree: "Admitted to the Bar of Thailand (License No. 395/2553)", institution: "Lawyers Council of Thailand under Royal Patronage" },
+        { year: "2009", degree: "Bachelor of Laws (LL.B.)", institution: "Faculty of Law, Ramkhamhaeng University" }
+      ],
+      admissions: [
+        { year: "2010", title: "Attorney-at-Law License No. 395/2553, Lawyers Council of Thailand" }
+      ],
+      experienceHighlights: [
+        "Senior Litigation Attorney, THANPRAT LAWYER CO., LTD. (2018 – Present)",
+        "Active Trial Advocate in Thai Courts of Justice Nationwide (2010 – Present, 14+ Years)",
+        "Counsel for Complex Property, Land Title, Commercial Contract, and Inheritance Disputes",
+        "Defense & Prosecution in Corporate Criminal Offenses, Fraud, and Economic Crimes",
+        "Judicial Mediation, Court-Annexed Settlement, and Commercial Arbitration"
+      ],
+      practiceAreas: [
+        "Civil & Commercial Dispute Litigation",
+        "Corporate Criminal Defense & Economic Crimes",
+        "Real Estate & Land Title Controversy Resolution",
+        "Labor Court Litigation & Executive Employment Disputes",
+        "Alternative Dispute Resolution (ADR) & Judicial Mediation"
+      ],
+      languages: ["Thai (Native)", "English (Conversational)"]
+    },
+    {
+      slug: "teeraya-hemchinakul",
+      name: "Teeraya Hemchinakul",
+      nameEn: "Teeraya Hemchinakul",
+      role: "Attorney at Law & Notarial Services Attorney",
+      roleBadge: "Notarial Services & Corporate Counsel",
+      licenseNumber: "Attorney License (2013) | Notarial Services License Class 22 (2015)",
+      image: "/images/thanprat/lawyer-teeraya.jpg",
+      quote: "Meticulous documentation and international compliance are the bedrock of frictionless global enterprise.",
+      bio: [
+        "Teeraya Hemchinakul is an Attorney at Law and certified Notarial Services Attorney at THANPRAT LAWYER CO., LTD., recognized for her specialized international practice in cross-border document verification, overseas legalizations, and transnational corporate affairs.",
+        "She earned her LL.B. from Assumption University (an English-medium institution), completed specialized English legal communication training at the University of Leicester's English Language Teaching Unit in the United Kingdom, and was called to the Bar as a Thai Barrister-at-Law (Class 72).",
+        "Prior to joining THANPRAT LAWYER in 2020, Ms. Hemchinakul spent over six years practicing at Far East Legal Counsellors Co., Ltd. (2013–2019). Her bilingual capabilities and deep understanding of foreign legal standards make her the trusted counsel of choice for multinational corporate clients, expatriates, and foreign investors operating in Thailand."
+      ],
+      education: [
+        { year: "2021", degree: "Thai Barrister-at-Law (Class 72)", institution: "Institute of Legal Education of the Thai Bar Association" },
+        { year: "2015", degree: "Certified Notarial Services Attorney (Class 22)", institution: "Lawyers Council of Thailand under Royal Patronage" },
+        { year: "2013", degree: "Admitted to the Bar of Thailand", institution: "Lawyers Council of Thailand" },
+        { year: "2009", degree: "English Language Programme", institution: "University of Leicester, United Kingdom" },
+        { year: "2006", degree: "Bachelor of Laws (LL.B.)", institution: "Faculty of Law, Assumption University (ABAC)" }
+      ],
+      admissions: [
+        { year: "2021", title: "Thai Barrister-at-Law, Thai Bar Association" },
+        { year: "2015", title: "Certified Notarial Services Attorney (Class 22), Lawyers Council of Thailand" },
+        { year: "2013", title: "Attorney-at-Law, Lawyers Council of Thailand" }
+      ],
+      experienceHighlights: [
+        "Attorney at Law, THANPRAT LAWYER CO., LTD. (2020 – Present)",
+        "Senior Legal Associate, Far East Legal Counsellors Co., Ltd. (2013 – 2019)",
+        "Official Embassy & Overseas Notarial Attestations, Certifications & Legalizations",
+        "Bilingual Commercial Agreements, Master Service Contracts & International Terms",
+        "Intellectual Property Portfolio Management, Trademark Registrations & Licensing"
+      ],
+      practiceAreas: [
+        "Notarial Services, Document Legalization & Consular Attestation",
+        "Cross-Border Commercial Contracts & Corporate Governance",
+        "Intellectual Property, Trademark & Copyright Protection",
+        "Foreign Direct Investment, Work Permits & Visa Compliance",
+        "Civil & Commercial Dispute Resolution"
+      ],
+      languages: ["Thai (Native)", "English (Fluent)"]
+    }
+  ],
+  attorneyPage: {
+    backToTeam: "Back to Legal Team",
+    sectionBadge: "Attorney Credentials & Professional Profile",
+    biographyTitle: "Biography & Professional Practice",
+    educationTitle: "Academic Education",
+    admissionsTitle: "Bar Admissions & Professional Licenses",
+    experienceTitle: "Key Career & Practice Highlights",
+    practiceAreasTitle: "Areas of Legal Practice",
+    languagesLabel: "Working Languages",
+    licenseLabel: "Professional License",
+    scheduleConsultation: "Schedule a Privileged Consultation",
+    consultationSubtitle: "Contact our firm to request legal counsel or formal courtroom representation.",
+    otherAttorneysTitle: "Other Attorneys in Our Firm"
   },
   contact: {
     sectionBadge: "Contact Firm",

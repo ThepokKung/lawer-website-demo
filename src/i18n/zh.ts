@@ -176,34 +176,216 @@ export const zh = {
     subtitle: "团队由深具商事法务、全境诉讼抗辩、银行金融风控、合同架构及涉外公证资历的资深专家领衔。",
     members: [
       {
+        slug: "pratchaya-vichakote",
         name: "普拉查亚·维查科特 (Pratchaya Vichakote)",
         role: "主任律师 · 创办人 (Managing Director & Founder)",
         credentials: "法学学士 (蓝甘杏大学) • 泰国律政公会出庭大律师 (第58届) • 法学硕士 (商法) • 法学高级文凭 (法政大学) • 涉外公证律师资格 (第1届) • 执业证书 1592/2543",
-        experience: "自 2000 年起执业至今，拥有逾 26 年法务与诉讼功力。精于重大民商事与刑事辩护、跨国投资合规，长期受聘担任沃拉蓬·索卡蒂亚努拉克博士 (Dr. Vorapol Socatiyanurak) 专属法务顾问。",
+        experience: "自 2000 年起执业至今，拥有逾 24 年法务与诉讼功力。精于重大民商事与刑事辩护、跨国投资合规，长期受聘担任沃拉蓬·索卡蒂亚努拉克博士 (Dr. Vorapol Socatiyanurak) 专属法务顾问。",
         image: "/images/thanprat/lawyer-pratchaya.jpg"
       },
       {
-        name: "差亚通·维查科特 (Chayathon Vichakote)",
-        role: "主办出庭律师 (Attorney at Law)",
+        slug: "chayathon-vichakote",
+        name: "查亚通·维查科特 (Chayathon Vichakote)",
+        role: "主办律师 · 金融追索事务负责人 (Attorney at Law & Banking Specialist)",
         credentials: "法学学士 • 泰国律政公会出庭大律师 (第58届) • 蓝甘杏大学商法法学硕士 • 泰国律师公会注册执业律师",
         experience: "曾任泰国国有政府储蓄银行 (Government Savings Bank) 资产保全与债权管控部高级主管 (1999–2022 年)，深谙银行法、资产强制执行、大额债务追索及重大商事出庭。",
         image: "/images/thanprat/lawyer-chayathon.jpg"
       },
       {
-        name: "桑冠斯里·帕蓬 (Sanguansri Phaphong)",
-        role: "主办出庭律师 (Attorney at Law)",
+        slug: "sanguansri-phaphong",
+        name: "桑万西·帕蓬 (Sanguansri Phaphong)",
+        role: "资深出庭律师 (Senior Trial Counsel)",
         credentials: "蓝甘杏大学法学学士 • 泰国律师公会注册执业律师 (执业证号 395/2553，2010 年取得)",
         experience: "专注于泰国各级法院民商事、刑事出庭辩护、行政争议、涉外破产重组、劳动法及商业调解仲裁，具备极为过硬的法庭抗辩与证据质证攻防实战经验。",
         image: "/images/thanprat/lawyer-sanguansri.jpg"
       },
       {
-        name: "蒂拉雅·赫姆齐纳库 (Teeraya Hemchinakul)",
+        slug: "teeraya-hemchinakul",
+        name: "蒂拉雅·亨奇纳库尔 (Teeraya Hemchinakul)",
         role: "涉外主办律师 · 公证律师 (Attorney at Law & Notary)",
         credentials: "易三仓大学 (ABAC) 国际法学学士 • 泰国律政公会出庭大律师 (第72届) • 涉外公证律师资格 (第22期) • 英国莱斯特大学 (Univ. of Leicester) 英文法学培训",
         experience: "曾任远东法律顾问公司 (Far East Legal Counsellors) 主办律师 (2013–2019 年)，擅长涉外商事谈判、多语种合同拟定、涉外使馆公证认证及中泰民商事诉讼代理。",
         image: "/images/thanprat/lawyer-teeraya.jpg"
       }
     ]
+  },
+  attorneys: [
+    {
+      slug: "pratchaya-vichakote",
+      name: "普拉查亚·维查科特",
+      nameEn: "Pratchaya Vichakote",
+      role: "创办人兼主任律师 (Managing Director & Founder)",
+      roleBadge: "创始人兼主任律师",
+      licenseNumber: "执业证号：1592/2543 (泰国皇家赞助律师公会)",
+      image: "/images/thanprat/lawyer-pratchaya.jpg",
+      quote: "法律的绝对精确，是企业构筑商业护城河与实现基业长青的最稳固基石。",
+      bio: [
+        "普拉查亚·维查科特 (Pratchaya Vichakote) 律师是泰国丹普拉特律师事务所 (THANPRAT LAWYER CO., LTD.) 创办人兼主任律师。自 2000 年取得执业资格并执业至今，拥有逾 24 年深厚的出庭诉讼代理与跨国企业常年法律顾问经验。",
+        "普拉查亚律师在公司法、跨境投资合规、高端商业合同、白领犯罪辩护及重大争议解决领域声誉卓著，深受中资出海企业与泰国政商界领袖的高度信赖。他长期受聘担任泰国证券交易委员会 (SEC) 前秘书长沃拉蓬·索卡蒂亚努拉克博士 (Dr. Vorapol Socatiyanurak) 及蒙特里·索卡蒂亚努拉克博士 (Dr. Montree Socatiyanurak) 的私人专属首席法律顾问。",
+        "此外，普拉查亚律师多次受邀担任泰国国家级重大政策与科研项目首席法律专家，包括泰国劳工部“泰国劳工赴海外务工管理体系提升与国际劳务合规课题”，以及清莱府清孔边境工业园可行性与合规性研究项目。"
+      ],
+      education: [
+        { year: "2010", degree: "商法学法学硕士 (LL.M. Business Law)", institution: "泰国蓝甘杏大学法学院" },
+        { year: "2005", degree: "泰国出庭大律师 (Thai Barrister-at-Law, 第58届)", institution: "泰国律政公会法律研修院" },
+        { year: "2003", degree: "涉外公证律师资格 (Notarial Services Attorney, 第1期)", institution: "泰国皇家赞助律师公会" },
+        { year: "2002", degree: "商法高级文凭 (Graduate Diploma in Business Law, 第16期)", institution: "泰国法政大学法学院 (Thammasat University)" },
+        { year: "2000", degree: "取得全泰出庭律师执业许可 (执业证号: 1592/2543)", institution: "泰国皇家赞助律师公会" },
+        { year: "1999", degree: "法学学士 (LL.B.)", institution: "泰国蓝甘杏大学法学院" }
+      ],
+      admissions: [
+        { year: "2000", title: "泰国皇家赞助律师公会注册执业出庭律师 (执业证号: 1592/2543)" },
+        { year: "2005", title: "泰国律政公会出庭大律师 (Thai Barrister-at-Law)" },
+        { year: "2003", title: "泰国官方涉外公证律师资格 (Notarial Services Attorney 第1期)" }
+      ],
+      experienceHighlights: [
+        "泰国丹普拉特律师事务所 (THANPRAT LAWYER CO., LTD.) 创办人兼主任律师 (2018 至今)",
+        "全泰各级法院出庭律师与跨国商事法务专家 (2000 至今，逾 24 年实务经验)",
+        "泰国证监会 (SEC) 前秘书长沃拉蓬博士 (Dr. Vorapol Socatiyanurak) 专属首席法务顾问",
+        "蒙特里·索卡蒂亚努拉克博士 (Dr. Montree Socatiyanurak) 专属法务顾问",
+        "清莱府清孔工业园项目国家级法律调研与合规可行性专家 (2015)",
+        "泰国劳工部就业厅海外跨国劳工遣送与合规保护体系特邀首席法学专家 (2014)"
+      ],
+      practiceAreas: [
+        "企业法、外资直投 (BOI / FBL 申请) 与公司治理",
+        "重大民商事诉讼代理与高管经济犯罪刑事辩护",
+        "跨国商务合同审拟、中泰双语合资架构 (JV) 与并购",
+        "金融机构追偿、企业破产清算与司法重组",
+        "反不正当竞争、能源、矿产资源与环保合规"
+      ],
+      languages: ["泰语 (母语)", "英语 (商务精通)"]
+    },
+    {
+      slug: "chayathon-vichakote",
+      name: "查亚通·维查科特",
+      nameEn: "Chayathon Vichakote",
+      role: "主办律师 · 金融资产追索与不良资产处置负责人",
+      roleBadge: "资深金融与债权执行专家",
+      licenseNumber: "泰国皇家赞助律师公会注册执业律师 (1999 年取得)",
+      image: "/images/thanprat/lawyer-chayathon.jpg",
+      quote: "战略性债务化解与权益主张，必须兼具坚实的法学条理与敏锐的金融商业洞见。",
+      bio: [
+        "查亚通·维查科特 (Chayathon Vichakote) 律师是泰国丹普拉特律师事务所主办律师兼资深金融信贷法务专家，在泰国国有大型金融机构拥有逾 23 年的信贷风控、法务合规及资产处置高级管理履历。",
+        "1999 年至 2022 年期间，查亚通律师担任泰国政府储蓄银行 (Government Savings Bank - GSB，泰国核心国有行) 债权管控与法务中心高级主管。期间主持处置数百亿泰铢企业不良信贷 (NPL)、抵债资产 (NPA)、集团债务重组谈判，以及主导重大金融破产、企业重整与全泰范围内的强制执行案。",
+        "2023 年加盟丹普拉特律所后，他将深厚的金融体制实操经验与法院诉讼程序深度结合，为商业银行、跨国融资机构及大型企业客户提供涵盖融资担保设立、逾期账款追缴、司法查封冻结及全流程拍卖变现的高效解决方案。"
+      ],
+      education: [
+        { year: "2005", degree: "商法学法学硕士 (LL.M. Business Law)", institution: "泰国蓝甘杏大学法学院" },
+        { year: "2000", degree: "泰国出庭大律师 (Thai Barrister-at-Law, 第58届)", institution: "泰国律政公会法律研修院" },
+        { year: "1999", degree: "取得全泰出庭律师执业资格", institution: "泰国皇家赞助律师公会" },
+        { year: "1998", degree: "法学学士 (LL.B.)", institution: "泰国蓝甘杏大学法学院" }
+      ],
+      admissions: [
+        { year: "1999", title: "泰国皇家赞助律师公会注册执业律师" },
+        { year: "2000", title: "泰国律政公会出庭大律师资格 (Thai Barrister)" }
+      ],
+      experienceHighlights: [
+        "泰国政府储蓄银行 (GSB) 债权管控与法务中心高级主管 (1999 – 2022，任职逾 23 年)",
+        "泰国丹普拉特律师事务所主办律师兼金融处置团队负责人 (2023 至今)",
+        "主持大型企业集团商业信贷履约重组、抵押权/质权变现与反逃废债方案",
+        "全泰各府司法查封、财产线索穿透式调查及商业资产强制执行清收"
+      ],
+      practiceAreas: [
+        "银行法、金融借贷合规与银行业务监管",
+        "企业不良资产处置 (NPL / NPA) 与债务重组",
+        "企业破产重整申请与债权人会议权益代表",
+        "司法查封、执行变现与全泰财产线索追索",
+        "重大民商事合同违约出庭诉讼代理"
+      ],
+      languages: ["泰语 (母语)", "英语 (专业工作)"]
+    },
+    {
+      slug: "sanguansri-phaphong",
+      name: "桑万西·帕蓬",
+      nameEn: "Sanguansri Phaphong",
+      role: "资深诉讼律师 · 核心出庭大律师 (Senior Trial Counsel)",
+      roleBadge: "资深出庭诉讼律师",
+      licenseNumber: "执业证号：395/2553 (泰国皇家赞助律师公会)",
+      image: "/images/thanprat/lawyer-sanguansri.jpg",
+      quote: "法庭上的胜诉从不取决于修辞，而取决于对全案证据链与事实细节穷尽一切的严谨求证。",
+      bio: [
+        "桑万西·帕蓬 (Sanguansri Phaphong) 律师是泰国丹普拉特律师事务所资深出庭律师，在泰国各级法院拥有逾 14 年全流程实战辩护经验 (执业证号: 395/2553，2010 年取得)。",
+        "桑万西律师以高强度的法庭辩论、精湛的证人盘问 (Cross-Examination) 及对复杂证据链的法证穿透力见长。常年代理各类复杂房地产及土地权属争议、涉外商事侵权与合同索赔、公司股权内斗，以及各类重大伪造公文、涉税、商业诈骗与名誉侵权等刑事辩护案件。",
+        "自 2018 年加入丹普拉特律所以来，她率领出庭诉讼组统筹泰国全国七个司法辖区的各级法院出庭工作，确保出海中企与各界当事人的合法财产与民事权益得到最大限度的司法救济。"
+      ],
+      education: [
+        { year: "2010", degree: "取得全泰出庭律师执业资格 (执业证号: 395/2553)", institution: "泰国皇家赞助律师公会" },
+        { year: "2009", degree: "法学学士 (LL.B.)", institution: "泰国蓝甘杏大学法学院" }
+      ],
+      admissions: [
+        { year: "2010", title: "泰国皇家赞助律师公会注册执业律师 (执业证号: 395/2553)" }
+      ],
+      experienceHighlights: [
+        "泰国丹普拉特律师事务所资深出庭律师 (2018 至今)",
+        "全泰各级法院常驻出庭诉讼代理人 (2010 至今，逾 14 年法庭抗辩经验)",
+        "主导代理多起过亿泰铢工业用地确权、重大工程合同违约与涉外继承纠纷",
+        "白领经济犯罪、涉外跨境诈骗、商业诽谤与公文伪造案件攻防辩护",
+        "法庭调解委员会调解博弈与泰国仲裁院 (THAC) 商业仲裁"
+      ],
+      practiceAreas: [
+        "泰国各级法院民商事诉讼一审、二审与最高法院上诉代理",
+        "企业刑事合规风险化解与重大刑事控告/辩护",
+        "不动产、工业地产、厂房买卖及土地权属争议",
+        "劳动法庭诉讼代理与高管雇佣解除纠纷",
+        "司法调解博弈与多元化争议解决 (ADR)"
+      ],
+      languages: ["泰语 (母语)", "英语 (日常交流)"]
+    },
+    {
+      slug: "teeraya-hemchinakul",
+      name: "蒂拉雅·亨奇纳库尔",
+      nameEn: "Teeraya Hemchinakul",
+      role: "涉外主办律师 · 官方涉外公证律师 (Notarial Services Attorney)",
+      roleBadge: "涉外法务与国际公证专家",
+      licenseNumber: "执业证号 (2013) | 官方涉外公证执业资格 第22期 (2015)",
+      image: "/images/thanprat/lawyer-teeraya.jpg",
+      quote: "精确的法律文书与国际通行的高规格合规标准，是全球跨境商务顺畅推进的前提。",
+      bio: [
+        "蒂拉雅·亨奇纳库尔 (Teeraya Hemchinakul) 律师是泰国丹普拉特律师事务所涉外事务主办律师及泰国官方认证公证律师 (Notarial Services Attorney)，长期专注于跨国法律文书合规公证、中泰双语商事合同架构拟定及涉外投资合规。",
+        "蒂拉雅律师全英文毕业于易三仓大学 (ABAC) 法学院，随后赴英国莱斯特大学 (University of Leicester) 研修专业法律英语培训课程，并成功考取泰国律政公会出庭大律师 (Thai Barrister-at-Law, 第72届)。",
+        "在 2020 年加入丹普拉特律所前，蒂拉雅律师曾在知名外资律所远东法律顾问公司 (Far East Legal Counsellors Co., Ltd.) 执业逾六年 (2013–2019)。凭借流利娴熟的英文沟通能力与跨国法务视野，她成为了中资跨国企业、外资高管及外籍人士在泰开展投资、商业准入及使馆领事认证不可或缺的得力法务助手。"
+      ],
+      education: [
+        { year: "2021", degree: "泰国出庭大律师资格 (Thai Barrister-at-Law, 第72届)", institution: "泰国律政公会法律研修院" },
+        { year: "2015", degree: "泰国官方涉外公证律师执业资质 (Class 22)", institution: "泰国皇家赞助律师公会" },
+        { year: "2013", degree: "取得全泰出庭律师执业资格", institution: "泰国皇家赞助律师公会" },
+        { year: "2009", degree: "英文法学高级研修项目 (ELTU)", institution: "英国莱斯特大学 (University of Leicester, UK)" },
+        { year: "2006", degree: "法学学士 (LL.B., 全英文授课)", institution: "泰国易三仓大学法学院 (Assumption University - ABAC)" }
+      ],
+      admissions: [
+        { year: "2021", title: "泰国律政公会出庭大律师 (Thai Barrister)" },
+        { year: "2015", title: "泰国涉外公证律师执照 (Notarial Services Attorney 第22期)" },
+        { year: "2013", title: "泰国皇家赞助律师公会注册执业律师" }
+      ],
+      experienceHighlights: [
+        "泰国丹普拉特律师事务所涉外法务与公证团队负责人 (2020 至今)",
+        "远东法律顾问公司 (Far East Legal Counsellors) 涉外主办律师 (2013 – 2019)",
+        "全流程涉外商业文件、授权委托书 (POA)、护照及文书使馆认证公证",
+        "中英双语总包合同、跨境服务协议及外商独资企业章程拟定",
+        "知识产权海外维权、商标注册 (Trademark) 及海外投资准入合规"
+      ],
+      practiceAreas: [
+        "泰国官方涉外公证、使领馆认证与签名真实性见证",
+        "跨国商事合同起草与审核、企业跨境治理架构",
+        "中泰知识产权布局、商标及专利保护",
+        "外商投资准入合规、工作签证与长期居留许可证办理",
+        "涉外民商事合同违约与涉外维权诉讼"
+      ],
+      languages: ["泰语 (母语)", "英语 (流利精通)"]
+    }
+  ],
+  attorneyPage: {
+    backToTeam: "返回核心律师团队",
+    sectionBadge: "主办律师执业档案与履历",
+    biographyTitle: "律师背景与专业执业综述",
+    educationTitle: "高等法学教育背景",
+    admissionsTitle: "官方执业资格与公会认证",
+    experienceTitle: "核心业绩与代表案例履历",
+    practiceAreasTitle: "擅长专业法律业务领域",
+    languagesLabel: "主要工作语言",
+    licenseLabel: "泰国官方执业执照",
+    scheduleConsultation: "预约与该主办律师当面咨询",
+    consultationSubtitle: "欢迎与律所联络预约案情闭门评估或正式签署委托诉讼代理协议。",
+    otherAttorneysTitle: "律所其他主办律师"
   },
   contact: {
     sectionBadge: "联系律所",

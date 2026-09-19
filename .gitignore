@@ -8,3 +8,4 @@ dist/
 .wrangler/
 lh-*.json
 temp_data/
+scratch/

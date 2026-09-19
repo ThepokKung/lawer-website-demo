@@ -11,6 +11,34 @@ export const languages = {
 export type SupportedLang = keyof typeof languages;
 export const defaultLang: SupportedLang = 'th';
 
+export interface EducationItem {
+  year: string;
+  degree: string;
+  institution: string;
+}
+
+export interface AdmissionItem {
+  year: string;
+  title: string;
+}
+
+export interface AttorneyProfile {
+  slug: string;
+  name: string;
+  nameEn?: string;
+  role: string;
+  roleBadge: string;
+  licenseNumber: string;
+  image: string;
+  quote: string;
+  bio: string[];
+  education: EducationItem[];
+  admissions: AdmissionItem[];
+  experienceHighlights: string[];
+  practiceAreas: string[];
+  languages: string[];
+}
+
 export const translations = {
   th,
   en,
