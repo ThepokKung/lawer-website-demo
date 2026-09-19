@@ -10,6 +10,7 @@ const { lang } = Astro.props;
 const t = useTranslations(lang);
 const googleScriptUrl = SITE_CONFIG.googleScriptUrl;
 const turnstileSiteKey = SITE_CONFIG.turnstileSiteKey;
+const targetEmail = SITE_CONFIG.email;
 ---
 
 <div class="rounded-[2px] p-5 sm:p-8 lg:p-10 border border-slate-200 bg-white shadow-sm">
@@ -27,6 +28,7 @@ const turnstileSiteKey = SITE_CONFIG.turnstileSiteKey;
     class="space-y-5"
     data-lang={lang}
     data-google-script-url={googleScriptUrl}
+    data-target-email={targetEmail}
   >
     <!-- Anti-Spam Honeypot Field (Hidden from humans, traps automated scraping bots) -->
     <div
@@ -50,7 +52,7 @@ const turnstileSiteKey = SITE_CONFIG.turnstileSiteKey;
       <svg class="w-4 h-4 text-emerald-600 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
         <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
       </svg>
-      <span>{t.contact.successMsg}</span>
+      <span id="form-success-msg">{t.contact.successMsg}</span>
     </div>
 
     <!-- Error Banner -->
@@ -72,7 +74,7 @@ const turnstileSiteKey = SITE_CONFIG.turnstileSiteKey;
         name="name"
         required
         class="w-full px-4 py-3 rounded-[2px] bg-white border border-slate-300 text-slate-900 placeholder-slate-400 focus:outline-none focus:border-navy-900 focus:ring-1 focus:ring-navy-900 text-sm transition-all shadow-xs"
-        placeholder={lang === 'th' ? "ระบุชื่อ - นามสกุลของคุณ" : lang === 'zh' ? "请填写您的姓名" : "Enter your full name"}
+        placeholder={lang === 'th' ? "ระบุชื่อ - นามสกุลของคุณ" : "Enter your full name"}
       />
     </div>
 
@@ -87,9 +89,17 @@ const turnstileSiteKey = SITE_CONFIG.turnstileSiteKey;
           id="client-email"
           name="email"
           required
+          pattern="^[a-zA-Z0-9._%+\\-]+@[a-zA-Z0-9.\\-]+\\.[a-zA-Z]{2,}$"
           class="w-full px-4 py-3 rounded-[2px] bg-white border border-slate-300 text-slate-900 placeholder-slate-400 focus:outline-none focus:border-navy-900 focus:ring-1 focus:ring-navy-900 text-sm transition-all shadow-xs"
           placeholder="yourname@domain.com"
+          autocomplete="email"
         />
+        <p id="email-error" class="hidden mt-1.5 text-xs text-rose-600 font-medium flex items-center gap-1">
+          <svg class="w-3.5 h-3.5 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+          </svg>
+          <span id="email-error-text">{t.contact.emailError}</span>
+        </p>
       </div>
 
       <div>
@@ -101,9 +111,18 @@ const turnstileSiteKey = SITE_CONFIG.turnstileSiteKey;
           id="client-phone"
           name="phone"
           required
+          inputmode="tel"
+          pattern="^(\\+?[0-9\\s\\-]{9,20})$"
           class="w-full px-4 py-3 rounded-[2px] bg-white border border-slate-300 text-slate-900 placeholder-slate-400 focus:outline-none focus:border-navy-900 focus:ring-1 focus:ring-navy-900 text-sm transition-all shadow-xs"
           placeholder="+66 8X-XXX-XXXX"
+          autocomplete="tel"
         />
+        <p id="phone-error" class="hidden mt-1.5 text-xs text-rose-600 font-medium flex items-center gap-1">
+          <svg class="w-3.5 h-3.5 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+          </svg>
+          <span id="phone-error-text">{t.contact.phoneError}</span>
+        </p>
       </div>
     </div>
 
@@ -136,7 +155,7 @@ const turnstileSiteKey = SITE_CONFIG.turnstileSiteKey;
         rows="4"
         required
         class="w-full px-4 py-3 rounded-[2px] bg-white border border-slate-300 text-slate-900 placeholder-slate-400 focus:outline-none focus:border-navy-900 focus:ring-1 focus:ring-navy-900 text-sm transition-all resize-y shadow-xs"
-        placeholder={lang === 'th' ? "โปรดระบุข้อเท็จจริงเบื้องต้น วันที่เกิดเหตุการณ์ หรือความประสงค์ที่ต้องการให้สำนักงานช่วยเหลือ..." : lang === 'zh' ? "请简述咨询事由、关键时间节点或希望律所协助达成的目标..." : "Briefly describe the context, relevant dates, or what legal assistance you are seeking..."}
+        placeholder={lang === 'th' ? "โปรดระบุข้อเท็จจริงเบื้องต้น วันที่เกิดเหตุการณ์ หรือความประสงค์ที่ต้องการให้สำนักงานช่วยเหลือ..." : "Briefly describe the context, relevant dates, or what legal assistance you are seeking..."}
       ></textarea>
     </div>
 
@@ -171,13 +190,122 @@ const turnstileSiteKey = SITE_CONFIG.turnstileSiteKey;
   function setupConsultationForm() {
     const form = document.getElementById('consultation-form') as HTMLFormElement | null;
     const successBox = document.getElementById('form-success');
+    const successMsg = document.getElementById('form-success-msg');
     const errorBox = document.getElementById('form-error');
     const submitBtn = document.getElementById('btn-submit-form') as HTMLButtonElement | null;
     const submitText = document.getElementById('submit-text');
     const serviceSelect = document.getElementById('client-service') as HTMLSelectElement | null;
 
     if (!form) return;
+    if (form.dataset.bound === 'true') return;
+    form.dataset.bound = 'true';
 
+    const lang = form.getAttribute('data-lang') || 'th';
+    const emailInput = document.getElementById('client-email') as HTMLInputElement | null;
+    const emailError = document.getElementById('email-error');
+    const phoneInput = document.getElementById('client-phone') as HTMLInputElement | null;
+    const phoneError = document.getElementById('phone-error');
+
+    // Strict RFC email validation with required top-level domain (e.g. .com, .co.th)
+    const EMAIL_REGEX = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+
+    function validateEmail(showError = true): boolean {
+      if (!emailInput) return true;
+      const val = emailInput.value.trim();
+      if (!val) {
+        if (showError) {
+          emailError?.classList.remove('hidden');
+          emailInput.classList.add('!border-rose-500', '!focus:border-rose-500', '!focus:ring-rose-500');
+          emailInput.setCustomValidity(lang === 'th' ? 'กรุณากรอกอีเมล' : 'Please enter your email');
+        }
+        return false;
+      }
+      const isValid = EMAIL_REGEX.test(val);
+      if (!isValid) {
+        if (showError) {
+          emailError?.classList.remove('hidden');
+          emailInput.classList.add('!border-rose-500', '!focus:border-rose-500', '!focus:ring-rose-500');
+          emailInput.setCustomValidity(lang === 'th' ? 'กรุณาระบุอีเมลที่ถูกต้อง เช่น name@domain.com' : 'Please enter a valid email address');
+        }
+        return false;
+      }
+      emailError?.classList.add('hidden');
+      emailInput.classList.remove('!border-rose-500', '!focus:border-rose-500', '!focus:ring-rose-500');
+      emailInput.setCustomValidity('');
+      return true;
+    }
+
+    if (emailInput) {
+      emailInput.addEventListener('blur', () => {
+        if (emailInput.value.trim().length > 0) {
+          validateEmail(true);
+        }
+      });
+      emailInput.addEventListener('input', () => {
+        if (!emailError?.classList.contains('hidden')) {
+          validateEmail(false);
+        }
+      });
+    }
+
+    // Phone filtering: Strictly allow only digits, spaces, hyphens, and leading +
+    function sanitizePhoneInput(input: HTMLInputElement) {
+      const raw = input.value;
+      const startsWithPlus = raw.startsWith('+');
+      let filtered = raw.replace(/[^\d\s-]/g, '');
+      if (startsWithPlus) {
+        filtered = '+' + filtered.replace(/\+/g, '');
+      } else {
+        filtered = filtered.replace(/\+/g, '');
+      }
+      if (raw !== filtered) {
+        input.value = filtered;
+      }
+    }
+
+    function validatePhone(showError = true): boolean {
+      if (!phoneInput) return true;
+      const raw = phoneInput.value.trim();
+      const digitCount = (raw.match(/\d/g) || []).length;
+      if (!raw || digitCount < 9) {
+        if (showError) {
+          phoneError?.classList.remove('hidden');
+          phoneInput.classList.add('!border-rose-500', '!focus:border-rose-500', '!focus:ring-rose-500');
+          phoneInput.setCustomValidity(lang === 'th' ? 'กรุณาระบุเบอร์โทรศัพท์ที่ถูกต้อง (ตัวเลขอย่างน้อย 9-10 หลัก)' : 'Please enter a valid phone number');
+        }
+        return false;
+      }
+      phoneError?.classList.add('hidden');
+      phoneInput.classList.remove('!border-rose-500', '!focus:border-rose-500', '!focus:ring-rose-500');
+      phoneInput.setCustomValidity('');
+      return true;
+    }
+
+    if (phoneInput) {
+      // Block non-numeric characters on keydown
+      phoneInput.addEventListener('keydown', (e) => {
+        if (e.ctrlKey || e.metaKey || e.altKey) return;
+        if (['Backspace', 'Delete', 'Tab', 'Escape', 'Enter', 'ArrowLeft', 'ArrowRight', 'Home', 'End'].includes(e.key)) return;
+        if (e.key === '+' && (phoneInput.selectionStart === 0 && !phoneInput.value.includes('+'))) return;
+        if (/^[0-9\s-]$/.test(e.key)) return;
+        e.preventDefault();
+      });
+
+      phoneInput.addEventListener('input', () => {
+        sanitizePhoneInput(phoneInput);
+        if (!phoneError?.classList.contains('hidden')) {
+          validatePhone(false);
+        }
+      });
+
+      phoneInput.addEventListener('blur', () => {
+        if (phoneInput.value.trim().length > 0) {
+          validatePhone(true);
+        }
+      });
+    }
+
+    const formLoadTime = Date.now();
 
     // Handle preselected service parameter from query string (e.g. ?service=...)
     const urlParams = new URLSearchParams(window.location.search);
@@ -189,23 +317,50 @@ const turnstileSiteKey = SITE_CONFIG.turnstileSiteKey;
     form.addEventListener('submit', async (e) => {
       e.preventDefault();
 
+      const isEmailValid = validateEmail(true);
+      const isPhoneValid = validatePhone(true);
+
+      if (!isEmailValid) {
+        emailInput?.focus();
+        return;
+      }
+
+      if (!isPhoneValid) {
+        phoneInput?.focus();
+        return;
+      }
+
       if (!form.checkValidity()) {
         form.reportValidity();
         return;
       }
 
-      const lang = form.getAttribute('data-lang') || 'th';
       const serviceVal = serviceSelect?.value || 'General Consultation';
       const googleScriptUrl = form.getAttribute('data-google-script-url') || '';
+      const targetEmail = form.getAttribute('data-target-email') || 'pok23250+test@gmail.com';
 
       const formData = new FormData(form);
+
+      // Anti-Spam Shield: Invisible honeypot and fast submission (< 2.0s) time trap
+      const honeypotVal = (formData.get('company_url_hp') || '').toString().trim();
+      const submissionSeconds = (Date.now() - formLoadTime) / 1000;
+      if (honeypotVal || submissionSeconds < 2.0) {
+        // Silently neutralize automated bot spam without error or sending email
+        successBox?.classList.remove('hidden');
+        errorBox?.classList.add('hidden');
+        form.reset();
+        if (submitText) {
+          submitText.textContent = lang === 'th' ? 'ส่งคำขอเข้ารับการปรึกษาเรียบร้อย' : 'Submitted Successfully';
+        }
+        return;
+      }
 
       // Cloudflare Turnstile token (if present)
       const turnstileToken = (formData.get('cf-turnstile-response') || '').toString();
 
       if (submitBtn && submitText) {
         submitBtn.disabled = true;
-        submitText.textContent = lang === 'th' ? 'กำลังส่งข้อมูล...' : lang === 'zh' ? '正在提交...' : 'Submitting...';
+        submitText.textContent = lang === 'th' ? 'กำลังส่งข้อมูล...' : 'Submitting...';
       }
 
       const payload: Record<string, any> = Object.fromEntries(formData);
@@ -228,8 +383,45 @@ const turnstileSiteKey = SITE_CONFIG.turnstileSiteKey;
             body: JSON.stringify(payload)
           });
         } else {
-          // Local/development preview mode
-          console.info('[M&S Legal Lead Preview]: Form payload ready for Google & Email dispatch:', payload);
+          // Free, instant Email Dispatch via FormSubmit.co directly to targetEmail
+          const endpoint = `https://formsubmit.co/ajax/${encodeURIComponent(targetEmail)}`;
+          const response = await fetch(endpoint, {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+              'Accept': 'application/json'
+            },
+            body: JSON.stringify({
+              'ชื่อ-นามสกุล (Name)': payload.name,
+              'อีเมล (Email)': payload.email,
+              'เบอร์โทรศัพท์ (Phone)': payload.phone,
+              'สาขาบริการที่สนใจ (Service)': serviceVal,
+              'รายละเอียดข้อเท็จจริง (Message)': payload.message,
+              'ภาษา (Language)': lang === 'th' ? 'ภาษาไทย (TH)' : 'English (EN)',
+              'เวลาที่ส่ง (Timestamp)': payload.timestamp,
+              _subject: lang === 'th'
+                ? `[THANPRAT LAWYER] คำขอเข้ารับการปรึกษาใหม่ (${serviceVal}) - คุณ${payload.name}`
+                : `[THANPRAT LAWYER] New Legal Consultation Request (${serviceVal}) - ${payload.name}`,
+              _replyto: payload.email,
+              _template: 'table',
+              _captcha: 'false'
+            })
+          });
+
+          const data = await response.json().catch(() => null);
+
+          // Handle first-time email activation prompt
+          if (data && data.success === 'false' && data.message && data.message.includes('Activation')) {
+            if (successMsg) {
+              successMsg.textContent = lang === 'th'
+                ? `ระบบส่งอีเมลเปิดใช้งานไปยัง ${targetEmail} แล้ว กรุณากดยืนยัน (Activate Form) ในกล่องอีเมลของคุณ 1 ครั้ง`
+                : `Activation link sent to ${targetEmail}. Please check your inbox and click "Activate Form" once.`;
+            }
+          } else if (successMsg) {
+            successMsg.textContent = lang === 'th'
+              ? 'ส่งคำขอเข้ารับการปรึกษาเรียบร้อย ทนายความจะติดต่อกลับโดยเร็วที่สุด'
+              : 'Your consultation request has been submitted successfully.';
+          }
         }
 
         // Trigger Google Tag Manager / GA4 conversion event
@@ -240,7 +432,7 @@ const turnstileSiteKey = SITE_CONFIG.turnstileSiteKey;
         form.reset();
 
         if (submitText) {
-          submitText.textContent = lang === 'th' ? 'ส่งคำขอนัดปรึกษาเรียบร้อย' : lang === 'zh' ? '已成功发送' : 'Submitted Successfully';
+          submitText.textContent = lang === 'th' ? 'ส่งคำขอเข้ารับการปรึกษาเรียบร้อย' : 'Submitted Successfully';
         }
       } catch (err) {
         console.error('Form submission failed:', err);
@@ -248,7 +440,7 @@ const turnstileSiteKey = SITE_CONFIG.turnstileSiteKey;
         successBox?.classList.add('hidden');
 
         if (submitText) {
-          submitText.textContent = lang === 'th' ? 'เกิดข้อผิดพลาด ลองใหม่อีกครั้ง' : lang === 'zh' ? '提交失败，请重试' : 'Error, please retry';
+          submitText.textContent = lang === 'th' ? 'เกิดข้อผิดพลาด ลองใหม่อีกครั้ง' : 'Error, please retry';
         }
       } finally {
         if (submitBtn) {
@@ -259,4 +451,9 @@ const turnstileSiteKey = SITE_CONFIG.turnstileSiteKey;
   }
 
   document.addEventListener('astro:page-load', setupConsultationForm);
+  if (document.readyState !== 'loading') {
+    setupConsultationForm();
+  } else {
+    document.addEventListener('DOMContentLoaded', setupConsultationForm);
+  }
 </script>

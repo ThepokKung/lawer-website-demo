@@ -7,14 +7,14 @@ import StatsCounter from '@/components/home/StatsCounter.astro';
 import ServicesGrid from '@/components/home/ServicesGrid.astro';
 import WhyChooseUs from '@/components/home/WhyChooseUs.astro';
 import TeamPreview from '@/components/home/TeamPreview.astro';
+import ClientsShowcase from '@/components/home/ClientsShowcase.astro';
 import HomeCta from '@/components/home/HomeCta.astro';
 import { useTranslations, type SupportedLang } from '@/i18n';
 
 export function getStaticPaths() {
   return [
     { params: { lang: 'th' } },
-    { params: { lang: 'en' } },
-    { params: { lang: 'zh' } }
+    { params: { lang: 'en' } }
   ];
 }
 
@@ -34,6 +34,7 @@ const t = useTranslations(lang);
     <StatsCounter lang={lang} />
     <ServicesGrid lang={lang} />
     <WhyChooseUs lang={lang} />
+    <ClientsShowcase lang={lang} />
     <TeamPreview lang={lang} />
     <HomeCta lang={lang} />
   </main>

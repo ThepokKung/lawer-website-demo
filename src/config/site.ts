@@ -9,31 +9,31 @@ export const SITE_CONFIG = {
   url: (import.meta.env.PUBLIC_SITE_URL || 'https://law.thepokkung.space').replace(/\/+$/, ''),
 
   // Firm Information
-  firmName: 'Montclaire & Sterling Legal Counsel',
-  firmNameTh: 'สำนักงานกฎหมาย มงต์แคลร์ แอนด์ สเตอร์ลิง',
-  firmNameZh: '蒙克莱尔·斯特林国际律师事务所',
+  firmName: 'THANPRAT LAWYER CO., LTD.',
+  firmNameTh: 'บริษัท ธันปรัท ทนายความ จำกัด',
 
   // Addresses per locale
-  addressTh: 'อาคารสาทร สแควร์ ทาวเวอร์ ชั้น 28 ถนนสาทรเหนือ แขวงสีลม เขตบางรัก กรุงเทพมหานคร 10500',
-  addressEn: 'Sathorn Square Tower, 28th Floor, North Sathorn Rd, Silom, Bang Rak, Bangkok 10500',
-  addressZh: '曼谷挽叻区是隆路北沙吞路沙吞广场大厦28层 邮编10500',
+  addressTh: '1131/221 อาคารเทอดดำริ ถนนนครไชยศรี แขวงถนนนครไชยศรี เขตดุสิต กรุงเทพมหานคร 10300',
+  addressEn: '1131/221 Theoddamri Bldg., Nakornchaisri Road, Thanon Nakornchaisri, Dusit, Bangkok 10300 Thailand',
 
-  // Geographic Coordinates
-  latitude: 13.722588,
-  longitude: 100.528860,
+  // Geographic Coordinates (THANPRAT LAWYER CO., LTD. - Dusit / Sam Sen)
+  latitude: 13.7778516,
+  longitude: 100.5288187,
 
-  // Direct Contact Channels
-  email: 'contact@ms-legal.example.com',
-  phone: '+66 2 123 4567',
-  phoneMobile: '+66 81 999 8888',
-  line: '@mslegal',
-  lineUrl: 'https://line.me/R/ti/p/@mslegal',
-  wechat: 'MSLegalBKK',
-  whatsapp: '+66 81 999 8888',
+  // Direct Contact Channels (Driven by .env with official defaults)
+  email: import.meta.env.PUBLIC_CONTACT_EMAIL || 'thanprat.lawyer@gmail.com',
+  phone: import.meta.env.PUBLIC_CONTACT_PHONE || '+66 82 156 5651',
+  phoneMobile: import.meta.env.PUBLIC_CONTACT_PHONE_MOBILE || '+66 64 829 8888',
+  line: import.meta.env.PUBLIC_CONTACT_LINE || '@thanpratlawyer',
+  lineUrl: import.meta.env.PUBLIC_CONTACT_LINE_URL || 'https://line.me/ti/p/~thanprat.lawyer',
+  facebook: import.meta.env.PUBLIC_CONTACT_FACEBOOK || 'https://www.facebook.com/thanprat.lawyer',
+  facebookLabel: 'Facebook Page',
+  facebookHandle: '@thanprat.lawyer',
+  whatsapp: import.meta.env.PUBLIC_CONTACT_PHONE || '+66 82 156 5651',
 
   // Google Maps Embed & Direct Navigation
-  mapsEmbedUrl: 'https://maps.google.com/maps?q=Sathorn+Square+Tower+Bangkok&t=&z=16&ie=UTF8&iwloc=&output=embed',
-  mapsDirectUrl: 'https://maps.google.com/?q=Sathorn+Square+Tower+Bangkok',
+  mapsEmbedUrl: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1500!2d100.5289472!3d13.778944!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30e29bf9bb2166b5%3A0xe6c35fd5a2120d99!2zVEhBTlBSQVQgTEFXWUVSIENPLixMVEQuIOC4muC4o-C4tOC4qeC4seC4lyDguJjguLHguJnguJvguKPguLHguJcg4LiX4LiZ4Liy4Lii4LiE4Lin4Liy4LihIOC4iOC4s-C4geC4seC4lA!5e0!3m2!1sth!2sth',
+  mapsDirectUrl: 'https://maps.app.goo.gl/d9LDF1XnfYZk5tBM7',
 
   // Google Apps Script Lead Webhook (Google Sheets + Email)
   googleScriptUrl: import.meta.env.PUBLIC_GOOGLE_SCRIPT_URL || '',

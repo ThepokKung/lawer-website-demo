@@ -1,6 +1,6 @@
 ---
 interface Props {
-  lang?: 'th' | 'en' | 'zh';
+  lang?: 'th' | 'en';
 }
 
 const { lang = 'th' } = Astro.props;
@@ -21,14 +21,6 @@ const content = {
     decline: "Decline Non-Essential",
     policy: "Cookie Settings",
     policyHref: "/en/cookie-policy"
-  },
-  zh: {
-    title: "隐私与 Cookie 偏好设置",
-    desc: "本网站使用必要的系统 Cookie 以及用于评估与改进浏览体验的分析类 Cookie。您可以随时自定义偏好设置。",
-    acceptAll: "全部接受",
-    decline: "拒绝非必要",
-    policy: "Cookie 设置",
-    policyHref: "/zh/cookie-policy"
   }
 }[lang];
 ---

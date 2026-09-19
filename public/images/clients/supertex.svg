@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 60" width="240" height="60" fill="none">
+  <!-- Woven textile geometric lozenge -->
+  <g transform="translate(12, 10)">
+    <rect x="2" y="2" width="36" height="36" rx="6" fill="#F0FDFA" stroke="#0D9488" stroke-width="2" />
+    <path d="M8 20 L20 8 M14 26 L26 14 M20 32 L32 20" stroke="#0D9488" stroke-width="2" stroke-linecap="round" />
+    <path d="M20 8 L32 20 M14 14 L26 26 M8 20 L20 32" stroke="#0284C7" stroke-width="2" stroke-linecap="round" />
+  </g>
+  <!-- Brand Name -->
+  <text x="62" y="31" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" font-size="20" font-weight="900" fill="#0F172A" letter-spacing="1">SUPERTEX</text>
+  <!-- Subtitle -->
+  <text x="62" y="44" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" font-size="8.5" font-weight="700" fill="#0D9488" letter-spacing="2">SHENZHEN TEXTILE</text>
+</svg>

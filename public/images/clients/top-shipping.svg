@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 60" width="240" height="60" fill="none">
+  <!-- Maritime Logistics Emblem -->
+  <g transform="translate(10, 8)">
+    <rect x="0" y="0" width="42" height="42" rx="6" fill="#F0F9FF" stroke="#0284C7" stroke-width="2" />
+    <!-- Dynamic vessel / forward freight arrows -->
+    <path d="M8 28 L21 14 L34 28" stroke="#0369A1" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none" />
+    <path d="M12 22 L21 13 L30 22" stroke="#0284C7" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none" />
+    <circle cx="21" cy="24" r="3" fill="#0284C7" />
+    <path d="M8 32 L34 32" stroke="#0369A1" stroke-width="2" stroke-linecap="round" />
+  </g>
+  <!-- Brand Name -->
+  <text x="60" y="28" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" font-size="16" font-weight="900" fill="#0F172A" letter-spacing="1">TOP SHIPPING</text>
+  <!-- Subtitle -->
+  <text x="60" y="42" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" font-size="8.5" font-weight="700" fill="#0284C7" letter-spacing="2.5">LOGISTICS SERVICES</text>
+</svg>
