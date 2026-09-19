@@ -3,6 +3,7 @@ import BaseLayout from '@/layouts/BaseLayout.astro';
 import Navbar from '@/components/common/Navbar.astro';
 import Footer from '@/components/common/Footer.astro';
 import { useTranslations, type SupportedLang } from '@/i18n';
+import { SITE_CONFIG } from '@/config/site';
 
 export function getStaticPaths() {
   return [
@@ -37,7 +38,7 @@ const privacy = {
       },
       {
         heading: "5. สิทธิของเจ้าของข้อมูลส่วนบุคคลตามกฎหมาย PDPA",
-        body: "ท่านมีสิทธิในการ: ขอเข้าถึงและขอรับสำเนาข้อมูลส่วนบุคคล, ขอแก้ไขข้อมูลให้ถูกต้องเป็นปัจจุบัน, ขอลบหรือทำลายข้อมูล, ขอระงับการใช้ข้อมูล, คัดค้านการประมวลผลข้อมูล, และถอนความยินยอมได้ตลอดเวลา โดยสามารถติดต่อสำนักงานได้ที่ thanprat.lawyer@gmail.com"
+        body: `ท่านมีสิทธิในการ: ขอเข้าถึงและขอรับสำเนาข้อมูลส่วนบุคคล, ขอแก้ไขข้อมูลให้ถูกต้องเป็นปัจจุบัน, ขอลบหรือทำลายข้อมูล, ขอระงับการใช้ข้อมูล, คัดค้านการประมวลผลข้อมูล, และถอนความยินยอมได้ตลอดเวลา โดยสามารถติดต่อสำนักงานได้ที่ ${SITE_CONFIG.email}`
       }
     ]
   },
@@ -63,7 +64,7 @@ const privacy = {
       },
       {
         heading: "5. Your Rights Under the PDPA",
-        body: "You retain the right to request access, rectification, erasure, processing restriction, data portability, or consent withdrawal. Direct all inquiries to our designated compliance contact at thanprat.lawyer@gmail.com."
+        body: `You retain the right to request access, rectification, erasure, processing restriction, data portability, or consent withdrawal. Direct all inquiries to our designated compliance contact at ${SITE_CONFIG.email}.`
       }
     ]
   }

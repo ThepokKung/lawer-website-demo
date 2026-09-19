@@ -10,6 +10,7 @@ const { lang } = Astro.props;
 const t = useTranslations(lang);
 const googleScriptUrl = SITE_CONFIG.googleScriptUrl;
 const turnstileSiteKey = SITE_CONFIG.turnstileSiteKey;
+const targetEmail = SITE_CONFIG.email;
 ---
 
 <div class="rounded-[2px] p-5 sm:p-8 lg:p-10 border border-slate-200 bg-white shadow-sm">
@@ -27,6 +28,7 @@ const turnstileSiteKey = SITE_CONFIG.turnstileSiteKey;
     class="space-y-5"
     data-lang={lang}
     data-google-script-url={googleScriptUrl}
+    data-target-email={targetEmail}
   >
     <!-- Anti-Spam Honeypot Field (Hidden from humans, traps automated scraping bots) -->
     <div
@@ -50,7 +52,7 @@ const turnstileSiteKey = SITE_CONFIG.turnstileSiteKey;
       <svg class="w-4 h-4 text-emerald-600 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
         <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
       </svg>
-      <span>{t.contact.successMsg}</span>
+      <span id="form-success-msg">{t.contact.successMsg}</span>
     </div>
 
     <!-- Error Banner -->
@@ -171,13 +173,13 @@ const turnstileSiteKey = SITE_CONFIG.turnstileSiteKey;
   function setupConsultationForm() {
     const form = document.getElementById('consultation-form') as HTMLFormElement | null;
     const successBox = document.getElementById('form-success');
+    const successMsg = document.getElementById('form-success-msg');
     const errorBox = document.getElementById('form-error');
     const submitBtn = document.getElementById('btn-submit-form') as HTMLButtonElement | null;
     const submitText = document.getElementById('submit-text');
     const serviceSelect = document.getElementById('client-service') as HTMLSelectElement | null;
 
     if (!form) return;
-
 
     // Handle preselected service parameter from query string (e.g. ?service=...)
     const urlParams = new URLSearchParams(window.location.search);
@@ -197,6 +199,7 @@ const turnstileSiteKey = SITE_CONFIG.turnstileSiteKey;
       const lang = form.getAttribute('data-lang') || 'th';
       const serviceVal = serviceSelect?.value || 'General Consultation';
       const googleScriptUrl = form.getAttribute('data-google-script-url') || '';
+      const targetEmail = form.getAttribute('data-target-email') || 'pok23250+test@gmail.com';
 
       const formData = new FormData(form);
 
@@ -228,8 +231,45 @@ const turnstileSiteKey = SITE_CONFIG.turnstileSiteKey;
             body: JSON.stringify(payload)
           });
         } else {
-          // Local/development preview mode
-          console.info('[M&S Legal Lead Preview]: Form payload ready for Google & Email dispatch:', payload);
+          // Free, instant Email Dispatch via FormSubmit.co directly to targetEmail
+          const endpoint = `https://formsubmit.co/ajax/${encodeURIComponent(targetEmail)}`;
+          const response = await fetch(endpoint, {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+              'Accept': 'application/json'
+            },
+            body: JSON.stringify({
+              'ชื่อ-นามสกุล (Name)': payload.name,
+              'อีเมล (Email)': payload.email,
+              'เบอร์โทรศัพท์ (Phone)': payload.phone,
+              'สาขาบริการที่สนใจ (Service)': serviceVal,
+              'รายละเอียดข้อเท็จจริง (Message)': payload.message,
+              'ภาษา (Language)': lang === 'th' ? 'ภาษาไทย (TH)' : 'English (EN)',
+              'เวลาที่ส่ง (Timestamp)': payload.timestamp,
+              _subject: lang === 'th'
+                ? `[THANPRAT LAWYER] คำขอเข้ารับการปรึกษาใหม่ (${serviceVal}) - คุณ${payload.name}`
+                : `[THANPRAT LAWYER] New Legal Consultation Request (${serviceVal}) - ${payload.name}`,
+              _replyto: payload.email,
+              _template: 'table',
+              _captcha: 'false'
+            })
+          });
+
+          const data = await response.json().catch(() => null);
+
+          // Handle first-time email activation prompt
+          if (data && data.success === 'false' && data.message && data.message.includes('Activation')) {
+            if (successMsg) {
+              successMsg.textContent = lang === 'th'
+                ? `ระบบส่งอีเมลเปิดใช้งานไปยัง ${targetEmail} แล้ว กรุณากดยืนยัน (Activate Form) ในกล่องอีเมลของคุณ 1 ครั้ง`
+                : `Activation link sent to ${targetEmail}. Please check your inbox and click "Activate Form" once.`;
+            }
+          } else if (successMsg) {
+            successMsg.textContent = lang === 'th'
+              ? 'ส่งคำขอเข้ารับการปรึกษาเรียบร้อย ทนายความจะติดต่อกลับโดยเร็วที่สุด'
+              : 'Your consultation request has been submitted successfully.';
+          }
         }
 
         // Trigger Google Tag Manager / GA4 conversion event

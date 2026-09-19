@@ -21,7 +21,7 @@ export const SITE_CONFIG = {
   longitude: 100.5288187,
 
   // Direct Contact Channels
-  email: 'thanprat.lawyer@gmail.com',
+  email: import.meta.env.PUBLIC_CONTACT_EMAIL || 'pok23250+test@gmail.com',
   phone: '+66 82 156 5651',
   phoneMobile: '+66 64 829 8888',
   line: '@thanpratlawyer',
