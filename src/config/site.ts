@@ -27,8 +27,8 @@ export const SITE_CONFIG = {
   line: '@thanpratlawyer',
   lineUrl: 'https://line.me/ti/p/~thanprat.lawyer',
   facebook: 'https://www.facebook.com/thanprat.lawyer',
-  facebookLabel: 'Thanprat Lawyer',
-  wechat: 'ThanpratLawyer',
+  facebookLabel: 'Facebook Page',
+  facebookHandle: '@thanprat.lawyer',
   whatsapp: '+66 82 156 5651',
 
   // Google Maps Embed & Direct Navigation

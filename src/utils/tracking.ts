@@ -12,7 +12,6 @@ export type TrackingEventName =
   | 'click_call'
   | 'click_email'
   | 'click_line'
-  | 'click_wechat'
   | 'click_whatsapp'
   | 'form_submit_lead'
   | 'cookie_consent_update'

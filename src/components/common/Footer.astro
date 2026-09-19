@@ -151,14 +151,6 @@ const currentYear = new Date().getFullYear();
             >
               Facebook
             </a>
-
-            <!-- WeChat CTA -->
-            <a
-              href={`/${lang}/contact/#wechat`}
-              class="track-wechat px-3 py-1.5 rounded-[2px] bg-[#07C160]/15 hover:bg-[#07C160]/25 border border-[#07C160]/40 text-[#07C160] text-xs font-semibold flex items-center gap-1.5 transition-all"
-            >
-              WeChat
-            </a>
           </div>
         </div>
       </div>
@@ -202,12 +194,6 @@ const currentYear = new Date().getFullYear();
     document.querySelectorAll('.track-line').forEach((el) => {
       el.addEventListener('click', () => {
         trackEvent('click_line', { channel: 'line', link_url: el.getAttribute('href') || '' });
-      });
-    });
-
-    document.querySelectorAll('.track-wechat').forEach((el) => {
-      el.addEventListener('click', () => {
-        trackEvent('click_wechat', { channel: 'wechat' });
       });
     });
 

@@ -58,10 +58,10 @@ export function useTranslations(lang: SupportedLang = 'th') {
       phoneValue: SITE_CONFIG.phone,
       phoneMobile: SITE_CONFIG.phoneMobile,
       lineValue: SITE_CONFIG.line,
-      wechatValue: SITE_CONFIG.wechat,
       whatsappValue: SITE_CONFIG.whatsapp,
       facebookValue: SITE_CONFIG.facebook,
       facebookLabel: SITE_CONFIG.facebookLabel,
+      facebookHandle: SITE_CONFIG.facebookHandle,
       addressValue: localizedAddress
     }
   };
