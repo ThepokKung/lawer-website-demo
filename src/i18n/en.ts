@@ -22,9 +22,10 @@ export const en = {
   },
   hero: {
     badge: "Boutique Business Law & Nationwide Litigation",
-    title1: "Legal Precision.",
-    title2: "Business Protection.",
-    lead: "THANPRAT LAWYER CO., LTD. is a full-service Bangkok-based law firm dedicated to delivering reliable, innovative legal solutions with integrity, precision, and commercial acumen.",
+    title: "THANPRAT LAWYER CO., LTD.",
+    title1: "THANPRAT LAWYER",
+    title2: "CO., LTD.",
+    lead: "Committed to delivering comprehensive and premier legal services. Established in 2018 with a steadfast commitment to being a trusted legal partner for businesses and individuals, upholding integrity, transparency, and shared client success.",
     ctaConsultation: "Schedule a Consultation",
     ctaServices: "Explore Practice Areas",
     trustNote: "Uncompromising Integrity • Strict Professional Privilege • Fluent in Thai & English"
@@ -292,7 +293,7 @@ export const en = {
       image: "/images/thanprat/lawyer-pratchaya.jpg",
       quote: "Legal precision is the most resilient shield for commercial assets and sustainable business growth.",
       bio: [
-        "Pratchaya Vichakote is the founder and Managing Director of THANPRAT LAWYER CO., LTD. He has been actively practicing law and delivering high-level corporate counsel since 2000, bringing over 24 years of seasoned advocacy across Thai courts and commercial boardrooms.",
+        "Pratchaya Vichakote is the founder and Managing Director of THANPRAT LAWYER CO., LTD. He has been actively practicing law and delivering high-level corporate counsel since 2000, bringing over 26 years of seasoned advocacy across Thai courts and commercial boardrooms.",
         "Renowned for comprehensive mastery in civil, commercial, and white-collar criminal law, Mr. Vichakote has earned the enduring trust of major business enterprises and prominent national leaders. He served as dedicated legal advisor to Dr. Vorapol Socatiyanurak (former Secretary-General of the Securities and Exchange Commission - SEC Thailand) and Dr. Montree Socatiyanurak.",
         "In addition, he has served as legal expert and lead researcher on high-profile national policy initiatives, including the Feasibility and Suitability Study for Chiang Khong Industrial Estate in Chiang Rai Province, and the Thai Overseas Labor Deployment System Development Project for the Department of Employment, Ministry of Labor."
       ],
@@ -311,7 +312,7 @@ export const en = {
       ],
       experienceHighlights: [
         "Founder & Managing Director, THANPRAT LAWYER CO., LTD. (2018 – Present)",
-        "Practicing Trial Advocate & Commercial Legal Consultant (2000 – Present, 24+ Years)",
+        "Practicing Trial Advocate & Commercial Legal Consultant (2000 – Present, 26+ Years)",
         "Legal Advisor to Dr. Vorapol Socatiyanurak (Former Secretary-General, SEC Thailand)",
         "Legal Advisor to Dr. Montree Socatiyanurak",
         "Senior Legal Expert & Researcher, Chiang Khong Industrial Estate Strategic Feasibility Project (2015)",
@@ -375,7 +376,7 @@ export const en = {
       image: "/images/thanprat/lawyer-sanguansri.jpg",
       quote: "Courtroom victory is not won by rhetoric, but by unyielding evidence analysis and forensic precision.",
       bio: [
-        "Sanguansri Phaphong is a seasoned litigator with over 14 years of rigorous trial advocacy in the courts of Thailand (License No. 395/2553, admitted in 2010). She spearheads dispute proceedings across civil, criminal, labor, tax, intellectual property, and administrative jurisdictions.",
+        "Sanguansri Phaphong is a seasoned litigator with over 16 years of rigorous trial advocacy in the courts of Thailand (License No. 395/2553, admitted in 2010). She spearheads dispute proceedings across civil, criminal, labor, tax, intellectual property, and administrative jurisdictions.",
         "With formidable cross-examination skills and forensic documentary evidence analysis, Ms. Phaphong regularly represents corporate clients and private stakeholders in contentious real estate conflicts, commercial breaches, tort claims, and economic white-collar crimes including corporate forgery, fraud, and defamation.",
         "Serving as senior trial advocate at THANPRAT LAWYER CO., LTD. since 2018, she manages court proceedings across all judicial regions throughout the Kingdom, ensuring clients' legal rights and commercial assets are vigorously upheld."
       ],
@@ -388,7 +389,7 @@ export const en = {
       ],
       experienceHighlights: [
         "Senior Litigation Attorney, THANPRAT LAWYER CO., LTD. (2018 – Present)",
-        "Active Trial Advocate in Thai Courts of Justice Nationwide (2010 – Present, 14+ Years)",
+        "Active Trial Advocate in Thai Courts of Justice Nationwide (2010 – Present, 16+ Years)",
         "Counsel for Complex Property, Land Title, Commercial Contract, and Inheritance Disputes",
         "Defense & Prosecution in Corporate Criminal Offenses, Fraud, and Economic Crimes",
         "Judicial Mediation, Court-Annexed Settlement, and Commercial Arbitration"
@@ -488,6 +489,8 @@ export const en = {
     fieldService: "Required Practice Area *",
     fieldMessage: "Brief Matter Description *",
     fieldSubmit: "Request Consultation",
+    emailError: "Please enter a valid email address (e.g. name@example.com)",
+    phoneError: "Please enter a valid phone number (at least 9-10 digits, e.g. 0812345678 or +66812345678)",
     successMsg: "Thank you for reaching out. THANPRAT LAWYER CO., LTD. has received your inquiry and our attorneys will contact you shortly.",
     errorMsg: "An error occurred while submitting. Please try again or call us directly.",
     selectServiceDefault: "-- Select Practice Area --"

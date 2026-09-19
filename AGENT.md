@@ -2,18 +2,17 @@
 
 **Project:** THANPRAT LAWYER CO., LTD. (บริษัท ธันปรัท ทนายความ จำกัด / 泰国丹普拉特律师事务所)  
 **Framework:** Astro 5 (Static Site Generation)  
-**Design Paradigm:** Executive Deep Jungle Theme (Off-White `#F7FAF8`, Deep Jungle `#0B251B`, Forest Green `#1B4D3E`, Warm Champagne Gold `#C59B42`, `rounded-[2px]`) with Apple-grade smooth micro-interactions.  
+**Design Paradigm:** Executive Navy & Metallic Gold Theme (Off-White `#F8F6F0`, Executive Navy `#1a2332`, Forest Accent `#1B4D3E`, Warm Champagne Gold `#C59B42`, `rounded-[2px]`) with Apple-grade smooth micro-interactions.  
 **ACTIVE WORKING BRANCH:** `dev` (Strict Rule: All edits, code modifications, and new features must be done in `dev`. Never commit directly to `main`).
 
 ---
 
 ## 1. Project Purpose & Scope
 
-This project is an ultra-fast, search-engine-optimized, trilingual website for an executive international law firm in Thailand.
+This project is an ultra-fast, search-engine-optimized, bilingual website for an executive business law firm in Thailand.
 * **Locales:**
   * `th`: Thai (Default locale - domestic clients, Thai businesses)
   * `en`: English (Expats, multinational enterprises, foreign direct investment)
-  * `zh`: Simplified Chinese (Chinese investors, cross-border corporate ventures)
 * **Performance:** 100/100 Core Web Vitals target (SSG, zero runtime bloat, CSS hardware-accelerated transitions).
 * **Analytics & Tracking:** Integrated with Google Tag Manager (GTM), Google Analytics 4 (GA4), Microsoft Clarity, and Google Consent Mode v2.
 * **Compliance:** PDPA compliance, Cookie Policy, Privacy Policy, and floating Apple-style consent banner.
@@ -35,7 +34,7 @@ d:\Work_Dir\Law\
 │   │   ├── common/
 │   │   │   ├── Navbar.astro           # Translucent glass navbar with mobile menu
 │   │   │   ├── Footer.astro           # Corporate footer with credentials, links, contacts
-│   │   │   ├── LanguageSwitcher.astro # Pill-style language toggler (TH / EN / 中文)
+│   │   │   ├── LanguageSwitcher.astro # Pill-style language toggler (TH / EN)
 │   │   │   └── CookieBanner.astro     # Apple glass consent banner with Consent Mode v2
 │   │   ├── home/
 │   │   │   ├── Hero.astro             # High-impact typography, trust badges, primary CTA
@@ -54,8 +53,7 @@ d:\Work_Dir\Law\
 │   ├── i18n/
 │   │   ├── index.ts                   # i18n helpers and language router
 │   │   ├── th.ts                      # Thai translation dictionary & services data
-│   │   ├── en.ts                      # English translation dictionary & services data
-│   │   └── zh.ts                      # Chinese translation dictionary & services data
+│   │   └── en.ts                      # English translation dictionary & services data
 │   ├── pages/
 │   │   ├── index.astro                # Redirects / renders default locale (th)
 │   │   ├── [lang]/
@@ -64,9 +62,11 @@ d:\Work_Dir\Law\
 │   │   │   ├── contact.astro          # Inquiries, consultation form, map
 │   │   │   ├── cookie-policy.astro    # Cookie disclosure & consent management
 │   │   │   ├── privacy-policy.astro   # PDPA / GDPR legal privacy policy
-│   │   │   └── services/
-│   │   │       ├── index.astro        # All practice areas
-│   │   │       └── [slug].astro       # Individual practice area detail pages
+│   │   │   ├── services/
+│   │   │   │   ├── index.astro        # All practice areas
+│   │   │   │   └── [slug].astro       # Individual practice area detail pages
+│   │   │   └── team/
+│   │   │       └── [slug].astro       # Individual attorney profile pages
 │   ├── styles/
 │   │   └── global.css                 # Tailwind directives, custom glassmorphism, Apple motion curves
 │   └── utils/
@@ -103,8 +103,8 @@ d:\Work_Dir\Law\
    * Keep DOM lightweight and responsive.
 
 2. **Strict i18n Protocol:**
-   * Every user-facing string must reside in `src/i18n/{th,en,zh}.ts`.
-   * When modifying or adding navigation items or practice areas, update all 3 locales in tandem.
+   * Every user-facing string must reside in `src/i18n/{th,en}.ts`.
+   * When modifying or adding navigation items or practice areas, update both locales in tandem.
    * Internal links must always include `/${lang}/...` helper.
 
 3. **DataLayer & Tracking Standards:**
@@ -113,7 +113,7 @@ d:\Work_Dir\Law\
    * Cookie banner must trigger `cookie_consent_update` and update `gtag('consent', 'update', ...)`.
 
 4. **SEO & Schema Integrity:**
-   * All pages must emit canonical URL, alternate hreflang tags for `th`, `en`, `zh-Hans`, and `x-default`.
+   * All pages must emit canonical URL, alternate hreflang tags for `th`, `en`, and `x-default`.
    * `LegalService` JSON-LD schema must be injected in `BaseLayout.astro`.
 
 5. **Strict `.env` Rule (Zero Hardcoding):**
@@ -139,7 +139,7 @@ d:\Work_Dir\Law\
      1. Invisible Honeypot field (`company_url_hp`) and Time Trap (< 2.0s reject) running client-side with zero human friction.
      2. Optional Cloudflare Turnstile managed challenge when `PUBLIC_TURNSTILE_SITE_KEY` is present.
    * Bot submissions are neutralized silently (mocked success to the bot without writing to Google Sheets or sending notification emails).
-   * Google Fonts (`Sarabun` for formal Thai legal typography, `Cormorant Garamond` for prestige legal serif headings) are preconnected and integrated into `tailwind.config.mjs` and `global.css`.
+   * Self-hosted WOFF2 webfonts (`Sarabun` for formal Thai legal typography, `Cormorant Garamond` for prestige legal serif headings) are preloaded from `public/fonts/` and integrated into `tailwind.config.mjs` and `global.css`.
 
 10. **Priority Hints & Core Web Vitals Optimization:**
    * Preload critical LCP assets early in `<head>`: `<link rel="preload" href="/images/logo.svg" as="image" type="image/svg+xml" fetchpriority="high" />`.

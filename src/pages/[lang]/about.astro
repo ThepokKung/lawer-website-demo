@@ -68,12 +68,14 @@ const ethics = {
 
           <div class="space-y-4">
             <div class="p-6 rounded-[2px] bg-slate-50 border border-slate-200">
-              <div class="text-2xl sm:text-3xl font-bold font-serif text-gold-700 mb-1">2018</div>
+              <div class="text-2xl sm:text-3xl font-bold font-serif text-gold-700 mb-1">
+                {lang === 'th' ? '2561' : '2018'}
+              </div>
               <div class="text-xs sm:text-sm font-semibold text-slate-800">
                 {lang === 'th' ? 'ปีที่ก่อตั้งสำนักงาน' : 'Year Established'}
               </div>
               <div class="text-xs text-slate-500 mt-1">
-                {lang === 'th' ? 'จดทะเบียนนิติบุคคลตามกฎหมายไทยอย่างเป็นทางการ' : 'Officially incorporated under the Department of Business Development'}
+                {lang === 'th' ? 'จดทะเบียนนิติบุคคลตามกฎหมายไทยอย่างเป็นทางการ (พ.ศ. 2561)' : 'Officially incorporated under the Department of Business Development'}
               </div>
             </div>
 
@@ -83,7 +85,7 @@ const ethics = {
                 {lang === 'th' ? 'ปีแห่งประสบการณ์ทางวิชาชีพ' : 'Years of Combined Practice Leadership'}
               </div>
               <div class="text-xs text-slate-500 mt-1">
-                {lang === 'th' ? 'หัวหน้าสำนักงานเริ่มต้นงานวิชาชีพกฎหมายตั้งแต่ปี 2543' : 'Managing Director practicing law and corporate advisory since 2000'}
+                {lang === 'th' ? 'หัวหน้าสำนักงานเริ่มต้นงานวิชาชีพกฎหมายตั้งแต่ปี พ.ศ. 2543' : 'Managing Director practicing law and corporate advisory since 2000'}
               </div>
             </div>
           </div>
@@ -189,10 +191,18 @@ const ethics = {
           {lang === 'th' ? 'การรับรองและสมาชิกภาพองค์กรวิชาชีพกฎหมาย' : 'Professional Accreditations & Bar Affiliations'}
         </h3>
         <div class="flex flex-wrap items-center justify-center gap-4 sm:gap-6 text-xs sm:text-sm text-slate-700 font-medium">
-          <span class="px-4 py-2.5 rounded-[2px] bg-slate-50 border border-slate-200">สภาทนายความแห่งประเทศไทย (Lawyers Council)</span>
-          <span class="px-4 py-2.5 rounded-[2px] bg-slate-50 border border-slate-200">สำนักอบรมศึกษากฎหมายแห่งเนติบัณฑิตยสภา (Thai Bar)</span>
-          <span class="px-4 py-2.5 rounded-[2px] bg-slate-50 border border-slate-200">ทนายความผู้ทำคำรับรองลายมือชื่อ (Notarial Attorney)</span>
-          <span class="px-4 py-2.5 rounded-[2px] bg-slate-50 border border-slate-200">International Bar Association (IBA)</span>
+          <span class="px-4 py-2.5 rounded-[2px] bg-slate-50 border border-slate-200">
+            {lang === 'th' ? 'สภาทนายความในพระบรมราชูปถัมภ์' : 'Lawyers Council of Thailand'}
+          </span>
+          <span class="px-4 py-2.5 rounded-[2px] bg-slate-50 border border-slate-200">
+            {lang === 'th' ? 'สำนักอบรมศึกษากฎหมายแห่งเนติบัณฑิตยสภา' : 'Thai Bar Association'}
+          </span>
+          <span class="px-4 py-2.5 rounded-[2px] bg-slate-50 border border-slate-200">
+            {lang === 'th' ? 'ทนายความผู้ทำคำรับรองลายมือชื่อและเอกสาร' : 'Certified Notarial Services Attorney'}
+          </span>
+          <span class="px-4 py-2.5 rounded-[2px] bg-slate-50 border border-slate-200">
+            {lang === 'th' ? 'สมาคมทนายความระหว่างประเทศ (IBA)' : 'International Bar Association (IBA)'}
+          </span>
         </div>
       </div>
     </section>

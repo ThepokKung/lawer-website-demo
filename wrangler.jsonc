@@ -1,6 +1,6 @@
 {
   "$schema": "node_modules/wrangler/config-schema.json",
-  "name": "montclaire-sterling-legal",
+  "name": "lawer-website-demo",
   "compatibility_date": "2024-09-23",
   "assets": {
     "directory": "./dist",

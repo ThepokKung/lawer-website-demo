@@ -1,6 +1,6 @@
-# Montclaire & Sterling Legal Counsel Website
+# THANPRAT LAWYER CO., LTD. Website
 
-An executive-grade, trilingual international law firm website designed for performance, accessibility, and search engine visibility. Built with Astro 5, Tailwind CSS, and optimized for deployment on Cloudflare Pages.
+An executive-grade, bilingual (Thai/English) business law firm website for THANPRAT LAWYER CO., LTD., designed for performance, accessibility, and search engine visibility. Built with Astro 5, Tailwind CSS, and optimized for deployment on Cloudflare Pages.
 
 ---
 
@@ -35,7 +35,7 @@ An executive-grade, trilingual international law firm website designed for perfo
 - **Zero Layout Shift (CLS = 0):** All images and SVG graphics have explicit width/height ratios and aspect ratio containers.
 
 ### 2. Production SEO & Multilingual Parity
-- **Trilingual Parity (i18n):** Full localization across Thai (`/th/`), English (`/en/`), and Simplified Chinese (`/zh/`).
+- **Bilingual Parity (i18n):** Full localization across Thai (`/th/`) and English (`/en/`).
 - **Dynamic Hreflang & Canonical URL:** Every page dynamically outputs canonical links and `xhtml:link rel="alternate" hreflang="..."` pointing to all language variants.
 - **Search Engine Directives (`public/robots.txt`):** Configured with dedicated crawler rules for Googlebot, Bingbot, and Baiduspider, referencing `sitemap-index.xml`.
 - **Structured Data (Schema.org):** Comprehensive `LegalService` JSON-LD schema embedded on every page, containing operating hours, geographical coordinates, contact endpoints, and multilingual alternate names.
@@ -86,6 +86,12 @@ Create a `.env` file in the project root based on `.env.example`:
 
 | Variable | Required | Description | Example |
 | :--- | :--- | :--- | :--- |
+| `PUBLIC_CONTACT_EMAIL` | Yes | Primary contact email for forms and quick-contact links | `thanprat.lawyer@gmail.com` |
+| `PUBLIC_CONTACT_PHONE` | Yes | Office telephone number | `+66 82 156 5651` |
+| `PUBLIC_CONTACT_PHONE_MOBILE` | Yes | Mobile telephone number | `+66 64 829 8888` |
+| `PUBLIC_CONTACT_LINE` | Yes | LINE Official Account ID | `@thanpratlawyer` |
+| `PUBLIC_CONTACT_LINE_URL` | Yes | LINE direct link URL | `https://line.me/ti/p/~thanprat.lawyer` |
+| `PUBLIC_CONTACT_FACEBOOK` | Yes | Facebook Page URL | `https://www.facebook.com/thanprat.lawyer` |
 | `PUBLIC_SITE_URL` | Yes | Primary canonical site URL | `https://law.thepokkung.space` |
 | `PUBLIC_GOOGLE_SCRIPT_URL` | No | Webhook URL for consultation lead forwarding | `https://script.google.com/macros/s/.../exec` |
 | `PUBLIC_GTM_ID` | No | Google Tag Manager Container ID | `GTM-XXXXXXX` |
@@ -98,7 +104,7 @@ Create a `.env` file in the project root based on `.env.example`:
 ```text
 ├── public/
 │   ├── fonts/                 # Self-hosted WOFF2 font subsets (Sarabun, Cormorant)
-│   ├── images/                # Brand logos, fictional attorney portraits, icons
+│   ├── images/                # Brand logos, attorney portraits, client logos, icons
 │   ├── _headers               # Cloudflare Pages edge cache and security headers
 │   ├── favicon.svg            # Primary brand favicon
 │   └── robots.txt             # Search crawler directives and sitemap reference
@@ -111,11 +117,11 @@ Create a `.env` file in the project root based on `.env.example`:
 │   │   ├── gtm/               # Google Tag Manager export container JSON
 │   │   └── site.ts            # Centralized firm info, coordinates, and contact URLs
 │   ├── content/               # Content collections for legal practice areas
-│   ├── i18n/                  # Localization dictionaries (th, en, zh)
+│   ├── i18n/                  # Localization dictionaries (th, en)
 │   ├── layouts/
 │   │   └── BaseLayout.astro   # Root HTML shell, preloads, SEO meta, schema JSON-LD
 │   ├── pages/
-│   │   ├── [lang]/            # Localized routes (/th/, /en/, /zh/)
+│   │   ├── [lang]/            # Localized routes (/th/, /en/)
 │   │   └── index.astro        # Root language redirector
 │   ├── styles/
 │   │   ├── fonts.css          # Local @font-face definitions
@@ -152,7 +158,7 @@ Runs Astro and TypeScript diagnostics to ensure zero template and type errors.
 ```bash
 npm run build
 ```
-Generates 36 static pages, bundles CSS/JS assets, copies fonts/headers, and generates `sitemap-index.xml` in `dist/`.
+Generates 32 static pages, bundles CSS/JS assets, copies fonts/headers, and generates `sitemap-index.xml` in `dist/`.
 
 ### 5. Preview Production Build
 ```bash

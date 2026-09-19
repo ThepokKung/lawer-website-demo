@@ -235,7 +235,7 @@ const personSchema = {
             </div>
             <div>
               <h2 class="text-lg font-bold text-navy-950">{t.attorneyPage.educationTitle}</h2>
-              <span class="text-xs text-slate-500">Academic Background & Diplomas</span>
+              <span class="text-xs text-slate-500">{lang === 'th' ? 'วุฒิการศึกษาและคุณวุฒิทางวิชาการ' : 'Academic Background & Diplomas'}</span>
             </div>
           </div>
 
@@ -243,7 +243,7 @@ const personSchema = {
             {attorney.education.map((edu) => (
               <div class="p-4 rounded-[2px] bg-slate-50 border border-slate-200 flex items-start gap-4">
                 <span class="px-2.5 py-1 rounded-[2px] bg-gold-100 text-gold-800 text-xs font-mono font-bold shrink-0 border border-gold-300">
-                  {edu.year}
+                  {lang === 'th' ? `พ.ศ. ${edu.year}` : edu.year}
                 </span>
                 <div>
                   <h3 class="text-sm font-bold text-navy-950 mb-0.5">{edu.degree}</h3>
@@ -267,7 +267,7 @@ const personSchema = {
               </div>
               <div>
                 <h2 class="text-lg font-bold text-navy-950">{t.attorneyPage.admissionsTitle}</h2>
-                <span class="text-xs text-slate-500">Bar Admissions & Professional Certifications</span>
+                <span class="text-xs text-slate-500">{lang === 'th' ? 'การขึ้นทะเบียนทนายความและใบอนุญาตวิชาชีพ' : 'Bar Admissions & Professional Certifications'}</span>
               </div>
             </div>
 
@@ -291,7 +291,7 @@ const personSchema = {
               </div>
               <div>
                 <h2 class="text-lg font-bold text-navy-950">{t.attorneyPage.experienceTitle}</h2>
-                <span class="text-xs text-slate-500">Distinguished Record & High-Stakes Engagements</span>
+                <span class="text-xs text-slate-500">{lang === 'th' ? 'ผลงานการว่าความและภารกิจที่ปรึกษากฎหมายสำคัญ' : 'Distinguished Record & High-Stakes Engagements'}</span>
               </div>
             </div>
 
@@ -345,7 +345,7 @@ const personSchema = {
                 {other.roleBadge}
               </p>
               <span class="text-[11px] text-slate-500 inline-flex items-center gap-1 group-hover:underline">
-                <span>View Profile</span>
+                <span>{lang === 'th' ? 'ดูประวัติ' : 'View Profile'}</span>
                 <span>→</span>
               </span>
             </div>

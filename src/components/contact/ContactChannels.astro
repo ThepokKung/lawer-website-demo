@@ -80,7 +80,9 @@ const t = useTranslations(lang);
           <span class="text-sm font-bold text-navy-950 group-hover:text-gold-700 transition-colors truncate block">{t.contact.emailValue}</span>
         </div>
       </div>
-      <span class="text-xs text-slate-500 block">ตอบกลับภายใน 24 ชม.</span>
+      <span class="text-xs text-slate-500 block">
+        {lang === 'th' ? 'ตอบกลับภายใน 24 ชม.' : 'Response within 24 business hours'}
+      </span>
     </a>
 
     <!-- LINE Official -->

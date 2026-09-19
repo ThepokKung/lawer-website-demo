@@ -57,7 +57,7 @@ const schemaData = {
       "@type": "OpeningHoursSpecification",
       "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
       "opens": "08:30",
-      "closes": "18:00"
+      "closes": "17:30"
     }
   ],
   "priceRange": "$$$$",
@@ -72,6 +72,10 @@ const schemaData = {
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="shortcut icon" href="/favicon.ico" />
     <meta name="generator" content={Astro.generator} />
 
     <!-- SEO Meta Tags -->
@@ -94,6 +98,7 @@ const schemaData = {
 
     <!-- Priority Hints & Asset Preloading -->
     <link rel="preload" href="/images/thanprat/logo.png" as="image" type="image/png" fetchpriority="high" />
+    <link rel="preload" href="/images/thanprat/logo-emblem.png" as="image" type="image/png" fetchpriority="high" />
 
     <!-- Self-Hosted Webfonts Preload (Zero External Network Overhead) -->
     <link rel="preload" href="/fonts/sarabun-thai-400.woff2" as="font" type="font/woff2" crossorigin />
@@ -181,8 +186,8 @@ const schemaData = {
               });
             },
             {
-              threshold: 0.08,
-              rootMargin: '0px 0px -40px 0px'
+              threshold: 0.01,
+              rootMargin: '0px 0px 80px 0px'
             }
           );
 
@@ -193,8 +198,25 @@ const schemaData = {
         }
       }
 
-      // Run on Astro View Transition navigation
+      // Run on Astro View Transition navigation and initial DOM ready
       document.addEventListener('astro:page-load', initAppleScrollReveal);
+      if (document.readyState !== 'loading') {
+        initAppleScrollReveal();
+      } else {
+        document.addEventListener('DOMContentLoaded', initAppleScrollReveal);
+      }
+
+      // Disable right-click context menu (allowing in form inputs)
+      document.addEventListener('contextmenu', (e) => {
+        const target = e.target;
+        if (target && target.nodeType === 1) {
+          const tagName = target.tagName;
+          if (tagName === 'INPUT' || tagName === 'TEXTAREA' || target.isContentEditable) {
+            return;
+          }
+        }
+        e.preventDefault();
+      });
     </script>
   </body>
 </html>

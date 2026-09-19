@@ -49,6 +49,11 @@
   ::-webkit-scrollbar-thumb:hover {
     background: #1B4D3E;
   }
+
+  img {
+    -webkit-user-drag: none;
+    user-select: none;
+  }
 }
 
 @layer utilities {
